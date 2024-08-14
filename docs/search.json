@@ -1,0 +1,861 @@
+[
+  {
+    "objectID": "setup/index.html",
+    "href": "setup/index.html",
+    "title": "Setting Up of Quarto",
+    "section": "",
+    "text": "Before diving into literate programming with Quarto, ensure that your development environment is properly set up. Follow these steps to install and configure the necessary tools:",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#introduction",
+    "href": "setup/index.html#introduction",
+    "title": "Setting Up of Quarto",
+    "section": "",
+    "text": "Before diving into literate programming with Quarto, ensure that your development environment is properly set up. Follow these steps to install and configure the necessary tools:",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-1-install-python",
+    "href": "setup/index.html#step-1-install-python",
+    "title": "Setting Up of Quarto",
+    "section": "Step 1: Install Python",
+    "text": "Step 1: Install Python\nPython is essential for this workshop as it is integral to Quarto for executing code within documents, accessing a wide range of libraries and tools for data analysis and machine learning, and enabling script execution. It also integrates seamlessly with Visual Studio Code, our recommended IDE, to enhance coding efficiency and support advanced machine learning tasks. By installing Python, you set up a powerful environment that supports both technical documentation and complex computational projects.\n\nDownload and Install Python\n\nGo to the official Python website.\nDownload the latest stable version of Python suitable for your operating system (Windows, macOS, or Linux).\nRun the installer and ensure you check the box to “Add Python to PATH” during installation.\nFollow the on-screen instructions to complete the installation.",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-2-install-visual-studio-code-vs-code",
+    "href": "setup/index.html#step-2-install-visual-studio-code-vs-code",
+    "title": "Setting Up of Quarto",
+    "section": "Step 2: Install Visual Studio Code (VS Code)",
+    "text": "Step 2: Install Visual Studio Code (VS Code)\n\nDownload and Install Visual Studio Code (VS Code)\n\nVisit the official VS Code website.\nDownload the installer for your operating system.\nRun the installer and follow the prompts to install VS Code.\nAfter installation, open VS Code and install the recommended extensions:\n\nPython Extension: Search for “Python” in the Extensions view (Ctrl+Shift+X) and install it.\nQuarto Extension: Search for “Quarto” in the Extensions view and install it.",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-3-install-quarto-cli",
+    "href": "setup/index.html#step-3-install-quarto-cli",
+    "title": "Setting Up of Quarto",
+    "section": "Step 3: Install Quarto CLI",
+    "text": "Step 3: Install Quarto CLI\nQuarto CLI is crucial as it allows you to create, render, and manage Quarto documents and projects. Quarto CLI integrates seamlessly with your development environment, enabling you to compile literate programming documents that combine code and narrative effectively. It supports various output formats, including HTML, PDF, and slides, and facilitates the integration of code with documentation. By installing Quarto CLI, you equip yourself with the necessary tools to manage and execute Quarto projects efficiently, making it a key component of your setup for this workshop.\n\nDownload and Install Quarto CLI\n\nVisit the Quarto CLI download page.\nDownload the latest stable release of Quarto CLI for your operating system.\nRun the installer and follow the on-screen instructions to complete the installation.\nAfter installation, verify that Quarto CLI is correctly installed by opening a command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows) and typing:\nquarto --version",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-4-install-git-for-cicd",
+    "href": "setup/index.html#step-4-install-git-for-cicd",
+    "title": "Setting Up of Quarto",
+    "section": "Step 4: Install Git for CI/CD",
+    "text": "Step 4: Install Git for CI/CD\nGit is essential for version control and collaborative development, enabling you to track changes in your code, manage different versions of your projects, and collaborate effectively with others. It supports continuous integration and deployment (CI/CD) workflows, which are crucial for maintaining and deploying code systematically. Additionally, Git integrates with GitHub, allowing you to host and publish websites using GitHub Pages, providing a seamless way to share and showcase your projects online. By installing Git, you ensure that you can manage and synchronize your work efficiently, maintain a history of changes, collaborate seamlessly, and leverage GitHub Pages for web hosting throughout the workshop.\n\nDownload and Install Git\n\nVisit the official Git website.\nDownload the installer for your operating system.\nRun the installer and follow the prompts. You can use the default settings for most options.\nEnsure Git is added to your system PATH by checking the appropriate option during installation.\n\nConfigure Git\n\nOpen your command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows).\nConfigure your Git username and email:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@example.com\"\nVerify the installation by checking the Git version:\ngit --version\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you are in a fresh Python 3 environment, installing the jupyter package will provide everything required to execute Jupyter kernels with Quarto:\npython3 -m pip install jupyter\n\n\nThe publishing workflow is the process in which external resources are prepared and collated together with the help of an authoring tool and subsequently rendered with a formatting tool to generate a publishable output that can be delivered in various forms. This is visualised by the following figure.",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#literate-programming-workflow",
+    "href": "setup/index.html#literate-programming-workflow",
+    "title": "Setting Up of Quarto",
+    "section": "Literate Programming Workflow",
+    "text": "Literate Programming Workflow\n\n\n\n\n\n---\n Literate Programming Workflow\n---\ngraph TD\n    A[Python] --&gt;|Code Execution| B[Quarto CLI]\n    B --&gt;|Document Rendering| C[Technical Documents]\n    B --&gt;|Document Rendering| D[Blogs]\n    B --&gt;|Document Rendering| E[Websites]\n    E --&gt;|Host| F[GitHub Pages]\n    G[Git] --&gt;|Version Control| C\n    G --&gt;|Version Control| D\n    G --&gt;|Version Control| E\n    G --&gt;|CI/CD| F\n\n    subgraph Development\n        A\n        B\n        G\n    end\n\n    subgraph Output\n        C\n        D\n        E\n        F\n    end\n\n    style Development fill:#f9f,stroke:#333,stroke-width:2px\n    style Output fill:#ccf,stroke:#333,stroke-width:2px",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#creating-your-personal-website",
+    "href": "setup/index.html#creating-your-personal-website",
+    "title": "Setting Up of Quarto",
+    "section": "Creating Your Personal Website",
+    "text": "Creating Your Personal Website\nIn the digital era, a personal website is an essential tool for engineering students looking to showcase their skills, projects, and achievements. It acts as an online portfolio, a platform for sharing insights, and a way to make a professional impression. Creating your own website involves several key steps, from planning and design to development and hosting. This guide will walk you through the process of designing a user-friendly site, building it with the right tools, testing and optimizing its performance, and finally, hosting it for the world to see. Whether you want to present your academic projects, share your resume, or maintain a blog, a well-crafted personal website can enhance your visibility and open up new opportunities in your engineering career.",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-1-clone-the-website-template-respository-from-github",
+    "href": "setup/index.html#step-1-clone-the-website-template-respository-from-github",
+    "title": "Setting Up of Quarto",
+    "section": "Step 1: Clone the Website template respository from Github",
+    "text": "Step 1: Clone the Website template respository from Github\nCopy the following Github repo url and clone using Vscode source control.\nhttps://github.com/sijuswamy/Website-Template",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/index.html#step-2-open-the-folder-in-the-vscode-and-change-and-update-the-necessary-details-and-content.",
+    "href": "setup/index.html#step-2-open-the-folder-in-the-vscode-and-change-and-update-the-necessary-details-and-content.",
+    "title": "Setting Up of Quarto",
+    "section": "Step 2: Open the folder in the VScode and change and update the necessary details and content.",
+    "text": "Step 2: Open the folder in the VScode and change and update the necessary details and content.\nYou can author Quarto documents that include Python code using any text or notebook editor. No matter what editing tool you use, you’ll always run quarto preview first to setup a live preview of changes in your document. Live preview is available for both HTML and PDF output. For example:\nUse any of the following options to create your personal website designed in Quarto.\n# preview as html\nquarto preview index.qmd\n\n# preview as pdf\nquarto preview index.qmd --to pdf\n\n# preview a jupyter notebook\nquarto preview index.ipynb\n\nRendering\nYou can use quarto render command line options to control caching behavior without changing the document’s code. Use options to force the use of caching on all chunks, disable the use of caching on all chunks (even if it’s specified in options), or to force a refresh of the cache even if it has not been invalidated:\n# use a cache (even if not enabled in options)\nquarto render example.qmd --cache \n\n# don't use a cache (even if enabled in options)\nquarto render example.qmd --no-cache \n\n# use a cache and force a refresh \nquarto render example.qmd --cache-refresh",
+    "crumbs": [
+      "Home",
+      "Setting-up"
+    ]
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-1-install-python",
+    "href": "setup/slides-quarto.html#step-1-install-python",
+    "title": "Setting Up of Quarto",
+    "section": "Step 1: Install Python",
+    "text": "Step 1: Install Python\n\nDownload and Install Python\n\nGo to the official Python website.\nDownload the latest stable version of Python suitable for your operating system (Windows, macOS, or Linux).\nRun the installer and ensure you check the box to “Add Python to PATH” during installation.\nFollow the on-screen instructions to complete the installation."
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-2-install-visual-studio-code-vs-code",
+    "href": "setup/slides-quarto.html#step-2-install-visual-studio-code-vs-code",
+    "title": "Setting Up of Quarto",
+    "section": "Step 2: Install Visual Studio Code (VS Code)",
+    "text": "Step 2: Install Visual Studio Code (VS Code)\n\nDownload and Install Visual Studio Code (VS Code)\n\nVisit the official VS Code website.\nDownload the installer for your operating system.\nRun the installer and follow the prompts to install VS Code.\nAfter installation, open VS Code and install the recommended extensions:\n\nPython Extension: Search for “Python” in the Extensions view (Ctrl+Shift+X) and install it.\nQuarto Extension: Search for “Quarto” in the Extensions view and install it."
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-3-install-quarto-cli",
+    "href": "setup/slides-quarto.html#step-3-install-quarto-cli",
+    "title": "Setting Up of Quarto",
+    "section": "Step 3: Install Quarto CLI",
+    "text": "Step 3: Install Quarto CLI\n\nDownload and Install Quarto CLI\n\nVisit the Quarto CLI download page.\nDownload the latest stable release of Quarto CLI for your operating system.\nRun the installer and follow the on-screen instructions to complete the installation.\nAfter installation, verify that Quarto CLI is correctly installed by opening a command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows) and typing:\nquarto --version"
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-4-install-git-for-cicd",
+    "href": "setup/slides-quarto.html#step-4-install-git-for-cicd",
+    "title": "Setting Up of Quarto",
+    "section": "Step 4: Install Git for CI/CD",
+    "text": "Step 4: Install Git for CI/CD\n\nDownload and Install Git\n\nVisit the official Git website.\nDownload the installer for your operating system.\nRun the installer and follow the prompts. You can use the default settings for most options.\nEnsure Git is added to your system PATH by checking the appropriate option during installation.\n\nConfigure Git\n\nOpen your command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows).\nConfigure your Git username and email:\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"your.email@example.com\"\nVerify the installation by checking the Git version:\ngit --version"
+  },
+  {
+    "objectID": "setup/slides-quarto.html#literate-programming-workflow",
+    "href": "setup/slides-quarto.html#literate-programming-workflow",
+    "title": "Setting Up of Quarto",
+    "section": "Literate Programming Workflow",
+    "text": "Literate Programming Workflow\n\n\n\n\n\n---\n Literate Programming Workflow\n---\ngraph TD\n    A[Python] --&gt;|Code Execution| B[Quarto CLI]\n    B --&gt;|Document Rendering| C[Technical Documents]\n    B --&gt;|Document Rendering| D[Blogs]\n    B --&gt;|Document Rendering| E[Websites]\n    E --&gt;|Host| F[GitHub Pages]\n    G[Git] --&gt;|Version Control| C\n    G --&gt;|Version Control| D\n    G --&gt;|Version Control| E\n    G --&gt;|CI/CD| F\n\n    subgraph Development\n        A\n        B\n        G\n    end\n\n    subgraph Output\n        C\n        D\n        E\n        F\n    end\n\n    style Development fill:#f9f,stroke:#333,stroke-width:2px\n    style Output fill:#ccf,stroke:#333,stroke-width:2px"
+  },
+  {
+    "objectID": "setup/slides-quarto.html#creating-your-personal-website",
+    "href": "setup/slides-quarto.html#creating-your-personal-website",
+    "title": "Setting Up of Quarto",
+    "section": "Creating Your Personal Website",
+    "text": "Creating Your Personal Website"
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-1-clone-the-website-template-respository-from-github",
+    "href": "setup/slides-quarto.html#step-1-clone-the-website-template-respository-from-github",
+    "title": "Setting Up of Quarto",
+    "section": "Step 1: Clone the Website template respository from Github",
+    "text": "Step 1: Clone the Website template respository from Github\nCopy the following Github repo url and clone using Vscode source control.\nhttps://github.com/sijuswamy/Website-Template"
+  },
+  {
+    "objectID": "setup/slides-quarto.html#step-2-open-the-folder-in-the-vscode-and-change-and-update-the-necessary-details-and-content.",
+    "href": "setup/slides-quarto.html#step-2-open-the-folder-in-the-vscode-and-change-and-update-the-necessary-details-and-content.",
+    "title": "Setting Up of Quarto",
+    "section": "Step 2: Open the folder in the VScode and change and update the necessary details and content.",
+    "text": "Step 2: Open the folder in the VScode and change and update the necessary details and content.\nUse any of the following options to create your personal website designed in Quarto.\n# preview as html\nquarto preview index.qmd\n\n# preview as pdf\nquarto preview index.qmd --to pdf\n\n# preview a jupyter notebook\nquarto preview index.ipynb\nRendering\nYou can use quarto render command line options to control caching behavior without changing the document’s code. Use options to force the use of caching on all chunks, disable the use of caching on all chunks (even if it’s specified in options), or to force a refresh of the cache even if it has not been invalidated:\n# use a cache (even if not enabled in options)\nquarto render example.qmd --cache \n\n# don't use a cache (even if enabled in options)\nquarto render example.qmd --no-cache \n\n# use a cache and force a refresh \nquarto render example.qmd --cache-refresh"
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html",
+    "href": "Instructional_design/Instru_design.html",
+    "title": "Instructional Design for Python Programming",
+    "section": "",
+    "text": "Instructional design is a systematic process used to create educational experiences and materials that effectively facilitate learning and improve student outcomes. It involves analyzing learners’ needs, defining clear objectives, structuring content, and selecting appropriate teaching methods and resources to achieve those objectives. Unlike a syllabus, which outlines the topics and schedule of a course, instructional design focuses on the pedagogical approach, instructional strategies, and assessment methods to ensure that the content is delivered in a way that maximizes learning.\nWhile the syllabus provides a roadmap of what will be taught, instructional design details the “how” and “why” of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#introduction",
+    "href": "Instructional_design/Instru_design.html#introduction",
+    "title": "Instructional Design for Python Programming",
+    "section": "",
+    "text": "Instructional design is a systematic process used to create educational experiences and materials that effectively facilitate learning and improve student outcomes. It involves analyzing learners’ needs, defining clear objectives, structuring content, and selecting appropriate teaching methods and resources to achieve those objectives. Unlike a syllabus, which outlines the topics and schedule of a course, instructional design focuses on the pedagogical approach, instructional strategies, and assessment methods to ensure that the content is delivered in a way that maximizes learning.\nWhile the syllabus provides a roadmap of what will be taught, instructional design details the “how” and “why” of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#course-title-python-programming-for-algorithmic-thinking",
+    "href": "Instructional_design/Instru_design.html#course-title-python-programming-for-algorithmic-thinking",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Title: Python Programming (for Algorithmic Thinking)",
+    "text": "Course Title: Python Programming (for Algorithmic Thinking)\n\n\n\n\n\n\nCourse Description:\n\n\n\nThis lab-based one credit course introduces algorithmic thinking through Python programming. Designed for engineers, it covers fundamental programming concepts and their application to real-world problems. The course emphasizes the development of algorithms and their implementation in Python, preparing students to approach problem-solving methodically.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#course-objectives",
+    "href": "Instructional_design/Instru_design.html#course-objectives",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nThe course objectives for “Python Programming for Algorithmic Thinking” are designed to provide immediate, actionable goals that students are expected to achieve through successful execution of the course sessions. Each objective is directly aligned with hands-on lab exercises and practical coding tasks, ensuring that students gain relevant skills that are immediately applicable. The focus on these specific objectives not only prepares students to tackle fundamental programming challenges but also builds a strong foundation for advanced coursework and professional engineering tasks.\nThe course objecives are:\n\nCharacterize and Identify Computer Components:\n\nUnderstand and describe the functional units and components of a computer system, including hardware, software, and language translators.\n\nDevelop Proficiency in Python Programming:\n\nGain the ability to code, test, and debug simple Python programs, demonstrating proficiency in basic programming concepts and practices.\n\nImplement Control Structures:\n\nApply branching and looping statements in Python to develop programs that solve problems through conditional logic and repetitive tasks.\n\nUtilize Python Data Structures:\n\nEffectively use supported data structures such as lists, dictionaries, and tuples to organize and manage data in Python programs.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#course-outcomes",
+    "href": "Instructional_design/Instru_design.html#course-outcomes",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Outcomes",
+    "text": "Course Outcomes\nThe course outcomes represent measurable deliverables that students will gain upon completing the course. They are designed to be immediately applicable in subsequent courses and professional settings, ensuring that graduates are well-prepared for both advanced studies and real-world engineering challenges.\nCourse outcomes of ‘Python Programming’ are:\nAfter the successful completion of the course, the graduate will be able to:\n\nDesign and Implement Algorithms:\n\nDevelop, analyze, and apply algorithms to solve a variety of computational problems using Python.\n\nProgram Efficiently in Python:\n\nWrite, debug, and optimize Python code, utilizing core programming constructs and data structures effectively.\n\nApply Data Structures and Functions:\n\nUse Python’s data structures, such as lists, tuples, and dictionaries, and modularize code with functions for efficient problem-solving.\n\nUtilize Development Tools:\n\nLeverage development tools like GitHub and Raptor for effective coding, documentation, and algorithm visualization.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#course-introduction",
+    "href": "Instructional_design/Instru_design.html#course-introduction",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Introduction",
+    "text": "Course Introduction\nTo introduce the “Python Programming for Algorithmic Thinking” course to students from various branches, begin by explaining the universal relevance of algorithmic thinking in everyday problem-solving. Use a simple context, such as organizing a group project: just as you would plan tasks and delegate responsibilities to ensure the project is completed efficiently and effectively, algorithmic thinking involves creating systematic methods to solve problems. A block diagram representing this example is given below.\n\n\n\n\n\n\ngraph TD\n    A[Start Project] --&gt; B[Identify Objectives]\n    B --&gt; C[Break Down Tasks]\n    C --&gt; D[Assign Responsibilities]\n    D --&gt; E[Set Deadlines]\n    E --&gt; F[Execute Tasks]\n    F --&gt; G[Monitor Progress]\n    G --&gt; H[Review and Adjust]\n    H --&gt; I[Complete Project]\n    I --&gt; J[Project Successful]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style G fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style H fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style I fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style J fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 1: State diagram to successfully finish a project.\n\n\n\n\n\nEmphasize that the (the algorithmic thinking) skills learned will be valuable across all engineering disciplines, enhancing their problem-solving capabilities and preparing them for complex challenges in their academic and professional careers. This approach will help students appreciate the broad applicability of the course content and encourage active participation.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#a-seven-in-one-problem",
+    "href": "Instructional_design/Instru_design.html#a-seven-in-one-problem",
+    "title": "Instructional Design for Python Programming",
+    "section": "A Seven-in-One Problem!",
+    "text": "A Seven-in-One Problem!\nIn this context, we will explore how algorithmic thinking can be applied across different engineering branches using a common example. Each branch of engineering plays a critical role in developing and implementing this system, demonstrating the relevance and application of algorithms in diverse fields. Let us formulate the context and problem statement as follows.\n\n\n\n\n\n\nContext:\n\n\n\nA city wants to implement a smart traffic management system to improve traffic flow and reduce congestion at intersections. The system will use sensors and data analysis to control traffic lights dynamically.\n\n\n\n\n\n\n\n\nProblem:\n\n\n\nDesign an algorithm to manage traffic lights at a busy intersection based on real-time traffic data from sensors. The goal is to optimize traffic flow and minimize waiting times for vehicles.\n\n\n\nSteps for Algorithmic Thinking:",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#civil-engineering",
+    "href": "Instructional_design/Instru_design.html#civil-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "1. Civil Engineering",
+    "text": "1. Civil Engineering\n\nProblem: Design the layout of the intersection to ensure efficient traffic flow.\nAlgorithm: Develop an algorithm to determine optimal road layouts and signal timings based on traffic volume and road capacity.\n\nThe block diagram is shown in Fig- 2\n\n\n\n\n\n\ngraph TD\n    A[Design Intersection Layout] --&gt; B[Analyze Traffic Volume]\n    B --&gt; C[Determine Optimal Signal Timings]\n    C --&gt; D[Implement Traffic Light Control]\n    D --&gt; E[Monitor Traffic Flow]\n    E --&gt; F[Adjust Layout Based on Data]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 2: State diagram for Civil Engineering Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#mechanical-engineering",
+    "href": "Instructional_design/Instru_design.html#mechanical-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "2. Mechanical Engineering:",
+    "text": "2. Mechanical Engineering:\n\nProblem: Create a mechanism for automated traffic lights that can withstand varying weather conditions.\nAlgorithm: Develop an algorithm to control the mechanical parts of traffic lights and adjust for environmental factors.\n\nThe block diagram is shown in Fig- 3\n\n\n\n\n\n\ngraph TD\n    A[Design Traffic Light Mechanism] --&gt; B[Select Durable Materials]\n    B --&gt; C[Create Weather-Resistant Design]\n    C --&gt; D[Develop Control Mechanism]\n    D --&gt; E[Automate Traffic Light Adjustments]\n    E --&gt; F[Test Mechanism for Reliability]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 3: State diagram for Mechanical Engineering Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#chemical-engineering",
+    "href": "Instructional_design/Instru_design.html#chemical-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "3. Chemical Engineering:",
+    "text": "3. Chemical Engineering:\n\nProblem: Design materials for road signs and sensors that are durable and effective.\nAlgorithm: Develop an algorithm to evaluate and select materials based on their chemical properties and environmental impact.\n\nThe block diagram is shown in Fig- 4\n\n\n\n\n\n\ngraph TD\n    A[Design Road Signs and Sensors] --&gt; B[Evaluate Material Properties]\n    B --&gt; C[Select Chemical-Resistant Materials]\n    C --&gt; D[Ensure Environmental Impact]\n    D --&gt; E[Test Durability]\n    E --&gt; F[Implement in Traffic System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 4: State diagram for Chemical Engineering Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#food-technology",
+    "href": "Instructional_design/Instru_design.html#food-technology",
+    "title": "Instructional Design for Python Programming",
+    "section": "4. Food Technology:",
+    "text": "4. Food Technology:\n\nProblem: Ensure that traffic management systems in areas with food distribution centers do not disrupt deliveries.\nAlgorithm: Create an algorithm to prioritize traffic flow for delivery vehicles during peak hours to avoid delays.\n\nThe block diagram is shown in Fig- 5\n\n\n\n\n\n\ngraph TD\n    A[Assess Impact on Delivery Routes] --&gt; B[Prioritize Delivery Vehicles]\n    B --&gt; C[Design Traffic Light Scheduling]\n    C --&gt; D[Implement Scheduling in System]\n    D --&gt; E[Monitor Delivery Efficiency]\n    E --&gt; F[Adjust Based on Feedback]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 5: State diagram for Food Engineering Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#electronics-and-communication",
+    "href": "Instructional_design/Instru_design.html#electronics-and-communication",
+    "title": "Instructional Design for Python Programming",
+    "section": "5. Electronics and Communication:",
+    "text": "5. Electronics and Communication:\n\nProblem: Implement sensor networks and communication systems for data collection and signal control.\nAlgorithm: Develop algorithms for data transmission, sensor data integration, and communication between traffic lights and control systems.\n\nThe block diagram is shown in Fig- 6\n\n\n\n\n\n\ngraph TD\n    A[Implement Sensor Network] --&gt; B[Design Data Transmission System]\n    B --&gt; C[Integrate Sensors with Traffic Lights]\n    C --&gt; D[Develop Communication Protocols]\n    D --&gt; E[Ensure Reliable Data Transfer]\n    E --&gt; F[Optimize Communication System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 6: State diagram for Electronics and Communication Engineering Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#robotics-and-automation",
+    "href": "Instructional_design/Instru_design.html#robotics-and-automation",
+    "title": "Instructional Design for Python Programming",
+    "section": "6. Robotics and Automation:",
+    "text": "6. Robotics and Automation:\n\nProblem: Automate the adjustment of traffic lights based on real-time data.\nAlgorithm: Design an algorithm to control automated systems that adjust traffic lights dynamically based on sensor data and predefined rules.\n\nThe block diagram is shown in Fig- 7\n\n\n\n\n\n\ngraph TD\n    A[Develop Automation System] --&gt; B[Create Real-Time Adjustment Algorithms]\n    B --&gt; C[Integrate with Traffic Lights]\n    C --&gt; D[Test for Dynamic Control]\n    D --&gt; E[Optimize Automation for Traffic Flow]\n    E --&gt; F[Monitor and Refine System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 7: State diagram for Robotics Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#computer-science",
+    "href": "Instructional_design/Instru_design.html#computer-science",
+    "title": "Instructional Design for Python Programming",
+    "section": "7. Computer Science:",
+    "text": "7. Computer Science:\n\nProblem: Create a software system to process traffic data and control traffic lights.\nAlgorithm: Develop a software algorithm that processes data from traffic sensors, makes real-time decisions on traffic light timings, and adjusts signals to optimize traffic flow.\n\nThe block diagram is shown in Fig- 8\n\n\n\n\n\n\ngraph TD\n    A[Develop Software System] --&gt; B[Process Traffic Data]\n    B --&gt; C[Implement Decision-Making Algorithms]\n    C --&gt; D[Control Traffic Lights Based on Data]\n    D --&gt; E[Test and Debug System]\n    E --&gt; F[Deploy and Monitor System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 8: State diagram for Computer Science Tribe.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#expected-partial-outcome",
+    "href": "Instructional_design/Instru_design.html#expected-partial-outcome",
+    "title": "Instructional Design for Python Programming",
+    "section": "Expected Partial Outcome",
+    "text": "Expected Partial Outcome\nBy designing and implementing algorithms for this traffic management system, engineers from various branches contribute to creating a more efficient and responsive traffic control system. Each branch applies algorithmic thinking to address specific aspects of the problem, demonstrating the relevance and application of algorithms in real-world scenarios.\n\n\n\n\n\n\nKey Takeaway\n\n\n\nBy engaging with the various engineering contexts illustrated through algorithmic thinking, students will gain a deeper appreciation for how structured problem-solving can lead to better planning, efficient design, and successful execution in real-world scenarios. Algorithmic thinking is not just about writing code but about systematically breaking down complex challenges into manageable steps, which is crucial for effective engineering solutions. Understanding and applying this approach will empower students to tackle problems more efficiently, optimize processes, and enhance their ability to innovate across different engineering disciplines.\n\n\nThe next session will focus on translating the conceptual framework of algorithmic thinking into a computational framework. This transition will involve exploring the fundamental components and functions of computer systems, which are essential for implementing algorithms in a practical programming environment.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#conceptual-to-computational",
+    "href": "Instructional_design/Instru_design.html#conceptual-to-computational",
+    "title": "Instructional Design for Python Programming",
+    "section": "Conceptual to Computational",
+    "text": "Conceptual to Computational\nAlgorithmic thinking offers a robust conceptual framework for addressing complex problems through systematic decomposition into manageable steps. This method allows for effective planning, design, and implementation of solutions. However, transitioning from conceptual frameworks to practical applications necessitates a foundational understanding of computer systems.\nTo effectively translate algorithmic concepts into computational implementations, it is essential to grasp how computer systems operate. Knowledge of computer architecture, software types, and various programming tools is crucial for converting algorithms into executable programs and optimizing these solutions.\nThis course will introduce the basic components and functions of computer systems, including hardware, software, and programming environments. This foundational understanding will bridge the gap between theoretical algorithmic thinking and practical computational implementation, facilitating the effective application of algorithms in programming tasks. ### Familiarization of Computer System, Editors, Various Language Translators\n\nIntroduction to Computer Architecture\n1. Block Diagram of Computer: The block diagram of a computer provides a visual representation of its major components and their interconnections. It typically includes the Central Processing Unit (CPU), Memory, Input Devices, Output Devices, and Storage Units. This diagram helps in understanding the flow of data and control signals within the computer system. A sample block diagram is shown in Fig- 9.\n\n\n\n\n\n\nFigure 9: Block Diagram of a Computer\n\n\n\n2. Hardware: Hardware refers to the physical components of a computer system. It includes the CPU, motherboard, RAM, hard drives, input devices (such as keyboards and mice), output devices (such as monitors and printers), and peripheral devices. Understanding hardware is crucial for comprehending how software interacts with physical components to perform tasks.\n3. Input and Output Devices: - Input Devices: These are devices used to enter data into a computer. Common examples include keyboards, mice, scanners, and microphones. - Output Devices: These devices display or output data from the computer. Examples include monitors, printers, and speakers.\n4. Memory: Memory in a computer system is used to store data and instructions. It includes: - Primary Memory (RAM): Volatile memory that temporarily holds data and instructions currently in use. - Secondary Memory (Storage): Non-volatile memory used for long-term data storage, such as hard drives and SSDs.\n\n\nSoftware\n1. Types of Software: - System Software: Includes operating systems (e.g., Windows, macOS, Linux) that manage hardware resources and provide a platform for running applications. - Application Software: Programs designed for end-users to perform specific tasks, such as word processors, web browsers, and games.\n2. High-Level Languages: High-level programming languages are designed to be easy for humans to read and write. Examples include Python, Java, and C++. They are used to write programs that are compiled or interpreted into machine code.\n3. Low-Level Languages: Low-level languages are closer to machine code and provide less abstraction from the hardware. Examples include assembly language, which is specific to a particular computer architecture and provides a symbolic representation of machine instructions.\n4. Assembly Languages: Assembly language is a low-level programming language that uses symbolic names for instructions and data. It is specific to a computer architecture and is used to write programs that interact directly with hardware.\n\n\nLanguage Translators\n1. Compiler: A compiler is a program that translates high-level source code into machine code or intermediate code that can be executed by the computer. It performs syntax checking, optimization, and generates executable files.\n2. Interpreter: An interpreter translates high-level source code into machine code line-by-line or statement-by-statement at runtime. It does not produce an executable file but directly executes the instructions. Examples include Python interpreters.\n3. Assembler: An assembler translates assembly language code into machine code. It converts symbolic instructions into binary instructions that the computer’s CPU can execute.\n\n\n\n\n\n\nNeed and Significance of Technical Know-how on Computer System\n\n\n\nUnderstanding the fundamentals of computer systems, including hardware components, software types, and language translators, is crucial for engineers as they move from conceptual ideas to practical, computer-based solutions. Familiarity with computer architecture helps engineers grasp how different hardware elements interact and how data flows through the system. Knowledge of software types and language translators enables engineers to select appropriate programming tools and languages for implementing their algorithms efficiently.\n\n\nBefore delving into the development of algorithms and flow charts, it is essential to understand the fundamental concepts of the computer system, as they provide the groundwork for translating conceptual ideas into computational solutions. The knowledge of computer architecture, memory, and software helps in effectively implementing and visualizing algorithms within a computer system.\nWith this foundational understanding in place, the focus shifts to developing algorithms and flow charts, which are designed with specific structures to facilitate standardization.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#developing-algorithms-and-flow-charts",
+    "href": "Instructional_design/Instru_design.html#developing-algorithms-and-flow-charts",
+    "title": "Instructional Design for Python Programming",
+    "section": "Developing Algorithms and Flow Charts",
+    "text": "Developing Algorithms and Flow Charts\nIn the computational framework, standardizing the step-by-step process of algorithmic thinking is crucial for ensuring consistency and clarity in program development.\n\nIntroduction to Algorithms\n1. What is an Algorithm?\nAn algorithm is a well-defined sequence of steps or instructions designed to perform a specific task or solve a particular problem. It serves as a blueprint for writing computer programs. Algorithms are essential for problem-solving as they provide a clear and systematic approach to achieving desired outcomes.\n2. Properties of a Good Algorithm\nA well-constructed algorithm possesses several key properties: - Finiteness: The algorithm must have a finite number of steps and should terminate after a certain number of operations. - Definiteness: Each step of the algorithm should be precisely defined and unambiguous. - Input: The algorithm should accept zero or more inputs, which are the data necessary for its execution. - Output: The algorithm should produce at least one output, which is the result or solution of the problem. - Effectiveness: Each step of the algorithm should be basic enough to be executed within a finite amount of time.\n\n\nIntroduction to Flow Charts\n1. What is a Flow Chart?\nA flow chart is a visual representation of an algorithm, using various symbols to denote different types of operations or steps. Flow charts help in understanding and communicating the logic of an algorithm more clearly by illustrating the flow of control and decision-making process.\n2. Key Symbols in Flow Charts\n\nOval: Represents the start and end points of the flow chart.\nRectangle: Indicates a process or action step.\nDiamond: Denotes a decision point, where branching occurs based on conditions.\nParallelogram: Used for input and output operations.\nArrow: Shows the direction of flow between steps.\n\n\n\n\n\n\n\nStandardizing Algorithmic Thinking\n\n\n\nIn the computational framework, algorithms and flow charts are designed with a specific structure to ensure that the problem-solving approach is standardized. This standardization helps in maintaining consistency in how algorithms are developed, communicated, and executed. By adhering to these standardized structures, engineers and programmers can more effectively design, analyze, and implement solutions, ensuring that the computational processes are efficient and reliable.\n\n\nIn the upcoming sessions, students will have the opportunity to explore more examples and apply the principles of algorithmic thinking and flowchart design to a variety of problems.\n\n\n1. Crossing a Traffic Signal\nProblem: Write the algorithm and flowchart for the program to determine whether a pedestrian can cross the road based on the traffic signal color.\nAlgorithm:\n\nStart\nObserve the traffic signal color\nIf the signal is green, “Cross the road”\nElse if the signal is yellow, “Wait”\nElse if the signal is red, “wait”\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 10.\n\n\n\n\n\n\nflowchart TD\n    A((Start)) --&gt; B{Check traffic light color}\n    B -- Red --&gt; C[Wait]\n    B -- Yellow --&gt; D[Wait]\n    B -- Green --&gt; E[Cross the road]\n    C --&gt; B\n    D --&gt; B\n    E --&gt; F((Stop))\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,H startEnd;\n    class B,D,F,G inputOutput;\n    class C,E decision;\n\n\n\n\nFigure 10: Flowchart of the program to cross the trafic signal.\n\n\n\n\n\n\n\n2. Finding the Maximum of Two Numbers\nProblem: Write the algorithm and draw the flowchart for the program that takes two numbers as input and prints the larger of the two.\n\n\nAlgorithm:\n\nStart\nInput two numbers, A and B\nIf A is greater than B, print A\nOtherwise, print B\nEnd\n\n\n\nFlowchart\nFlowchart for this program is shown in Fig- 11.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B[Input A and B]\n    B --&gt; C{Is A &gt; B?}\n    C -- Yes --&gt; D[Print A]\n    C -- No --&gt; E[Print B]\n    D --&gt; F([End])\n    E --&gt; F\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,F startEnd;\n    class B,D,E inputOutput;\n    class C decision;\n\n\n\n\nFigure 11: Flowchart of the program to find larger of two numbers.\n\n\n\n\n\n\n\n3. Finding the Largest of Three Numbers\nProblem: Write a program that takes three numbers as input and prints the largest of the three.\nAlgorithm:\n\nStart\nInput three numbers, A, B, and C\nIf A is greater than B and A is greater than C, print A\nElse if B is greater than A and B is greater than C, print B\nOtherwise, print C\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 12.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B[Input A, B, and C]\n    B --&gt; C{Is A &gt; B?}\n    C --&gt;|Yes| D{Is A &gt; C?}\n    C --&gt;|No| E{Is B &gt; C?}\n    D -- Yes --&gt; F[Print A]\n    D -- No --&gt; G[Print C]\n    E -- Yes --&gt; H[Print B]\n    E -- No --&gt; G\n    F --&gt; I([End])\n    H --&gt; I\n    G --&gt; I\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,I startEnd;\n    class B,F,H inputOutput;\n    class C,D,E decision;\n\n\n\n\nFigure 12: Flowchart of the program to find largest of three numbers.\n\n\n\n\n\n\n\n4. Class Joining Dilema\nProblem: Write the algorithm and draw the flowchart for the program to determine whether a student will join a class based on whether their favorite teacher and best friend are in the class.\nAlgorithm:\n\nStart\nObserve the presence of the favorite teacher\nObserve the presence of the best friend\nIf both the favorite teacher and the best friend are present, “Join the class”\nElse, “Do not join the class”\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 13.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B{Is favourite teacher in class?}\n    B -- Yes --&gt; C{Is best friend in class?}\n    C -- Yes --&gt; D[Joins class]\n    B -- No --&gt; E[Does not join class]\n    C -- No --&gt; E[Does not join class]\n    E --&gt; F([Stop])\n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,I startEnd;\n    class B,F,H inputOutput;\n    class C,D,E decision;\n\n\n\n\nFigure 13: Flowchart of the program to join the class",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#transition-from-algorithmic-thinking-to-programming",
+    "href": "Instructional_design/Instru_design.html#transition-from-algorithmic-thinking-to-programming",
+    "title": "Instructional Design for Python Programming",
+    "section": "Transition from Algorithmic Thinking to Programming",
+    "text": "Transition from Algorithmic Thinking to Programming\nThe algorithmic thinking process involves breaking down a problem into a series of logical steps, as illustrated by our flowcharts. This conceptual framework is very important for defining clear, sequential instructions to solve a problem. However, to bring these concepts into a practical domain, we need to translate them into a programming language that can execute these instructions.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#transition-from-algorithmic-thinking-to-programming-1",
+    "href": "Instructional_design/Instru_design.html#transition-from-algorithmic-thinking-to-programming-1",
+    "title": "Instructional Design for Python Programming",
+    "section": "Transition from Algorithmic Thinking to Programming",
+    "text": "Transition from Algorithmic Thinking to Programming\nAlgorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like C, C++, and Java have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with Python, highlighting why Python is particularly suitable for computational thinking in engineering.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#historical-context-and-comparison",
+    "href": "Instructional_design/Instru_design.html#historical-context-and-comparison",
+    "title": "Instructional Design for Python Programming",
+    "section": "Historical Context and Comparison",
+    "text": "Historical Context and Comparison\n\nC Language\nDeveloped in the early 1970s, C is one of the earliest high-level programming languages. It provides a foundation for many modern languages and is known for its performance and low-level memory manipulation capabilities. C requires explicit management of memory and pointers, which adds complexity to code. While powerful, it lacks some of the high-level abstractions and simplicity found in Python.\n\n\nC++ Language\nAn extension of C, C++ was developed in the early 1980s and introduced object-oriented programming features. It allows for complex data modeling and high-performance applications. C++ offers more control over system resources but at the cost of increased complexity. It involves managing object-oriented concepts and memory explicitly, which can be challenging for beginners.\n\n\nJava Language\nDeveloped in the mid-1990s, Java is known for its portability across platforms, thanks to the Java Virtual Machine (JVM). It emphasizes object-oriented programming and has extensive libraries. Java’s syntax is more verbose compared to Python. It requires managing class structures and access modifiers, which can make code less straightforward to write and read.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Instru_design.html#why-python-is-preferred-for-computational-thinking",
+    "href": "Instructional_design/Instru_design.html#why-python-is-preferred-for-computational-thinking",
+    "title": "Instructional Design for Python Programming",
+    "section": "Why Python is Preferred for Computational Thinking?",
+    "text": "Why Python is Preferred for Computational Thinking?\nPython, created by Guido van Rossum and first released in 1991, emerged from a desire to develop a language that was both easy to read and write, while also being powerful enough to handle complex tasks. It was inspired by the ABC language, which van Rossum had worked on during his time at Centrum Wiskunde & Informatica (CWI) in the Netherlands. Python’s base code was written in C, which provides a solid foundation for its extensive standard library and cross-platform capabilities. The language emphasizes readability and simplicity, featuring an elegant syntax that allows programmers to express concepts in fewer lines of code compared to many other languages. This design philosophy has contributed to Python’s widespread adoption across various fields, from web development to scientific computing and engineering. Popular features of Python programming language are:\n\n1. Readability and Simplicity\nPython’s syntax is designed to be clear and intuitive, resembling natural language. This simplicity allows engineers to focus on the logic of their algorithms without being bogged down by complex syntax. For computational thinking, where clarity and understanding are crucial, Python’s readability reduces cognitive load, making it easier to implement and debug algorithms.\n\n\n2. Versatility and Ease of Use\nPython supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its versatility makes it suitable for a wide range of applications, from simple scripts to complex systems. This adaptability is particularly useful in engineering, where problems often span different domains and require diverse approaches.\n\n\n3. Rich Libraries and Frameworks\nPython’s extensive standard library and third-party modules simplify many tasks. Libraries such as NumPy for numerical computations, pandas for data manipulation, and Matplotlib for visualization provide powerful tools for engineers. These libraries streamline the implementation of complex algorithms and data handling, making Python an efficient choice for solving engineering problems.\n\n\n\n\n\n\nVerdict\n\n\n\nThe historical languages like C, C++, and Java have their strengths, Python’s readability, versatility, and extensive libraries make it particularly well-suited for computational thinking in engineering. By transitioning from conceptual algorithmic thinking to practical Python programming, engineers can effectively apply and implement their problem-solving strategies in a straightforward and efficient manner.\n\n\nFuture sessions will delve into various Python examples, reinforcing the practical application of these concepts and preparing students for advanced problem-solving in their respective engineering fields.",
+    "crumbs": [
+      "Home",
+      "Instructional Design"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#course-title-python-programming-for-algorithmic-thinking",
+    "href": "Instructional_design/slides-quarto.html#course-title-python-programming-for-algorithmic-thinking",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Title: Python Programming (for Algorithmic Thinking)",
+    "text": "Course Title: Python Programming (for Algorithmic Thinking)\n\n\n\n\n\n\nCourse Description:\n\n\nThis lab-based one credit course introduces algorithmic thinking through Python programming. Designed for engineers, it covers fundamental programming concepts and their application to real-world problems. The course emphasizes the development of algorithms and their implementation in Python, preparing students to approach problem-solving methodically."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#course-objectives",
+    "href": "Instructional_design/slides-quarto.html#course-objectives",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Objectives",
+    "text": "Course Objectives\nThe course objecives are:\n\nCharacterize and Identify Computer Components:\n\nUnderstand and describe the functional units and components of a computer system, including hardware, software, and language translators.\n\nDevelop Proficiency in Python Programming:\n\nGain the ability to code, test, and debug simple Python programs, demonstrating proficiency in basic programming concepts and practices.\n\nImplement Control Structures:\n\nApply branching and looping statements in Python to develop programs that solve problems through conditional logic and repetitive tasks.\n\nUtilize Python Data Structures:\n\nEffectively use supported data structures such as lists, dictionaries, and tuples to organize and manage data in Python programs."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#course-outcomes",
+    "href": "Instructional_design/slides-quarto.html#course-outcomes",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Outcomes",
+    "text": "Course Outcomes\nAfter the successful completion of the course, the graduate will be able to:\n\nDesign and Implement Algorithms:\n\nDevelop, analyze, and apply algorithms to solve a variety of computational problems using Python.\n\nProgram Efficiently in Python:\n\nWrite, debug, and optimize Python code, utilizing core programming constructs and data structures effectively.\n\nApply Data Structures and Functions:\n\nUse Python’s data structures, such as lists, tuples, and dictionaries, and modularize code with functions for efficient problem-solving.\n\nUtilize Development Tools:\n\nLeverage development tools like GitHub and Raptor for effective coding, documentation, and algorithm visualization."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#course-introduction",
+    "href": "Instructional_design/slides-quarto.html#course-introduction",
+    "title": "Instructional Design for Python Programming",
+    "section": "Course Introduction",
+    "text": "Course Introduction\nTo introduce the “Python Programming for Algorithmic Thinking” course to students from various branches, begin by explaining the universal relevance of algorithmic thinking in everyday problem-solving. Use a simple context, such as organizing a group project: just as you would plan tasks and delegate responsibilities to ensure the project is completed efficiently and effectively, algorithmic thinking involves creating systematic methods to solve problems. A block diagram representing this example is given below.\n\n\n\n\n\n\ngraph TD\n    A[Start Project] --&gt; B[Identify Objectives]\n    B --&gt; C[Break Down Tasks]\n    C --&gt; D[Assign Responsibilities]\n    D --&gt; E[Set Deadlines]\n    E --&gt; F[Execute Tasks]\n    F --&gt; G[Monitor Progress]\n    G --&gt; H[Review and Adjust]\n    H --&gt; I[Complete Project]\n    I --&gt; J[Project Successful]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style G fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style H fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style I fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style J fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 1: State diagram to successfully finish a project.\n\n\n\n\n\nEmphasize that the (the algorithmic thinking) skills learned will be valuable across all engineering disciplines, enhancing their problem-solving capabilities and preparing them for complex challenges in their academic and professional careers. This approach will help students appreciate the broad applicability of the course content and encourage active participation."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#a-seven-in-one-problem",
+    "href": "Instructional_design/slides-quarto.html#a-seven-in-one-problem",
+    "title": "Instructional Design for Python Programming",
+    "section": "A Seven-in-One Problem!",
+    "text": "A Seven-in-One Problem!\nIn this context, we will explore how algorithmic thinking can be applied across different engineering branches using a common example. Each branch of engineering plays a critical role in developing and implementing this system, demonstrating the relevance and application of algorithms in diverse fields. Let us formulate the context and problem statement as follows.\n\n\n\n\n\n\nContext:\n\n\nA city wants to implement a smart traffic management system to improve traffic flow and reduce congestion at intersections. The system will use sensors and data analysis to control traffic lights dynamically.\n\n\n\n\n\n\n\n\n\nProblem:\n\n\nDesign an algorithm to manage traffic lights at a busy intersection based on real-time traffic data from sensors. The goal is to optimize traffic flow and minimize waiting times for vehicles.\n\n\n\n\nSteps for Algorithmic Thinking:"
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#civil-engineering",
+    "href": "Instructional_design/slides-quarto.html#civil-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "1. Civil Engineering",
+    "text": "1. Civil Engineering\n\nProblem: Design the layout of the intersection to ensure efficient traffic flow.\nAlgorithm: Develop an algorithm to determine optimal road layouts and signal timings based on traffic volume and road capacity.\n\nThe block diagram is shown in Fig- 2\n\n\n\n\n\n\ngraph TD\n    A[Design Intersection Layout] --&gt; B[Analyze Traffic Volume]\n    B --&gt; C[Determine Optimal Signal Timings]\n    C --&gt; D[Implement Traffic Light Control]\n    D --&gt; E[Monitor Traffic Flow]\n    E --&gt; F[Adjust Layout Based on Data]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 2: State diagram for Civil Engineering Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#mechanical-engineering",
+    "href": "Instructional_design/slides-quarto.html#mechanical-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "2. Mechanical Engineering:",
+    "text": "2. Mechanical Engineering:\n\nProblem: Create a mechanism for automated traffic lights that can withstand varying weather conditions.\nAlgorithm: Develop an algorithm to control the mechanical parts of traffic lights and adjust for environmental factors.\n\nThe block diagram is shown in Fig- 3\n\n\n\n\n\n\ngraph TD\n    A[Design Traffic Light Mechanism] --&gt; B[Select Durable Materials]\n    B --&gt; C[Create Weather-Resistant Design]\n    C --&gt; D[Develop Control Mechanism]\n    D --&gt; E[Automate Traffic Light Adjustments]\n    E --&gt; F[Test Mechanism for Reliability]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 3: State diagram for Mechanical Engineering Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#chemical-engineering",
+    "href": "Instructional_design/slides-quarto.html#chemical-engineering",
+    "title": "Instructional Design for Python Programming",
+    "section": "3. Chemical Engineering:",
+    "text": "3. Chemical Engineering:\n\nProblem: Design materials for road signs and sensors that are durable and effective.\nAlgorithm: Develop an algorithm to evaluate and select materials based on their chemical properties and environmental impact.\n\nThe block diagram is shown in Fig- 4\n\n\n\n\n\n\ngraph TD\n    A[Design Road Signs and Sensors] --&gt; B[Evaluate Material Properties]\n    B --&gt; C[Select Chemical-Resistant Materials]\n    C --&gt; D[Ensure Environmental Impact]\n    D --&gt; E[Test Durability]\n    E --&gt; F[Implement in Traffic System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 4: State diagram for Chemical Engineering Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#food-technology",
+    "href": "Instructional_design/slides-quarto.html#food-technology",
+    "title": "Instructional Design for Python Programming",
+    "section": "4. Food Technology:",
+    "text": "4. Food Technology:\n\nProblem: Ensure that traffic management systems in areas with food distribution centers do not disrupt deliveries.\nAlgorithm: Create an algorithm to prioritize traffic flow for delivery vehicles during peak hours to avoid delays.\n\nThe block diagram is shown in Fig- 5\n\n\n\n\n\n\ngraph TD\n    A[Assess Impact on Delivery Routes] --&gt; B[Prioritize Delivery Vehicles]\n    B --&gt; C[Design Traffic Light Scheduling]\n    C --&gt; D[Implement Scheduling in System]\n    D --&gt; E[Monitor Delivery Efficiency]\n    E --&gt; F[Adjust Based on Feedback]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 5: State diagram for Food Engineering Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#electronics-and-communication",
+    "href": "Instructional_design/slides-quarto.html#electronics-and-communication",
+    "title": "Instructional Design for Python Programming",
+    "section": "5. Electronics and Communication:",
+    "text": "5. Electronics and Communication:\n\nProblem: Implement sensor networks and communication systems for data collection and signal control.\nAlgorithm: Develop algorithms for data transmission, sensor data integration, and communication between traffic lights and control systems.\n\nThe block diagram is shown in Fig- 6\n\n\n\n\n\n\ngraph TD\n    A[Implement Sensor Network] --&gt; B[Design Data Transmission System]\n    B --&gt; C[Integrate Sensors with Traffic Lights]\n    C --&gt; D[Develop Communication Protocols]\n    D --&gt; E[Ensure Reliable Data Transfer]\n    E --&gt; F[Optimize Communication System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 6: State diagram for Electronics and Communication Engineering Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#robotics-and-automation",
+    "href": "Instructional_design/slides-quarto.html#robotics-and-automation",
+    "title": "Instructional Design for Python Programming",
+    "section": "6. Robotics and Automation:",
+    "text": "6. Robotics and Automation:\n\nProblem: Automate the adjustment of traffic lights based on real-time data.\nAlgorithm: Design an algorithm to control automated systems that adjust traffic lights dynamically based on sensor data and predefined rules.\n\nThe block diagram is shown in Fig- 7\n\n\n\n\n\n\ngraph TD\n    A[Develop Automation System] --&gt; B[Create Real-Time Adjustment Algorithms]\n    B --&gt; C[Integrate with Traffic Lights]\n    C --&gt; D[Test for Dynamic Control]\n    D --&gt; E[Optimize Automation for Traffic Flow]\n    E --&gt; F[Monitor and Refine System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 7: State diagram for Robotics Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#computer-science",
+    "href": "Instructional_design/slides-quarto.html#computer-science",
+    "title": "Instructional Design for Python Programming",
+    "section": "7. Computer Science:",
+    "text": "7. Computer Science:\n\nProblem: Create a software system to process traffic data and control traffic lights.\nAlgorithm: Develop a software algorithm that processes data from traffic sensors, makes real-time decisions on traffic light timings, and adjusts signals to optimize traffic flow.\n\nThe block diagram is shown in Fig- 8\n\n\n\n\n\n\ngraph TD\n    A[Develop Software System] --&gt; B[Process Traffic Data]\n    B --&gt; C[Implement Decision-Making Algorithms]\n    C --&gt; D[Control Traffic Lights Based on Data]\n    D --&gt; E[Test and Debug System]\n    E --&gt; F[Deploy and Monitor System]\n\n    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;\n    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;\n    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;\n\n\n\n\nFigure 8: State diagram for Computer Science Tribe."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#expected-partial-outcome",
+    "href": "Instructional_design/slides-quarto.html#expected-partial-outcome",
+    "title": "Instructional Design for Python Programming",
+    "section": "Expected Partial Outcome",
+    "text": "Expected Partial Outcome\nBy designing and implementing algorithms for this traffic management system, engineers from various branches contribute to creating a more efficient and responsive traffic control system. Each branch applies algorithmic thinking to address specific aspects of the problem, demonstrating the relevance and application of algorithms in real-world scenarios.\n\n\n\n\n\n\nKey Takeaway\n\n\nBy engaging with the various engineering contexts illustrated through algorithmic thinking, students will gain a deeper appreciation for how structured problem-solving can lead to better planning, efficient design, and successful execution in real-world scenarios. Algorithmic thinking is not just about writing code but about systematically breaking down complex challenges into manageable steps, which is crucial for effective engineering solutions. Understanding and applying this approach will empower students to tackle problems more efficiently, optimize processes, and enhance their ability to innovate across different engineering disciplines.\n\n\n\nThe next session will focus on translating the conceptual framework of algorithmic thinking into a computational framework. This transition will involve exploring the fundamental components and functions of computer systems, which are essential for implementing algorithms in a practical programming environment."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#conceptual-to-computational",
+    "href": "Instructional_design/slides-quarto.html#conceptual-to-computational",
+    "title": "Instructional Design for Python Programming",
+    "section": "Conceptual to Computational",
+    "text": "Conceptual to Computational\nAlgorithmic thinking offers a robust conceptual framework for addressing complex problems through systematic decomposition into manageable steps. This method allows for effective planning, design, and implementation of solutions. However, transitioning from conceptual frameworks to practical applications necessitates a foundational understanding of computer systems.\nTo effectively translate algorithmic concepts into computational implementations, it is essential to grasp how computer systems operate. Knowledge of computer architecture, software types, and various programming tools is crucial for converting algorithms into executable programs and optimizing these solutions.\nThis course will introduce the basic components and functions of computer systems, including hardware, software, and programming environments. This foundational understanding will bridge the gap between theoretical algorithmic thinking and practical computational implementation, facilitating the effective application of algorithms in programming tasks. ### Familiarization of Computer System, Editors, Various Language Translators\nIntroduction to Computer Architecture\n1. Block Diagram of Computer: The block diagram of a computer provides a visual representation of its major components and their interconnections. It typically includes the Central Processing Unit (CPU), Memory, Input Devices, Output Devices, and Storage Units. This diagram helps in understanding the flow of data and control signals within the computer system. A sample block diagram is shown in Fig- 9.\n\n\nFigure 9: Block Diagram of a Computer\n2. Hardware: Hardware refers to the physical components of a computer system. It includes the CPU, motherboard, RAM, hard drives, input devices (such as keyboards and mice), output devices (such as monitors and printers), and peripheral devices. Understanding hardware is crucial for comprehending how software interacts with physical components to perform tasks.\n3. Input and Output Devices: - Input Devices: These are devices used to enter data into a computer. Common examples include keyboards, mice, scanners, and microphones. - Output Devices: These devices display or output data from the computer. Examples include monitors, printers, and speakers.\n4. Memory: Memory in a computer system is used to store data and instructions. It includes: - Primary Memory (RAM): Volatile memory that temporarily holds data and instructions currently in use. - Secondary Memory (Storage): Non-volatile memory used for long-term data storage, such as hard drives and SSDs.\nSoftware\n1. Types of Software: - System Software: Includes operating systems (e.g., Windows, macOS, Linux) that manage hardware resources and provide a platform for running applications. - Application Software: Programs designed for end-users to perform specific tasks, such as word processors, web browsers, and games.\n2. High-Level Languages: High-level programming languages are designed to be easy for humans to read and write. Examples include Python, Java, and C++. They are used to write programs that are compiled or interpreted into machine code.\n3. Low-Level Languages: Low-level languages are closer to machine code and provide less abstraction from the hardware. Examples include assembly language, which is specific to a particular computer architecture and provides a symbolic representation of machine instructions.\n4. Assembly Languages: Assembly language is a low-level programming language that uses symbolic names for instructions and data. It is specific to a computer architecture and is used to write programs that interact directly with hardware.\nLanguage Translators\n1. Compiler: A compiler is a program that translates high-level source code into machine code or intermediate code that can be executed by the computer. It performs syntax checking, optimization, and generates executable files.\n2. Interpreter: An interpreter translates high-level source code into machine code line-by-line or statement-by-statement at runtime. It does not produce an executable file but directly executes the instructions. Examples include Python interpreters.\n3. Assembler: An assembler translates assembly language code into machine code. It converts symbolic instructions into binary instructions that the computer’s CPU can execute.\n\n\n\n\n\n\nNeed and Significance of Technical Know-how on Computer System\n\n\nUnderstanding the fundamentals of computer systems, including hardware components, software types, and language translators, is crucial for engineers as they move from conceptual ideas to practical, computer-based solutions. Familiarity with computer architecture helps engineers grasp how different hardware elements interact and how data flows through the system. Knowledge of software types and language translators enables engineers to select appropriate programming tools and languages for implementing their algorithms efficiently.\n\n\n\nBefore delving into the development of algorithms and flow charts, it is essential to understand the fundamental concepts of the computer system, as they provide the groundwork for translating conceptual ideas into computational solutions. The knowledge of computer architecture, memory, and software helps in effectively implementing and visualizing algorithms within a computer system.\nWith this foundational understanding in place, the focus shifts to developing algorithms and flow charts, which are designed with specific structures to facilitate standardization."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#developing-algorithms-and-flow-charts",
+    "href": "Instructional_design/slides-quarto.html#developing-algorithms-and-flow-charts",
+    "title": "Instructional Design for Python Programming",
+    "section": "Developing Algorithms and Flow Charts",
+    "text": "Developing Algorithms and Flow Charts\nIn the computational framework, standardizing the step-by-step process of algorithmic thinking is crucial for ensuring consistency and clarity in program development.\nIntroduction to Algorithms\n1. What is an Algorithm?\nAn algorithm is a well-defined sequence of steps or instructions designed to perform a specific task or solve a particular problem. It serves as a blueprint for writing computer programs. Algorithms are essential for problem-solving as they provide a clear and systematic approach to achieving desired outcomes.\n2. Properties of a Good Algorithm\nA well-constructed algorithm possesses several key properties: - Finiteness: The algorithm must have a finite number of steps and should terminate after a certain number of operations. - Definiteness: Each step of the algorithm should be precisely defined and unambiguous. - Input: The algorithm should accept zero or more inputs, which are the data necessary for its execution. - Output: The algorithm should produce at least one output, which is the result or solution of the problem. - Effectiveness: Each step of the algorithm should be basic enough to be executed within a finite amount of time.\nIntroduction to Flow Charts\n1. What is a Flow Chart?\nA flow chart is a visual representation of an algorithm, using various symbols to denote different types of operations or steps. Flow charts help in understanding and communicating the logic of an algorithm more clearly by illustrating the flow of control and decision-making process.\n2. Key Symbols in Flow Charts\n\nOval: Represents the start and end points of the flow chart.\nRectangle: Indicates a process or action step.\nDiamond: Denotes a decision point, where branching occurs based on conditions.\nParallelogram: Used for input and output operations.\nArrow: Shows the direction of flow between steps.\n\n\n\n\n\n\n\nStandardizing Algorithmic Thinking\n\n\nIn the computational framework, algorithms and flow charts are designed with a specific structure to ensure that the problem-solving approach is standardized. This standardization helps in maintaining consistency in how algorithms are developed, communicated, and executed. By adhering to these standardized structures, engineers and programmers can more effectively design, analyze, and implement solutions, ensuring that the computational processes are efficient and reliable.\n\n\n\nIn the upcoming sessions, students will have the opportunity to explore more examples and apply the principles of algorithmic thinking and flowchart design to a variety of problems.\n1. Crossing a Traffic Signal\nProblem: Write the algorithm and flowchart for the program to determine whether a pedestrian can cross the road based on the traffic signal color.\nAlgorithm:\n\nStart\nObserve the traffic signal color\nIf the signal is green, “Cross the road”\nElse if the signal is yellow, “Wait”\nElse if the signal is red, “wait”\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 10.\n\n\n\n\n\n\nflowchart TD\n    A((Start)) --&gt; B{Check traffic light color}\n    B -- Red --&gt; C[Wait]\n    B -- Yellow --&gt; D[Wait]\n    B -- Green --&gt; E[Cross the road]\n    C --&gt; B\n    D --&gt; B\n    E --&gt; F((Stop))\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,H startEnd;\n    class B,D,F,G inputOutput;\n    class C,E decision;\n\n\n\n\nFigure 10: Flowchart of the program to cross the trafic signal.\n\n\n\n\n\n2. Finding the Maximum of Two Numbers\nProblem: Write the algorithm and draw the flowchart for the program that takes two numbers as input and prints the larger of the two.\nAlgorithm:\n\nStart\nInput two numbers, A and B\nIf A is greater than B, print A\nOtherwise, print B\nEnd\n\nFlowchart\nFlowchart for this program is shown in Fig- 11.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B[Input A and B]\n    B --&gt; C{Is A &gt; B?}\n    C -- Yes --&gt; D[Print A]\n    C -- No --&gt; E[Print B]\n    D --&gt; F([End])\n    E --&gt; F\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,F startEnd;\n    class B,D,E inputOutput;\n    class C decision;\n\n\n\n\nFigure 11: Flowchart of the program to find larger of two numbers.\n\n\n\n\n\n3. Finding the Largest of Three Numbers\nProblem: Write a program that takes three numbers as input and prints the largest of the three.\nAlgorithm:\n\nStart\nInput three numbers, A, B, and C\nIf A is greater than B and A is greater than C, print A\nElse if B is greater than A and B is greater than C, print B\nOtherwise, print C\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 12.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B[Input A, B, and C]\n    B --&gt; C{Is A &gt; B?}\n    C --&gt;|Yes| D{Is A &gt; C?}\n    C --&gt;|No| E{Is B &gt; C?}\n    D -- Yes --&gt; F[Print A]\n    D -- No --&gt; G[Print C]\n    E -- Yes --&gt; H[Print B]\n    E -- No --&gt; G\n    F --&gt; I([End])\n    H --&gt; I\n    G --&gt; I\n    \n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,I startEnd;\n    class B,F,H inputOutput;\n    class C,D,E decision;\n\n\n\n\nFigure 12: Flowchart of the program to find largest of three numbers.\n\n\n\n\n\n4. Class Joining Dilema\nProblem: Write the algorithm and draw the flowchart for the program to determine whether a student will join a class based on whether their favorite teacher and best friend are in the class.\nAlgorithm:\n\nStart\nObserve the presence of the favorite teacher\nObserve the presence of the best friend\nIf both the favorite teacher and the best friend are present, “Join the class”\nElse, “Do not join the class”\nEnd\n\nFlowchart: Flowchart for this program is shown in Fig- 13.\n\n\n\n\n\n\nflowchart TD\n    A([Start]) --&gt; B{Is favourite teacher in class?}\n    B -- Yes --&gt; C{Is best friend in class?}\n    C -- Yes --&gt; D[Joins class]\n    B -- No --&gt; E[Does not join class]\n    C -- No --&gt; E[Does not join class]\n    E --&gt; F([Stop])\n    %% Define styles\n    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;\n    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;\n    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;\n    \n    %% Apply styles to nodes\n    class A,I startEnd;\n    class B,F,H inputOutput;\n    class C,D,E decision;\n\n\n\n\nFigure 13: Flowchart of the program to join the class"
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#transition-from-algorithmic-thinking-to-programming",
+    "href": "Instructional_design/slides-quarto.html#transition-from-algorithmic-thinking-to-programming",
+    "title": "Instructional Design for Python Programming",
+    "section": "Transition from Algorithmic Thinking to Programming",
+    "text": "Transition from Algorithmic Thinking to Programming\nThe algorithmic thinking process involves breaking down a problem into a series of logical steps, as illustrated by our flowcharts. This conceptual framework is very important for defining clear, sequential instructions to solve a problem. However, to bring these concepts into a practical domain, we need to translate them into a programming language that can execute these instructions."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#transition-from-algorithmic-thinking-to-programming-1",
+    "href": "Instructional_design/slides-quarto.html#transition-from-algorithmic-thinking-to-programming-1",
+    "title": "Instructional Design for Python Programming",
+    "section": "Transition from Algorithmic Thinking to Programming",
+    "text": "Transition from Algorithmic Thinking to Programming\nAlgorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like C, C++, and Java have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with Python, highlighting why Python is particularly suitable for computational thinking in engineering."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#historical-context-and-comparison",
+    "href": "Instructional_design/slides-quarto.html#historical-context-and-comparison",
+    "title": "Instructional Design for Python Programming",
+    "section": "Historical Context and Comparison",
+    "text": "Historical Context and Comparison\nC Language\nDeveloped in the early 1970s, C is one of the earliest high-level programming languages. It provides a foundation for many modern languages and is known for its performance and low-level memory manipulation capabilities. C requires explicit management of memory and pointers, which adds complexity to code. While powerful, it lacks some of the high-level abstractions and simplicity found in Python.\nC++ Language\nAn extension of C, C++ was developed in the early 1980s and introduced object-oriented programming features. It allows for complex data modeling and high-performance applications. C++ offers more control over system resources but at the cost of increased complexity. It involves managing object-oriented concepts and memory explicitly, which can be challenging for beginners.\nJava Language\nDeveloped in the mid-1990s, Java is known for its portability across platforms, thanks to the Java Virtual Machine (JVM). It emphasizes object-oriented programming and has extensive libraries. Java’s syntax is more verbose compared to Python. It requires managing class structures and access modifiers, which can make code less straightforward to write and read."
+  },
+  {
+    "objectID": "Instructional_design/slides-quarto.html#why-python-is-preferred-for-computational-thinking",
+    "href": "Instructional_design/slides-quarto.html#why-python-is-preferred-for-computational-thinking",
+    "title": "Instructional Design for Python Programming",
+    "section": "Why Python is Preferred for Computational Thinking?",
+    "text": "Why Python is Preferred for Computational Thinking?\nPython, created by Guido van Rossum and first released in 1991, emerged from a desire to develop a language that was both easy to read and write, while also being powerful enough to handle complex tasks. It was inspired by the ABC language, which van Rossum had worked on during his time at Centrum Wiskunde & Informatica (CWI) in the Netherlands. Python’s base code was written in C, which provides a solid foundation for its extensive standard library and cross-platform capabilities. The language emphasizes readability and simplicity, featuring an elegant syntax that allows programmers to express concepts in fewer lines of code compared to many other languages. This design philosophy has contributed to Python’s widespread adoption across various fields, from web development to scientific computing and engineering. Popular features of Python programming language are:\n1. Readability and Simplicity\nPython’s syntax is designed to be clear and intuitive, resembling natural language. This simplicity allows engineers to focus on the logic of their algorithms without being bogged down by complex syntax. For computational thinking, where clarity and understanding are crucial, Python’s readability reduces cognitive load, making it easier to implement and debug algorithms.\n2. Versatility and Ease of Use\nPython supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its versatility makes it suitable for a wide range of applications, from simple scripts to complex systems. This adaptability is particularly useful in engineering, where problems often span different domains and require diverse approaches.\n3. Rich Libraries and Frameworks\nPython’s extensive standard library and third-party modules simplify many tasks. Libraries such as NumPy for numerical computations, pandas for data manipulation, and Matplotlib for visualization provide powerful tools for engineers. These libraries streamline the implementation of complex algorithms and data handling, making Python an efficient choice for solving engineering problems.\n\n\n\n\n\n\nVerdict\n\n\nThe historical languages like C, C++, and Java have their strengths, Python’s readability, versatility, and extensive libraries make it particularly well-suited for computational thinking in engineering. By transitioning from conceptual algorithmic thinking to practical Python programming, engineers can effectively apply and implement their problem-solving strategies in a straightforward and efficient manner.\n\n\n\nFuture sessions will delve into various Python examples, reinforcing the practical application of these concepts and preparing students for advanced problem-solving in their respective engineering fields."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "One Day Faculty Development Programme",
+    "section": "",
+    "text": "Welcome Note\nWelcome to this one-day Faculty Development Program! Today, we will explore the essential role of algorithmic thinking in engineering education and how it can be effectively taught using Python programming. The focus will be on how to shift from using tools and methods to designing innovative teaching solutions. We will also delve into practical hands-on training with tools like Quarto, Raptor, and Python code visualizers, which are designed to enhance teaching methods and facilitate a deeper understanding of computational thinking.\nBy the end of the session, you will have a comprehensive understanding of how to integrate algorithmic thinking into your teaching and how to utilize Python for implementing these concepts. Additionally, you will gain practical experience with various tools that can aid in presenting and visualizing these ideas effectively.\n\n\nObjectives\n\nTo Equip faculty with the skills to teach algorithmic thinking through Python programming and effective instructional design.\nTo Provide hands-on training on tools like Quarto, Raptor, and Python code visualizers to enhance teaching methods and course delivery.\n\n\n\nAgenda\n9:00 AM – 9:30 AM: Introduction and Overview\n\nWelcome and Overview:\n\nIntroduction to the day’s goals.\nImportance of algorithmic thinking in engineering education.\n\n\n9:30 AM – 11:00 AM: Introduction to GitHub, Account Creation, and Software Installation\n\nGitHub Introduction:\n\nOverview of GitHub and its role in version control and collaboration.\nCreate a GitHub account and explore basic functionalities.\n\nSoftware Installation:\n\nPython Installation: Guide through installing Python.\nVisual Studio Code (VSCode): Installation and setup for Python development.\nQuarto CLI: Installation and initial setup for dynamic document creation.\nHands-On Activity:\n\nCreate and push a simple repository to GitHub.\nVerify installations and configurations.\nSynchronize with GitHub using VScode.\n\n\n\n11:00 AM – 11:15 AM: Tea Break\n11:15 AM – 12:00 PM: The Role of High-Level Languages\n\nConcept Introduction:\n\nImportance and advantages of high-level programming languages.\n\nHands-On Activity:\n\nCompare a simple algorithm implemented in Python with versions in other languages (e.g., C, Java).\n\n\n12:00 PM – 12:30 PM: Python Programming for Algorithmic Implementation\n\nContent Overview:\n\nBasic Python programming concepts: syntax, data types, operators.\n\nHands-On Activity:\n\nDevelop Python programs to implement various algorithms.\n\n\n12:30 PM – 1:30 PM: Lunch Break\n1:30 PM – 2:15 PM: Tool Training: Quarto\n\nIntroduction to Quarto:\n\nCreating dynamic documents and using Quarto for literate programming.\n\nHands-On Activity:\n\nCreate a Quarto document to demonstrate publishing academic documents containing Python code.\n\n\n2:15 PM – 3:00 PM: Tool Training: Raptor\n\nIntroduction to Raptor:\n\nDesigning flowcharts and simulating algorithms using Raptor.\n\nHands-On Activity:\n\nDesign and test algorithms with Raptor.\n\n\n3:00 PM – 3:20 PM: Tea Break\n3:20 PM – 4:05 PM: Tool Training: Python Code Visualizers\n\nOverview of Code Visualizers:\n\nVisualizing and debugging Python code.\n\nHands-On Activity:\n\nUse code visualizers to understand and debug Python programs.\n\n\n4:05 PM – 4:20 PM: Conclusion and Q&A\n\nRecap:\n\nSummary of the day’s key takeaways.\n\nQ&A Session:\n\nAddress any questions and provide additional resources and support.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "feedback.html",
+    "href": "feedback.html",
+    "title": "Feedback Analysis",
+    "section": "",
+    "text": "We value your feedback! Please take a moment to provide your insights on the workshop. Your responses will help us improve and tailor future sessions to better meet your needs.\n\n\nPlease rate the following statements on a scale of 1 to 5, where 1 is “Strongly Disagree” and 5 is “Strongly Agree”:\n\nHow effective was the workshop in teaching you to use Quarto for course Websites and technical writing?\n\n1\n2\n3\n4\n5\n\nHow clear was the discussions on the Instructional Design of the Course ?\n\n1\n2\n3\n4\n5\n\nHow beneficial was the hands-on approach and tools used in the FDP?\n\n1\n2\n3\n4\n5\n\nHow would you rate the knowledge and expertise of the resource person in the topics covered?\n\n1\n2\n3\n4\n5\n\nHow satisfactory was the support and assistance provided by the resource person during the workshop?\n\n1\n2\n3\n4\n5\n\n\nThank you for your feedback!\n\nYou can access the feedback form through the link below or scan the QR code to provide your responses:\nhttps://forms.gle/bHKwtrkV8JoN8KCc6"
+  },
+  {
+    "objectID": "feedback.html#workshop-feedback-questionnaire",
+    "href": "feedback.html#workshop-feedback-questionnaire",
+    "title": "Feedback Analysis",
+    "section": "",
+    "text": "We value your feedback! Please take a moment to provide your insights on the workshop. Your responses will help us improve and tailor future sessions to better meet your needs.\n\n\nPlease rate the following statements on a scale of 1 to 5, where 1 is “Strongly Disagree” and 5 is “Strongly Agree”:\n\nHow effective was the workshop in teaching you to use Quarto for course Websites and technical writing?\n\n1\n2\n3\n4\n5\n\nHow clear was the discussions on the Instructional Design of the Course ?\n\n1\n2\n3\n4\n5\n\nHow beneficial was the hands-on approach and tools used in the FDP?\n\n1\n2\n3\n4\n5\n\nHow would you rate the knowledge and expertise of the resource person in the topics covered?\n\n1\n2\n3\n4\n5\n\nHow satisfactory was the support and assistance provided by the resource person during the workshop?\n\n1\n2\n3\n4\n5\n\n\nThank you for your feedback!\n\nYou can access the feedback form through the link below or scan the QR code to provide your responses:\nhttps://forms.gle/bHKwtrkV8JoN8KCc6"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site contains information about a FDP organised in Saintgits College of Engineering (Autonomous) to disseminate the instructional design of the foundational course “Python Programming.” The FDP will guide educators through the course’s structure, emphasizing the integration of Python programming as a tool for implementing algorithmic concepts. Participants will gain hands-on experience with key tools such as GitHub, Python, Quarto, and Raptor, which are essential for both teaching and applying these concepts effectively.",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#workshop-organisers",
+    "href": "about.html#workshop-organisers",
+    "title": "About",
+    "section": "Workshop organisers",
+    "text": "Workshop organisers\n\n\n\n\n\n\n\n\n\nDr.Nisha Joseph\n\n\n\n\n\n\n\nDr. Naveen Punnose\n\n\n\n\n\n\n\nEr. Justin Mathew",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "about.html#sidebar-image",
+    "href": "about.html#sidebar-image",
+    "title": "About",
+    "section": "Sidebar image",
+    "text": "Sidebar image\nThe sidebar image was generated by Microsoft Copilot with a prompt, “Transforming Classical Libraries to Digital Libraries with Open source.”",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "slides.html#agenda",
+    "href": "slides.html#agenda",
+    "title": "Hands-on Session on Quarto",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroduction to Quarto\nGet Started\nHands-on\n\nListings\nTemplates and Customization\nPrograming"
+  },
+  {
+    "objectID": "slides.html#get-started",
+    "href": "slides.html#get-started",
+    "title": "Hands-on Session on Quarto",
+    "section": "Get Started",
+    "text": "Get Started\nDownloading Quarto\n\nDownload Quarto\n\nLinux\nMacOS\nWindows\n\nChoose your platform\n\nVS Code\nJupyter Notebook/Lab\nNeoVim\nRStudio"
+  },
+  {
+    "objectID": "slides.html#listings",
+    "href": "slides.html#listings",
+    "title": "Hands-on Session on Quarto",
+    "section": "Listings",
+    "text": "Listings\n\nListings enable you to automatically generate the contents of a page (or region of a page) from a list of Quarto documents or other custom data\nUseful to create blogs, newletters\nLink to the documentation: https://quarto.org/docs/websites/website-listings.html"
+  },
+  {
+    "objectID": "slides.html#templates-and-customization",
+    "href": "slides.html#templates-and-customization",
+    "title": "Hands-on Session on Quarto",
+    "section": "Templates and Customization",
+    "text": "Templates and Customization\n\nSearch bar\n\nhttps://quarto.org/docs/websites/website-search.html\n\nThemes\n\nhttps://quarto.org/docs/output-formats/html-themes.html\n\nTools\n\nhttps://quarto.org/docs/websites/website-tools.html"
+  },
+  {
+    "objectID": "slides.html#programing",
+    "href": "slides.html#programing",
+    "title": "Hands-on Session on Quarto",
+    "section": "Programing",
+    "text": "Programing\n\nQuarto also provides the option to embed some code on your website\nQuarto supports Python, R, Julia and Observable Javascript\nYou can create a code block delimiting using ```\nExample of code running: https://tailor-uob.github.io/training-material/cha_odm/odm.html"
+  },
+  {
+    "objectID": "slides.html#programing-1",
+    "href": "slides.html#programing-1",
+    "title": "Hands-on Session on Quarto",
+    "section": "Programing",
+    "text": "Programing\n\nAlso Quarto allows the creation of short codes.\nShortcodes are special markdown directives that generate various types of content. Quarto shortcodes are similar in form and function to Hugo shortcodes and WordPress shortcodes.\nDocumentation: https://quarto.org/docs/extensions/shortcodes.html"
+  },
+  {
+    "objectID": "hands_on.html",
+    "href": "hands_on.html",
+    "title": "Hands-on Session on Quarto",
+    "section": "",
+    "text": "Introduction to Quarto\nGet Started\nHands-on\n\nListings\nTemplates and Customization\nPrograming",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#agenda",
+    "href": "hands_on.html#agenda",
+    "title": "Hands-on Session on Quarto",
+    "section": "",
+    "text": "Introduction to Quarto\nGet Started\nHands-on\n\nListings\nTemplates and Customization\nPrograming",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#get-started",
+    "href": "hands_on.html#get-started",
+    "title": "Hands-on Session on Quarto",
+    "section": "Get Started",
+    "text": "Get Started\n\nDownloading Quarto\n\nDownload Quarto\n\nLinux\nMacOS\nWindows\n\nChoose your platform\n\nVS Code\nJupyter Notebook/Lab\nNeoVim\nRStudio\n\n\n\n\n\n\nDownload Quarto\n\nDownload Quarto: https://quarto.org/docs/get-started/\nWorkshop website: https://sijuswamy.github.io/CME-workshop-1/\n\n\nSetup\n\nTerminal + Text Editor (VS Code)\nVisual Studio Code has options to use quarto in a better user interface\n\n\n\nRun the command ‘quarto create project website ’\nAlternatively, ctrl+shift+p and create the quarto project\nAutomatically Quarto will create the following directory structure:\n\n_quarto.yml\nindex.qmd\nabout.qmd\nstyles.css\n\n\n\n\nStructure\n\n.yml files\n\nYAML is a human-readable data serialization language\nYAML is an official strict superset of JSON despite looking very different from JSON.\nTo create a YAML file, use either the .yaml or .yml file extension.\n\n.qmd files\n\nWork as markdown files, but they have a configuration section in yml on the top of the file\n\n\n\n\n_quarto.yml\n\nDefines the basic structure of the website.\nAll configurations are done using yml\nSome of the configurations:\n\nNavigation bar\nSide bar\nContents",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#listings",
+    "href": "hands_on.html#listings",
+    "title": "Hands-on Session on Quarto",
+    "section": "Listings",
+    "text": "Listings\n\nListings enable you to automatically generate the contents of a page (or region of a page) from a list of Quarto documents or other custom data\nUseful to create blogs, newletters\nLink to the documentation: https://quarto.org/docs/websites/website-listings.html",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#templates-and-customization",
+    "href": "hands_on.html#templates-and-customization",
+    "title": "Hands-on Session on Quarto",
+    "section": "Templates and Customization",
+    "text": "Templates and Customization\n\nSearch bar\n\nhttps://quarto.org/docs/websites/website-search.html\n\nThemes\n\nhttps://quarto.org/docs/output-formats/html-themes.html\n\nTools\n\nhttps://quarto.org/docs/websites/website-tools.html",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#programing",
+    "href": "hands_on.html#programing",
+    "title": "Hands-on Session on Quarto",
+    "section": "Programing",
+    "text": "Programing\n\nQuarto also provides the option to embed some code on your website\nQuarto supports Python, R, Julia and Observable Javascript\nYou can create a code block delimiting using ```\nExample of code running: https://tailor-uob.github.io/training-material/cha_odm/odm.html",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "hands_on.html#programing-1",
+    "href": "hands_on.html#programing-1",
+    "title": "Hands-on Session on Quarto",
+    "section": "Programing",
+    "text": "Programing\n\nAlso Quarto allows the creation of short codes.\nShortcodes are special markdown directives that generate various types of content. Quarto shortcodes are similar in form and function to Hugo shortcodes and WordPress shortcodes.\nDocumentation: https://quarto.org/docs/extensions/shortcodes.html",
+    "crumbs": [
+      "Home",
+      "Hands-on Session on Quarto"
+    ]
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html",
+    "href": "Instructional_design/Course_outline.html",
+    "title": "Python Programming",
+    "section": "",
+    "text": "Credits: 2\nHours per Week: 2\nCourse Objectives:\n\nTo develop algorithmic thinking and problem-solving skills.\nTo familiarize students with computer systems, software, and language translators.\nTo justify the use of Python for programming and algorithmic design.\nTo introduce Python programming concepts, including data types, conditional statements, and loops.\nTo implement functions, string operations, and real-time applications using Python’s data structures.\nTo enable students to apply their knowledge to solve practical problems through a micro project."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-1-introduction-to-algorithmic-thinking",
+    "href": "Instructional_design/Course_outline.html#topic-1-introduction-to-algorithmic-thinking",
+    "title": "Python Programming",
+    "section": "Topic 1: Introduction to Algorithmic Thinking",
+    "text": "Topic 1: Introduction to Algorithmic Thinking\nLesson Outcomes:\n\nUnderstand the concept of algorithmic thinking.\nDevelop basic algorithms for simple problems.\nRecognize the importance of algorithms in problem-solving.\n\nContent:\n\nWhat is Algorithmic Thinking?\n\nImportance in problem-solving\nSteps in designing an algorithm\n\nExample Algorithms:\n\nSimple tasks (e.g., making a cup of tea)\n\n\nPractical Situation:\n\nCreate algorithms for everyday activities to illustrate the concept."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-2-familiarization-with-computer-systems-and-language-translators",
+    "href": "Instructional_design/Course_outline.html#topic-2-familiarization-with-computer-systems-and-language-translators",
+    "title": "Python Programming",
+    "section": "Topic 2: Familiarization with Computer Systems and Language Translators",
+    "text": "Topic 2: Familiarization with Computer Systems and Language Translators\nLesson Outcomes:\n\nUnderstand basic computer architecture and components.\nIdentify different types of software and language translators.\n\nContent:\n\nIntroduction to Computer Architecture:\n\nBlock diagram of a computer\nHardware components (Input, Output devices)\nMemory types\n\nSoftware Types:\n\nHigh-level vs. Low-level languages\nAssembly languages\n\nLanguage Translators:\n\nCompilers, Interpreters, Assemblers\n\n\nPractical Situation:\n\nExplore how different programming languages and translators affect the execution of a simple program."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-3-justification-for-using-python",
+    "href": "Instructional_design/Course_outline.html#topic-3-justification-for-using-python",
+    "title": "Python Programming",
+    "section": "Topic 3: Justification for Using Python",
+    "text": "Topic 3: Justification for Using Python\nLesson Outcomes:\n\nUnderstand the advantages of Python for algorithmic thinking and programming.\nCompare Python with other programming languages in terms of simplicity and effectiveness.\n\nContent:\n\nWhy Python?\n\nPython’s simplicity and readability\nComparison with other languages (e.g., C++, Java)\nPython’s role in modern software development and data science\n\n\nPractical Situation:\n\nDemonstrate a basic Python script and compare it with an equivalent script in another language."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-4-developing-algorithms-and-flow-charts",
+    "href": "Instructional_design/Course_outline.html#topic-4-developing-algorithms-and-flow-charts",
+    "title": "Python Programming",
+    "section": "Topic 4: Developing Algorithms and Flow Charts",
+    "text": "Topic 4: Developing Algorithms and Flow Charts\nLesson Outcomes:\n\nDevelop and represent algorithms using flowcharts.\nUnderstand properties of good algorithms.\n\nContent:\n\nIntroduction to Algorithms:\n\nProperties of good algorithms\n\nFlowchart Creation:\n\nBasic flowchart symbols and conventions\n\n\nPractical Situation:\n\nDesign flowcharts for simple algorithms (e.g., sorting a list of numbers)."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-5-data-types-and-arithmetic-operations-in-python",
+    "href": "Instructional_design/Course_outline.html#topic-5-data-types-and-arithmetic-operations-in-python",
+    "title": "Python Programming",
+    "section": "Topic 5: Data Types and Arithmetic Operations in Python",
+    "text": "Topic 5: Data Types and Arithmetic Operations in Python\nLesson Outcomes:\n\nUnderstand and use basic data types and operators in Python.\nPerform arithmetic operations and handle expressions.\n\nContent: - Introduction to Python Programming:\n\nData types (int, float, str, etc.)\nKeywords and Variables\nInput and Output statements\nOperators and Arithmetic expressions\nOperator precedence and Evaluation of expressions\n\nPractical Situation:\n\nWrite a Python program that performs various arithmetic operations and displays results."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-6-conditional-statements-in-python",
+    "href": "Instructional_design/Course_outline.html#topic-6-conditional-statements-in-python",
+    "title": "Python Programming",
+    "section": "Topic 6: Conditional Statements in Python",
+    "text": "Topic 6: Conditional Statements in Python\nLesson Outcomes:\n\nImplement and use conditional statements to control the flow of programs.\n\nContent: - Types of Conditional Statements:\n\nif, if-else, elif, nested if-else, if-elif-else\nPractical Examples:\n\nPrograms using conditional statements\n\n\nPractical Situation:\n\nCreate a Python program that determines if a number is positive, negative, or zero."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-7-loop-structures-in-python",
+    "href": "Instructional_design/Course_outline.html#topic-7-loop-structures-in-python",
+    "title": "Python Programming",
+    "section": "Topic 7: Loop Structures in Python",
+    "text": "Topic 7: Loop Structures in Python\nLesson Outcomes:\n\nUse loop structures to repeat actions and iterate over data.\n\nContent:\n\nIntroduction to Looping:\n\nfor, while, nested loops\nbreak, continue, pass statements\nrange function\n\nSample Programs:\n\nImplementing various loop constructs\n\n\nPractical Situation:\n\nWrite a Python program that calculates the factorial of a number using loops."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-8-functions-in-python",
+    "href": "Instructional_design/Course_outline.html#topic-8-functions-in-python",
+    "title": "Python Programming",
+    "section": "Topic 8: Functions in Python",
+    "text": "Topic 8: Functions in Python\nLesson Outcomes:\n\nDefine and use functions for modular programming.\nUnderstand function concepts including parameter passing and return values.\n\nContent:\n\nConcept of Functions:\n\nDefinition, Calling Functions\nPassing Parameters and Return Values\nType Conversion and Coercion\n\nAdvanced Function Concepts:\n\nLambda functions\nBuilt-in Mathematical functions\n\nSample Programs Using Functions\n\nPractical Situation:\n\nDevelop a Python program that uses functions to perform mathematical operations."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-9-string-operations-in-python",
+    "href": "Instructional_design/Course_outline.html#topic-9-string-operations-in-python",
+    "title": "Python Programming",
+    "section": "Topic 9: String Operations in Python",
+    "text": "Topic 9: String Operations in Python\nLesson Outcomes:\n\nManipulate and process strings using Python’s string handling functions.\n\nContent:\n\nIntroduction to Strings:\n\nString creation and manipulation\n\nString Handling Functions:\n\nCommonly used functions (e.g., split(), join(), replace())\n\n\nPractical Situation:\n\nWrite a Python program that processes and formats user input strings."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-10-real-timetechnical-applications-using-data-structures",
+    "href": "Instructional_design/Course_outline.html#topic-10-real-timetechnical-applications-using-data-structures",
+    "title": "Python Programming",
+    "section": "Topic 10: Real-time/Technical Applications Using Data Structures",
+    "text": "Topic 10: Real-time/Technical Applications Using Data Structures\nLesson Outcomes:\n\nApply data structures (lists, tuples, dictionaries) to solve real-world problems.\n\nContent:\n\nLists, Tuples, Dictionaries:\n\nConcepts, operations, and functions\nMutable vs Immutable data structures\n\nApplications:\n\nIdentifying use cases\nSolving problems using lists, tuples, and dictionaries\n\n\nPractical Situation:\n\nCreate a Python program that manages a list of student records using lists and dictionaries."
+  },
+  {
+    "objectID": "Instructional_design/Course_outline.html#topic-11-micro-project",
+    "href": "Instructional_design/Course_outline.html#topic-11-micro-project",
+    "title": "Python Programming",
+    "section": "Topic 11: Micro Project",
+    "text": "Topic 11: Micro Project\nLesson Outcomes:\n\nApply Python concepts to develop a project relevant to the student’s field of study.\n\nContent:\n\nProject Development:\n\nDesign and implementation of a simple project\nApplication of learned concepts to a practical problem\n\n\nPractical Situation:\n\nDevelop and present a micro project related to the student’s branch of study."
+  },
+  {
+    "objectID": "introduction/slides-quarto.html#getting-started",
+    "href": "introduction/slides-quarto.html#getting-started",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "Getting started",
+    "text": "Getting started\n\nGet started documentation: quarto.org/docs/get-started/\nOpen-source repository in GitHub: Quarto-cli\nCreate a project with quarto create project\n\nType: default, website, blog, manuscript, book, confluence\n\nBuild project with quarto render\nPreview with quarto preview (it autobuilds and updates when changes in the source files are detected)."
+  },
+  {
+    "objectID": "introduction/slides-quarto.html#integrated-development-environments",
+    "href": "introduction/slides-quarto.html#integrated-development-environments",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "Integrated Development Environments",
+    "text": "Integrated Development Environments\nQuarto is integrated in multiple IDEs"
+  },
+  {
+    "objectID": "introduction/index.html",
+    "href": "introduction/index.html",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "",
+    "text": "Introduction\nWelcome to Day 1 of our workshop! Today, we embark on an exploration of literate programming through the powerful open-source tool, Quarto. Literate programming is a methodology that integrates code and documentation, allowing for clearer, more maintainable, and more insightful technical writing. By the end of today, you’ll gain hands-on experience with Quarto, learning how to craft high-quality technical documents, build interactive web pages, and create engaging blogs. Our sessions are designed to provide both theoretical knowledge and practical skills, equipping you with the tools to effectively communicate your code and ideas. Let’s dive into the world of literate programming and see how Quarto can transform your documentation practices.",
+    "crumbs": [
+      "Home",
+      "Introduction to Quarto"
+    ]
+  },
+  {
+    "objectID": "introduction/index.html#unleashing-literate-programming-with-quarto",
+    "href": "introduction/index.html#unleashing-literate-programming-with-quarto",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "",
+    "text": "Introduction\nWelcome to Day 1 of our workshop! Today, we embark on an exploration of literate programming through the powerful open-source tool, Quarto. Literate programming is a methodology that integrates code and documentation, allowing for clearer, more maintainable, and more insightful technical writing. By the end of today, you’ll gain hands-on experience with Quarto, learning how to craft high-quality technical documents, build interactive web pages, and create engaging blogs. Our sessions are designed to provide both theoretical knowledge and practical skills, equipping you with the tools to effectively communicate your code and ideas. Let’s dive into the world of literate programming and see how Quarto can transform your documentation practices.",
+    "crumbs": [
+      "Home",
+      "Introduction to Quarto"
+    ]
+  },
+  {
+    "objectID": "introduction/index.html#getting-started",
+    "href": "introduction/index.html#getting-started",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "Getting started",
+    "text": "Getting started\n\nGet started documentation: quarto.org/docs/get-started/\nOpen-source repository in GitHub: Quarto-cli\nCreate a project with quarto create project\n\nType: default, website, blog, manuscript, book, confluence\n\nBuild project with quarto render\nPreview with quarto preview (it autobuilds and updates when changes in the source files are detected).",
+    "crumbs": [
+      "Home",
+      "Introduction to Quarto"
+    ]
+  },
+  {
+    "objectID": "introduction/index.html#integrated-development-environments",
+    "href": "introduction/index.html#integrated-development-environments",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "Integrated Development Environments",
+    "text": "Integrated Development Environments\nThe separation of the source code and the publishable outputs is something that all Integrated Development Environments (IDEs) provide. These are tools for writing computer programs that commonly require a compilation phase which is usually integrated in the same tool. The idea of authoring tools that can create generic input artefacts that are later combined by a formatting tool is very similar to the common process followed in programming compiled programming languages. This has facilitate the adoption of IDEs as authoring tools. Microsoft Visual Studio and Posit Workbench (formerly RStudio) have tools to work with the Quarto environment. Both of them provide options for collaborative and contemporaneous editing.",
+    "crumbs": [
+      "Home",
+      "Introduction to Quarto"
+    ]
+  },
+  {
+    "objectID": "introduction/index.html#key-points-about-quarto",
+    "href": "introduction/index.html#key-points-about-quarto",
+    "title": "Introduction to Literate Programming with Quarto",
+    "section": "Key points about Quarto",
+    "text": "Key points about Quarto\n\nQuarto is a formatting tool\nuses pandoc to convert the input artefacts to various outputs.\nsupports plain text markdown, Jupyter notebooks and an augmented markdown,\nsupports dynamic content with Python, R, Julia and Observable programming languages.\nis integrated in multiple IDEs: Visual Studio, Posit Connect (former RMarkdown), Atlassian Confluence, …",
+    "crumbs": [
+      "Home",
+      "Introduction to Quarto"
+    ]
+  }
+]

@@ -1,0 +1,298 @@
+---
+title: "Python Programming"
+author: "Justin Mathew"
+date: "15 August, 2024"
+format: html
+---
+
+# Course Overview
+
+**Credits:** 2  
+**Hours per Week:** 2  
+
+**Course Objectives:**
+
+1. To develop algorithmic thinking and problem-solving skills.
+2. To familiarize students with computer systems, software, and language translators.
+3. To justify the use of Python for programming and algorithmic design.
+4. To introduce Python programming concepts, including data types, conditional statements, and loops.
+5. To implement functions, string operations, and real-time applications using Python's data structures.
+6. To enable students to apply their knowledge to solve practical problems through a micro project.
+
+# Key Ideas
+
+## Topic 1: Introduction to Algorithmic Thinking
+
+**Lesson Outcomes:**
+
+- Understand the concept of algorithmic thinking.
+
+- Develop basic algorithms for simple problems.
+
+- Recognize the importance of algorithms in problem-solving.
+
+**Content:**
+
+- What is Algorithmic Thinking?
+
+  - Importance in problem-solving
+
+  - Steps in designing an algorithm
+
+- Example Algorithms:
+
+  - Simple tasks (e.g., making a cup of tea)
+
+**Practical Situation:**
+
+- Create algorithms for everyday activities to illustrate the concept.
+
+## Topic 2: Familiarization with Computer Systems and Language Translators
+
+**Lesson Outcomes:**
+
+- Understand basic computer architecture and components.
+
+- Identify different types of software and language translators.
+
+**Content:**
+
+- Introduction to Computer Architecture:
+
+  - Block diagram of a computer
+
+  - Hardware components (Input, Output devices)
+
+  - Memory types
+
+- Software Types:
+
+  - High-level vs. Low-level languages
+
+  - Assembly languages
+
+- Language Translators:
+
+  - Compilers, Interpreters, Assemblers
+
+**Practical Situation:**
+
+- Explore how different programming languages and translators affect the execution of a simple program.
+
+## Topic 3: Justification for Using Python
+
+**Lesson Outcomes:**
+
+- Understand the advantages of Python for algorithmic thinking and programming.
+
+- Compare Python with other programming languages in terms of simplicity and effectiveness.
+
+**Content:**
+
+- Why Python?
+
+  - Python’s simplicity and readability
+
+  - Comparison with other languages (e.g., C++, Java)
+
+  - Python’s role in modern software development and data science
+
+**Practical Situation:**
+
+- Demonstrate a basic Python script and compare it with an equivalent script in another language.
+
+## Topic 4: Developing Algorithms and Flow Charts
+
+**Lesson Outcomes:**
+
+- Develop and represent algorithms using flowcharts.
+
+- Understand properties of good algorithms.
+
+**Content:**
+
+- Introduction to Algorithms:
+
+  - Properties of good algorithms
+
+- Flowchart Creation:
+
+  - Basic flowchart symbols and conventions
+
+**Practical Situation:**
+
+- Design flowcharts for simple algorithms (e.g., sorting a list of numbers).
+
+## Topic 5: Data Types and Arithmetic Operations in Python
+
+**Lesson Outcomes:**
+
+- Understand and use basic data types and operators in Python.
+
+- Perform arithmetic operations and handle expressions.
+
+**Content:**
+- Introduction to Python Programming:
+
+  - Data types (int, float, str, etc.)
+
+  - Keywords and Variables
+
+  - Input and Output statements
+
+  - Operators and Arithmetic expressions
+
+  - Operator precedence and Evaluation of expressions
+
+**Practical Situation:**
+
+- Write a Python program that performs various arithmetic operations and displays results.
+
+## Topic 6: Conditional Statements in Python
+
+**Lesson Outcomes:**
+
+- Implement and use conditional statements to control the flow of programs.
+
+**Content:**
+- Types of Conditional Statements:
+
+  - `if`, `if-else`, `elif`, nested `if-else`, `if-elif-else`
+
+- Practical Examples:
+
+  - Programs using conditional statements
+
+**Practical Situation:**
+
+- Create a Python program that determines if a number is positive, negative, or zero.
+
+## Topic 7: Loop Structures in Python
+
+**Lesson Outcomes:**
+
+- Use loop structures to repeat actions and iterate over data.
+
+**Content:**
+
+- Introduction to Looping:
+
+  - `for`, `while`, nested loops
+
+  - `break`, `continue`, `pass` statements
+
+  - `range` function
+
+- Sample Programs:
+
+  - Implementing various loop constructs
+
+**Practical Situation:**
+
+- Write a Python program that calculates the factorial of a number using loops.
+
+## Topic 8: Functions in Python
+
+**Lesson Outcomes:**
+
+- Define and use functions for modular programming.
+
+- Understand function concepts including parameter passing and return values.
+
+**Content:**
+
+- Concept of Functions:
+
+  - Definition, Calling Functions
+
+  - Passing Parameters and Return Values
+
+  - Type Conversion and Coercion
+
+- Advanced Function Concepts:
+
+  - Lambda functions
+
+  - Built-in Mathematical functions
+
+- Sample Programs Using Functions
+
+**Practical Situation:**
+
+- Develop a Python program that uses functions to perform mathematical operations.
+
+## Topic 9: String Operations in Python
+
+**Lesson Outcomes:**
+
+- Manipulate and process strings using Python’s string handling functions.
+
+**Content:**
+
+- Introduction to Strings:
+
+  - String creation and manipulation
+
+- String Handling Functions:
+
+  - Commonly used functions (e.g., `split()`, `join()`, `replace()`)
+
+**Practical Situation:**
+
+- Write a Python program that processes and formats user input strings.
+
+## Topic 10: Real-time/Technical Applications Using Data Structures
+
+**Lesson Outcomes:**
+
+- Apply data structures (lists, tuples, dictionaries) to solve real-world problems.
+
+**Content:**
+
+- Lists, Tuples, Dictionaries:
+
+  - Concepts, operations, and functions
+
+  - Mutable vs Immutable data structures
+
+- Applications:
+
+  - Identifying use cases
+
+  - Solving problems using lists, tuples, and dictionaries
+
+**Practical Situation:**
+
+- Create a Python program that manages a list of student records using lists and dictionaries.
+
+## Topic 11: Micro Project
+
+**Lesson Outcomes:**
+
+- Apply Python concepts to develop a project relevant to the student’s field of study.
+
+**Content:**
+
+- Project Development:
+
+  - Design and implementation of a simple project
+
+  - Application of learned concepts to a practical problem
+
+**Practical Situation:**
+
+- Develop and present a micro project related to the student's branch of study.
+
+# Teaching Methodology
+
+- Hands-on lab exercises
+
+- Step-by-step problem-solving approach
+
+- Regular assessments and feedback
+
+# Evaluation
+
+- Lab exercises and practical implementation
+
+- Micro Project

@@ -1,0 +1,633 @@
+---
+title: Instructional Design for Python Programming
+subtitle: <a href="slides-instructional-design.html" target="_blank"></a>
+author: 
+  - name:
+      given: Siju
+      family: Swamy
+    #orcid: 0000-0001-8925-424X
+    email: siju.swamy@saintgits.org
+    affiliations:
+      - name: Saintgits
+        city: Kottayam
+        country: India
+        postal-code: 686572
+    attributes:
+        equal-contributor: False
+format:
+  html:
+    mermaid:
+      theme: dark
+  revealjs:
+    output-file: slides-quarto.html
+    width: 960
+    height: 700
+    css: assets/style.css
+    mermaid:
+      theme: dark
+---
+
+:::: {.content-hidden when-format="revealjs"}
+## Introduction
+
+Instructional design is a systematic process used to create educational experiences and materials that effectively facilitate learning and improve student outcomes. It involves analyzing learners' needs, defining clear objectives, structuring content, and selecting appropriate teaching methods and resources to achieve those objectives. Unlike a syllabus, which outlines the topics and schedule of a course, instructional design focuses on the pedagogical approach, instructional strategies, and assessment methods to ensure that the content is delivered in a way that maximizes learning. 
+::::
+
+While the syllabus provides a roadmap of what will be taught, instructional design details the "how" and "why" of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them.
+
+## *Course Title:* Python Programming (for Algorithmic Thinking)
+
+:::{.callout-note}
+### Course Description:
+This lab-based one credit course introduces algorithmic thinking through Python programming. Designed for engineers, it covers fundamental programming concepts and their application to real-world problems. The course emphasizes the development of algorithms and their implementation in Python, preparing students to approach problem-solving methodically.
+:::
+
+## Course Objectives{.smaller}
+
+:::: {.content-hidden when-format="revealjs"}
+The course objectives for "Python Programming for Algorithmic Thinking" are designed to provide immediate, actionable goals that students are expected to achieve through successful execution of the course sessions. Each objective is directly aligned with hands-on lab exercises and practical coding tasks, ensuring that students gain relevant skills that are immediately applicable. The focus on these specific objectives not only prepares students to tackle fundamental programming challenges but also builds a strong foundation for advanced coursework and professional engineering tasks.
+::::
+
+The course objecives are:
+
+1. **Characterize and Identify Computer Components:**
+   - Understand and describe the functional units and components of a computer system, including hardware, software, and language translators.
+
+2. **Develop Proficiency in Python Programming:**
+   - Gain the ability to code, test, and debug simple Python programs, demonstrating proficiency in basic programming concepts and practices.
+
+3. **Implement Control Structures:**
+   - Apply branching and looping statements in Python to develop programs that solve problems through conditional logic and repetitive tasks.
+
+4. **Utilize Python Data Structures:**
+   - Effectively use supported data structures such as lists, dictionaries, and tuples to organize and manage data in Python programs.
+
+## Course Outcomes{.smaller}
+
+:::: {.content-hidden when-format="revealjs"}
+The course outcomes represent measurable deliverables that students will gain upon completing the course. They are designed to be immediately applicable in subsequent courses and professional settings, ensuring that graduates are well-prepared for both advanced studies and real-world engineering challenges.
+
+Course outcomes of 'Python Programming' are:
+
+::::
+
+After the successful completion of the course, the graduate will be able to:
+
+1. **Design and Implement Algorithms:**
+   - Develop, analyze, and apply algorithms to solve a variety of computational problems using Python.
+
+2. **Program Efficiently in Python:**
+   - Write, debug, and optimize Python code, utilizing core programming constructs and data structures effectively.
+
+3. **Apply Data Structures and Functions:**
+   - Use Python’s data structures, such as lists, tuples, and dictionaries, and modularize code with functions for efficient problem-solving.
+
+4. **Utilize Development Tools:**
+   - Leverage development tools like GitHub and Raptor for effective coding, documentation, and algorithm visualization.
+
+## Course Introduction
+
+To introduce the "Python Programming for Algorithmic Thinking" course to students from various branches, begin by explaining the universal relevance of algorithmic thinking in everyday problem-solving. Use a simple context, such as organizing a group project: just as you would plan tasks and delegate responsibilities to ensure the project is completed efficiently and effectively, algorithmic thinking involves creating systematic methods to solve problems. A block diagram representing this example is given below.
+
+```{mermaid}
+%%| label: fig-1
+%%| fig-cap: State diagram to successfully finish a project.
+%%| fig-align: center
+graph TD
+    A[Start Project] --> B[Identify Objectives]
+    B --> C[Break Down Tasks]
+    C --> D[Assign Responsibilities]
+    D --> E[Set Deadlines]
+    E --> F[Execute Tasks]
+    F --> G[Monitor Progress]
+    G --> H[Review and Adjust]
+    H --> I[Complete Project]
+    I --> J[Project Successful]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style G fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style H fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style I fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style J fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+Emphasize that the (the algorithmic thinking) skills learned will be valuable across all engineering disciplines, enhancing their problem-solving capabilities and preparing them for complex challenges in their academic and professional careers. This approach will help students appreciate the broad applicability of the course content and encourage active participation.
+
+## A Seven-in-One Problem!
+
+In this context, we will explore how algorithmic thinking can be applied across different engineering branches using a common example. Each branch of engineering plays a critical role in developing and implementing this system, demonstrating the relevance and application of algorithms in diverse fields. Let us formulate the context and problem statement as follows.
+
+:::{.callout-note}
+### Context:
+A city wants to implement a smart traffic management system to improve traffic flow and reduce congestion at intersections. The system will use sensors and data analysis to control traffic lights dynamically.
+:::
+:::{.callout-note}
+### Problem:
+Design an algorithm to manage traffic lights at a busy intersection based on real-time traffic data from sensors. The goal is to optimize traffic flow and minimize waiting times for vehicles.
+:::
+
+>*Steps for Algorithmic Thinking:*
+
+## 1. Civil Engineering
+
+- *Problem:* Design the layout of the intersection to ensure efficient traffic flow.
+- *Algorithm:* Develop an algorithm to determine optimal road layouts and signal timings based on traffic volume and road capacity.
+
+The block diagram is shown in [Fig- @fig-civil]
+
+```{mermaid}
+%%| label: fig-civil
+%%| fig-cap: State diagram for Civil Engineering Tribe.
+%%| fig-align: center
+graph TD
+    A[Design Intersection Layout] --> B[Analyze Traffic Volume]
+    B --> C[Determine Optimal Signal Timings]
+    C --> D[Implement Traffic Light Control]
+    D --> E[Monitor Traffic Flow]
+    E --> F[Adjust Layout Based on Data]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+
+
+
+## 2. Mechanical Engineering:
+
+- *Problem:* Create a mechanism for automated traffic lights that can withstand varying weather conditions.
+- *Algorithm:* Develop an algorithm to control the mechanical parts of traffic lights and adjust for environmental factors.
+
+The block diagram is shown in [Fig- @fig-mech]
+
+```{mermaid}
+%%| label: fig-mech
+%%| fig-cap: State diagram for Mechanical Engineering Tribe.
+%%| fig-align: center
+graph TD
+    A[Design Traffic Light Mechanism] --> B[Select Durable Materials]
+    B --> C[Create Weather-Resistant Design]
+    C --> D[Develop Control Mechanism]
+    D --> E[Automate Traffic Light Adjustments]
+    E --> F[Test Mechanism for Reliability]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+## 3. Chemical Engineering:
+
+- *Problem:* Design materials for road signs and sensors that are durable and effective.
+- *Algorithm:* Develop an algorithm to evaluate and select materials based on their chemical properties and environmental impact.
+
+The block diagram is shown in [Fig- @fig-chem]
+
+```{mermaid}
+%%| label: fig-chem
+%%| fig-cap: State diagram for Chemical Engineering Tribe.
+%%| fig-align: center
+graph TD
+    A[Design Road Signs and Sensors] --> B[Evaluate Material Properties]
+    B --> C[Select Chemical-Resistant Materials]
+    C --> D[Ensure Environmental Impact]
+    D --> E[Test Durability]
+    E --> F[Implement in Traffic System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+## 4. Food Technology:
+
+- *Problem:* Ensure that traffic management systems in areas with food distribution centers do not disrupt deliveries.
+- *Algorithm:* Create an algorithm to prioritize traffic flow for delivery vehicles during peak hours to avoid delays.
+
+The block diagram is shown in [Fig- @fig-food]
+
+```{mermaid}
+%%| label: fig-food
+%%| fig-cap: State diagram for Food Engineering Tribe.
+%%| fig-align: center
+graph TD
+    A[Assess Impact on Delivery Routes] --> B[Prioritize Delivery Vehicles]
+    B --> C[Design Traffic Light Scheduling]
+    C --> D[Implement Scheduling in System]
+    D --> E[Monitor Delivery Efficiency]
+    E --> F[Adjust Based on Feedback]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+## 5. Electronics and Communication:
+
+- *Problem:* Implement sensor networks and communication systems for data collection and signal control.
+- *Algorithm:* Develop algorithms for data transmission, sensor data integration, and communication between traffic lights and control systems.
+
+The block diagram is shown in [Fig- @fig-EC]
+
+
+```{mermaid}
+%%| label: fig-EC
+%%| fig-cap: State diagram for Electronics and Communication Engineering Tribe.
+%%| fig-align: center
+graph TD
+    A[Implement Sensor Network] --> B[Design Data Transmission System]
+    B --> C[Integrate Sensors with Traffic Lights]
+    C --> D[Develop Communication Protocols]
+    D --> E[Ensure Reliable Data Transfer]
+    E --> F[Optimize Communication System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+## 6. Robotics and Automation:
+
+- *Problem:* Automate the adjustment of traffic lights based on real-time data.
+- *Algorithm:* Design an algorithm to control automated systems that adjust traffic lights dynamically based on sensor data and predefined rules.
+
+The block diagram is shown in [Fig- @fig-RB]
+
+```{mermaid}
+%%| label: fig-RB
+%%| fig-cap: State diagram for Robotics Tribe.
+%%| fig-align: center
+graph TD
+    A[Develop Automation System] --> B[Create Real-Time Adjustment Algorithms]
+    B --> C[Integrate with Traffic Lights]
+    C --> D[Test for Dynamic Control]
+    D --> E[Optimize Automation for Traffic Flow]
+    E --> F[Monitor and Refine System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+## 7. Computer Science:
+
+- *Problem:* Create a software system to process traffic data and control traffic lights.
+- *Algorithm:* Develop a software algorithm that processes data from traffic sensors, makes real-time decisions on traffic light timings, and adjusts signals to optimize traffic flow.
+
+The block diagram is shown in [Fig- @fig-CS]
+
+```{mermaid}
+%%| label: fig-CS
+%%| fig-cap: State diagram for Computer Science Tribe.
+%%| fig-align: center
+graph TD
+    A[Develop Software System] --> B[Process Traffic Data]
+    B --> C[Implement Decision-Making Algorithms]
+    C --> D[Control Traffic Lights Based on Data]
+    D --> E[Test and Debug System]
+    E --> F[Deploy and Monitor System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+```
+
+## Expected Partial Outcome 
+
+By designing and implementing algorithms for this traffic management system, engineers from various branches contribute to creating a more efficient and responsive traffic control system. Each branch applies algorithmic thinking to address specific aspects of the problem, demonstrating the relevance and application of algorithms in real-world scenarios.
+
+:::{.callout-tip}
+### Key Takeaway
+By engaging with the various engineering contexts illustrated through algorithmic thinking, students will gain a deeper appreciation for how structured problem-solving can lead to better planning, efficient design, and successful execution in real-world scenarios. Algorithmic thinking is not just about writing code but about systematically breaking down complex challenges into manageable steps, which is crucial for effective engineering solutions. Understanding and applying this approach will empower students to tackle problems more efficiently, optimize processes, and enhance their ability to innovate across different engineering disciplines.
+:::
+
+The next session will focus on translating the conceptual framework of algorithmic thinking into a computational framework. This transition will involve exploring the fundamental components and functions of computer systems, which are essential for implementing algorithms in a practical programming environment.
+
+## Conceptual to Computational 
+
+Algorithmic thinking offers a robust conceptual framework for addressing complex problems through systematic decomposition into manageable steps. This method allows for effective planning, design, and implementation of solutions. However, transitioning from conceptual frameworks to practical applications necessitates a foundational understanding of computer systems.
+
+To effectively translate algorithmic concepts into computational implementations, it is essential to grasp how computer systems operate. Knowledge of computer architecture, software types, and various programming tools is crucial for converting algorithms into executable programs and optimizing these solutions.
+
+This course will introduce the basic components and functions of computer systems, including hardware, software, and programming environments. This foundational understanding will bridge the gap between theoretical algorithmic thinking and practical computational implementation, facilitating the effective application of algorithms in programming tasks.
+### Familiarization of Computer System, Editors, Various Language Translators
+
+#### Introduction to Computer Architecture
+
+**1. Block Diagram of Computer:**
+The block diagram of a computer provides a visual representation of its major components and their interconnections. It typically includes the Central Processing Unit (CPU), Memory, Input Devices, Output Devices, and Storage Units. This diagram helps in understanding the flow of data and control signals within the computer system. A sample block diagram is shown in [Fig-@fig-CBD].
+
+![Block Diagram of a Computer](https://www.essc-india.org/semicon/images/coureses_computer/computer-architecture.jpg){#fig-CBD fig-align="center"}
+
+**2. Hardware:**
+Hardware refers to the physical components of a computer system. It includes the CPU, motherboard, RAM, hard drives, input devices (such as keyboards and mice), output devices (such as monitors and printers), and peripheral devices. Understanding hardware is crucial for comprehending how software interacts with physical components to perform tasks.
+
+**3. Input and Output Devices:**
+   - **Input Devices:** These are devices used to enter data into a computer. Common examples include keyboards, mice, scanners, and microphones.
+   - **Output Devices:** These devices display or output data from the computer. Examples include monitors, printers, and speakers.
+
+**4. Memory:**
+Memory in a computer system is used to store data and instructions. It includes:
+   - **Primary Memory (RAM):** Volatile memory that temporarily holds data and instructions currently in use.
+   - **Secondary Memory (Storage):** Non-volatile memory used for long-term data storage, such as hard drives and SSDs.
+
+#### Software
+
+**1. Types of Software:**
+   - **System Software:** Includes operating systems (e.g., Windows, macOS, Linux) that manage hardware resources and provide a platform for running applications.
+   - **Application Software:** Programs designed for end-users to perform specific tasks, such as word processors, web browsers, and games.
+
+**2. High-Level Languages:**
+High-level programming languages are designed to be easy for humans to read and write. Examples include Python, Java, and C++. They are used to write programs that are compiled or interpreted into machine code.
+
+**3. Low-Level Languages:**
+Low-level languages are closer to machine code and provide less abstraction from the hardware. Examples include assembly language, which is specific to a particular computer architecture and provides a symbolic representation of machine instructions.
+
+**4. Assembly Languages:**
+Assembly language is a low-level programming language that uses symbolic names for instructions and data. It is specific to a computer architecture and is used to write programs that interact directly with hardware.
+
+#### Language Translators
+
+**1. Compiler:**
+A compiler is a program that translates high-level source code into machine code or intermediate code that can be executed by the computer. It performs syntax checking, optimization, and generates executable files.
+
+**2. Interpreter:**
+An interpreter translates high-level source code into machine code line-by-line or statement-by-statement at runtime. It does not produce an executable file but directly executes the instructions. Examples include Python interpreters.
+
+**3. Assembler:**
+An assembler translates assembly language code into machine code. It converts symbolic instructions into binary instructions that the computer's CPU can execute.
+
+:::{.callout-tip}
+### Need and Significance of Technical Know-how on Computer System
+
+Understanding the fundamentals of computer systems, including hardware components, software types, and language translators, is crucial for engineers as they move from conceptual ideas to practical, computer-based solutions. Familiarity with computer architecture helps engineers grasp how different hardware elements interact and how data flows through the system. Knowledge of software types and language translators enables engineers to select appropriate programming tools and languages for implementing their algorithms efficiently.
+:::
+
+Before delving into the development of algorithms and flow charts, it is essential to understand the fundamental concepts of the computer system, as they provide the groundwork for translating conceptual ideas into computational solutions. The knowledge of computer architecture, memory, and software helps in effectively implementing and visualizing algorithms within a computer system.
+
+With this foundational understanding in place, the focus shifts to developing algorithms and flow charts, which are designed with specific structures to facilitate standardization.
+
+## Developing Algorithms and Flow Charts
+
+In the computational framework, standardizing the step-by-step process of algorithmic thinking is crucial for ensuring consistency and clarity in program development. 
+
+#### Introduction to Algorithms
+
+**1. What is an Algorithm?**
+
+An algorithm is a well-defined *sequence of steps* or instructions designed to perform a specific task or solve a particular problem. It serves as a blueprint for writing computer programs. Algorithms are essential for problem-solving as they provide a clear and systematic approach to achieving desired outcomes.
+
+**2. Properties of a Good Algorithm**
+
+A well-constructed algorithm possesses several key properties:
+   - **Finiteness:** The algorithm must have a finite number of steps and should terminate after a certain number of operations.
+   - **Definiteness:** Each step of the algorithm should be precisely defined and unambiguous.
+   - **Input:** The algorithm should accept zero or more inputs, which are the data necessary for its execution.
+   - **Output:** The algorithm should produce at least one output, which is the result or solution of the problem.
+   - **Effectiveness:** Each step of the algorithm should be basic enough to be executed within a finite amount of time.
+
+#### Introduction to Flow Charts
+
+**1. What is a Flow Chart?**
+
+A flow chart is a *visual representation* of an algorithm, using various symbols to denote different types of operations or steps. Flow charts help in understanding and communicating the logic of an algorithm more clearly by illustrating the flow of control and decision-making process.
+
+**2. Key Symbols in Flow Charts**
+
+   - **Oval:** Represents the start and end points of the flow chart.
+   - **Rectangle:** Indicates a process or action step.
+   - **Diamond:** Denotes a decision point, where branching occurs based on conditions.
+   - **Parallelogram:** Used for input and output operations.
+   - **Arrow:** Shows the direction of flow between steps.
+
+:::{.callout-tip}
+### Standardizing Algorithmic Thinking
+
+In the computational framework, algorithms and flow charts are designed with a specific structure to ensure that the problem-solving approach is standardized. This standardization helps in maintaining consistency in how algorithms are developed, communicated, and executed. By adhering to these standardized structures, engineers and programmers can more effectively design, analyze, and implement solutions, ensuring that the computational processes are efficient and reliable.
+:::
+
+In the upcoming sessions, students will have the opportunity to explore more examples and apply the principles of algorithmic thinking and flowchart design to a variety of problems.
+
+#### 1. Crossing a Traffic Signal
+
+**Problem:** Write the algorithm and flowchart for the program to determine whether a pedestrian can cross the road based on the traffic signal color.
+
+**Algorithm:**
+
+1. Start
+2. Observe the traffic signal color
+3. If the signal is green,  "Cross the road"
+4. Else if the signal is yellow,  "Wait"
+5. Else if the signal is red, "wait"
+6. End
+
+**Flowchart:**
+Flowchart for this program is shown in [Fig-@fig-FCC].
+```{mermaid}
+%%| label: fig-FCC
+%%| fig-cap: Flowchart of the program to cross the trafic signal.
+%%| fig-align: center
+flowchart TD
+    A((Start)) --> B{Check traffic light color}
+    B -- Red --> C[Wait]
+    B -- Yellow --> D[Wait]
+    B -- Green --> E[Cross the road]
+    C --> B
+    D --> B
+    E --> F((Stop))
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,H startEnd;
+    class B,D,F,G inputOutput;
+    class C,E decision;
+```
+
+#### 2. Finding the Maximum of Two Numbers
+
+**Problem:** Write the algorithm and draw the flowchart for the program that takes two numbers as input and prints the larger of the two.
+
+#### Algorithm:
+1. Start
+2. Input two numbers, A and B
+3. If A is greater than B, print A
+4. Otherwise, print B
+5. End
+
+#### Flowchart 
+
+Flowchart for this program is shown in [Fig-@fig-FC1].
+```{mermaid}
+%%| label: fig-FC1
+%%| fig-cap: Flowchart of the program to find larger of two numbers.
+%%| fig-align: center
+flowchart TD
+    A([Start]) --> B[Input A and B]
+    B --> C{Is A > B?}
+    C -- Yes --> D[Print A]
+    C -- No --> E[Print B]
+    D --> F([End])
+    E --> F
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,F startEnd;
+    class B,D,E inputOutput;
+    class C decision;
+```
+
+#### 3. Finding the Largest of Three Numbers
+
+**Problem:** Write a program that takes three numbers as input and prints the largest of the three.
+
+**Algorithm:**
+
+1. Start
+2. Input three numbers, A, B, and C
+3. If A is greater than B and A is greater than C, print A
+4. Else if B is greater than A and B is greater than C, print B
+5. Otherwise, print C
+6. End
+
+**Flowchart:**
+Flowchart for this program is shown in [Fig-@fig-FC3].
+```{mermaid}
+%%| label: fig-FC3
+%%| fig-cap: Flowchart of the program to find largest of three numbers.
+%%| fig-align: center
+flowchart TD
+    A([Start]) --> B[Input A, B, and C]
+    B --> C{Is A > B?}
+    C -->|Yes| D{Is A > C?}
+    C -->|No| E{Is B > C?}
+    D -- Yes --> F[Print A]
+    D -- No --> G[Print C]
+    E -- Yes --> H[Print B]
+    E -- No --> G
+    F --> I([End])
+    H --> I
+    G --> I
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,I startEnd;
+    class B,F,H inputOutput;
+    class C,D,E decision;
+```
+
+#### 4. Class Joining Dilema
+
+**Problem:** Write the algorithm and draw the flowchart for the program to determine whether a student will join a class based on whether their favorite teacher and best friend are in the class.
+
+**Algorithm:**
+
+1. Start
+2. Observe the presence of the favorite teacher
+3. Observe the presence of the best friend
+4. If both the favorite teacher and the best friend are present,  "Join the class"
+5. Else,  "Do not join the class"
+6. End
+
+**Flowchart:**
+Flowchart for this program is shown in [Fig-@fig-FC4].
+```{mermaid}
+%%| label: fig-FC4
+%%| fig-cap: Flowchart of the program to join the class
+%%| fig-align: center
+flowchart TD
+    A([Start]) --> B{Is favourite teacher in class?}
+    B -- Yes --> C{Is best friend in class?}
+    C -- Yes --> D[Joins class]
+    B -- No --> E[Does not join class]
+    C -- No --> E[Does not join class]
+    E --> F([Stop])
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,I startEnd;
+    class B,F,H inputOutput;
+    class C,D,E decision;
+```
+
+## Transition from Algorithmic Thinking to Programming
+
+The algorithmic thinking process involves breaking down a problem into a series of logical steps, as illustrated by our flowcharts. This conceptual framework is very important for defining clear, sequential instructions to solve a problem. However, to bring these concepts into a practical domain, we need to translate them into a programming language that can execute these instructions.
+
+## Transition from Algorithmic Thinking to Programming
+
+Algorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like `C`, `C++`, and `Java` have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with `Python`, highlighting why `Python` is particularly suitable for computational thinking in engineering.
+
+## Historical Context and Comparison
+
+### C Language
+ Developed in the early 1970s, `C` is one of the earliest high-level programming languages. It provides a foundation for many modern languages and is known for its performance and low-level memory manipulation capabilities. `C` requires explicit management of memory and pointers, which adds complexity to code. While powerful, it lacks some of the high-level abstractions and simplicity found in `Python`.
+
+### C++ Language
+
+ An extension of `C`, `C++` was developed in the early 1980s and introduced object-oriented programming features. It allows for complex data modeling and high-performance applications. `C++` offers more control over system resources but at the cost of increased complexity. It involves managing object-oriented concepts and memory explicitly, which can be challenging for beginners.
+
+### Java Language
+Developed in the mid-1990s, `Java` is known for its portability across platforms, thanks to the `Java Virtual Machine` (JVM). It emphasizes object-oriented programming and has extensive libraries. `Java`'s syntax is more verbose compared to `Python`. It requires managing class structures and access modifiers, which can make code less straightforward to write and read.
+
+## Why `Python` is Preferred for Computational Thinking?
+`Python`, created by Guido van Rossum and first released in 1991, emerged from a desire to develop a language that was both easy to read and write, while also being powerful enough to handle complex tasks. It was inspired by the ABC language, which van Rossum had worked on during his time at Centrum Wiskunde & Informatica (CWI) in the Netherlands. `Python`'s base code was written in C, which provides a solid foundation for its extensive standard library and cross-platform capabilities. The language emphasizes readability and simplicity, featuring an elegant syntax that allows programmers to express concepts in fewer lines of code compared to many other languages. This design philosophy has contributed to `Python`'s widespread adoption across various fields, from web development to scientific computing and engineering.
+Popular features of `Python` programming language are:
+
+### 1. Readability and Simplicity
+`Python`’s syntax is designed to be clear and intuitive, resembling natural language. This simplicity allows engineers to focus on the logic of their algorithms without being bogged down by complex syntax. For computational thinking, where clarity and understanding are crucial, `Python`’s readability reduces cognitive load, making it easier to implement and debug algorithms.
+
+### 2. Versatility and Ease of Use
+`Python` supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its versatility makes it suitable for a wide range of applications, from simple scripts to complex systems. This adaptability is particularly useful in engineering, where problems often span different domains and require diverse approaches.
+
+### 3. Rich Libraries and Frameworks
+`Python`’s extensive standard library and third-party modules simplify many tasks. Libraries such as `NumPy` for numerical computations, `pandas` for data manipulation, and `Matplotlib` for visualization provide powerful tools for engineers. These libraries streamline the implementation of complex algorithms and data handling, making `Python` an efficient choice for solving engineering problems.
+
+:::{.callout-tip}
+### Verdict
+
+The historical languages like `C`, `C++`, and `Java` have their strengths, `Python`'s readability, versatility, and extensive libraries make it particularly well-suited for computational thinking in engineering. By transitioning from conceptual algorithmic thinking to practical `Python` programming, engineers can effectively apply and implement their problem-solving strategies in a straightforward and efficient manner.
+
+:::
+
+Future sessions will delve into various `Python` examples, reinforcing the practical application of these concepts and preparing students for advanced problem-solving in their respective engineering fields.

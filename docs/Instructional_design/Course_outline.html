@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Justin Mathew">
+<meta name="dcterms.date" content="2024-08-15">
+
+<title>Python Programming – Instructional Design for Python Programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Instructional Design for Python Programming</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About the FDP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../feedback.html"> 
+<span class="menu-text">Feed Back</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Python Programming</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././images/workshop_cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Course_outline.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructional_design/Course Outline</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Instructional_design/Instru_design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instructional Design</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../introduction/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setting-up</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hands_on.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands-on Session on Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images//saintgits_logo.JPG" class="img-fluid figure-img"></p>
+<figcaption>Sharing Innovations</figcaption>
+</figure>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-overview" id="toc-course-overview" class="nav-link active" data-scroll-target="#course-overview">Course Overview</a></li>
+  <li><a href="#key-ideas" id="toc-key-ideas" class="nav-link" data-scroll-target="#key-ideas">Key Ideas</a>
+  <ul class="collapse">
+  <li><a href="#topic-1-introduction-to-algorithmic-thinking" id="toc-topic-1-introduction-to-algorithmic-thinking" class="nav-link" data-scroll-target="#topic-1-introduction-to-algorithmic-thinking">Topic 1: Introduction to Algorithmic Thinking</a></li>
+  <li><a href="#topic-2-familiarization-with-computer-systems-and-language-translators" id="toc-topic-2-familiarization-with-computer-systems-and-language-translators" class="nav-link" data-scroll-target="#topic-2-familiarization-with-computer-systems-and-language-translators">Topic 2: Familiarization with Computer Systems and Language Translators</a></li>
+  <li><a href="#topic-3-justification-for-using-python" id="toc-topic-3-justification-for-using-python" class="nav-link" data-scroll-target="#topic-3-justification-for-using-python">Topic 3: Justification for Using Python</a></li>
+  <li><a href="#topic-4-developing-algorithms-and-flow-charts" id="toc-topic-4-developing-algorithms-and-flow-charts" class="nav-link" data-scroll-target="#topic-4-developing-algorithms-and-flow-charts">Topic 4: Developing Algorithms and Flow Charts</a></li>
+  <li><a href="#topic-5-data-types-and-arithmetic-operations-in-python" id="toc-topic-5-data-types-and-arithmetic-operations-in-python" class="nav-link" data-scroll-target="#topic-5-data-types-and-arithmetic-operations-in-python">Topic 5: Data Types and Arithmetic Operations in Python</a></li>
+  <li><a href="#topic-6-conditional-statements-in-python" id="toc-topic-6-conditional-statements-in-python" class="nav-link" data-scroll-target="#topic-6-conditional-statements-in-python">Topic 6: Conditional Statements in Python</a></li>
+  <li><a href="#topic-7-loop-structures-in-python" id="toc-topic-7-loop-structures-in-python" class="nav-link" data-scroll-target="#topic-7-loop-structures-in-python">Topic 7: Loop Structures in Python</a></li>
+  <li><a href="#topic-8-functions-in-python" id="toc-topic-8-functions-in-python" class="nav-link" data-scroll-target="#topic-8-functions-in-python">Topic 8: Functions in Python</a></li>
+  <li><a href="#topic-9-string-operations-in-python" id="toc-topic-9-string-operations-in-python" class="nav-link" data-scroll-target="#topic-9-string-operations-in-python">Topic 9: String Operations in Python</a></li>
+  <li><a href="#topic-10-real-timetechnical-applications-using-data-structures" id="toc-topic-10-real-timetechnical-applications-using-data-structures" class="nav-link" data-scroll-target="#topic-10-real-timetechnical-applications-using-data-structures">Topic 10: Real-time/Technical Applications Using Data Structures</a></li>
+  <li><a href="#topic-11-micro-project" id="toc-topic-11-micro-project" class="nav-link" data-scroll-target="#topic-11-micro-project">Topic 11: Micro Project</a></li>
+  </ul></li>
+  <li><a href="#teaching-methodology" id="toc-teaching-methodology" class="nav-link" data-scroll-target="#teaching-methodology">Teaching Methodology</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation">Evaluation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sijuswamy/CME-workshop-1/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Python Programming</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Justin Mathew </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 15, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="course-overview" class="level1">
+<h1>Course Overview</h1>
+<p><strong>Credits:</strong> 2<br>
+<strong>Hours per Week:</strong> 2</p>
+<p><strong>Course Objectives:</strong></p>
+<ol type="1">
+<li>To develop algorithmic thinking and problem-solving skills.</li>
+<li>To familiarize students with computer systems, software, and language translators.</li>
+<li>To justify the use of Python for programming and algorithmic design.</li>
+<li>To introduce Python programming concepts, including data types, conditional statements, and loops.</li>
+<li>To implement functions, string operations, and real-time applications using Python’s data structures.</li>
+<li>To enable students to apply their knowledge to solve practical problems through a micro project.</li>
+</ol>
+</section>
+<section id="key-ideas" class="level1">
+<h1>Key Ideas</h1>
+<section id="topic-1-introduction-to-algorithmic-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="topic-1-introduction-to-algorithmic-thinking">Topic 1: Introduction to Algorithmic Thinking</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Understand the concept of algorithmic thinking.</p></li>
+<li><p>Develop basic algorithms for simple problems.</p></li>
+<li><p>Recognize the importance of algorithms in problem-solving.</p></li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>What is Algorithmic Thinking?</p>
+<ul>
+<li><p>Importance in problem-solving</p></li>
+<li><p>Steps in designing an algorithm</p></li>
+</ul></li>
+<li><p>Example Algorithms:</p>
+<ul>
+<li>Simple tasks (e.g., making a cup of tea)</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Create algorithms for everyday activities to illustrate the concept.</li>
+</ul>
+</section>
+<section id="topic-2-familiarization-with-computer-systems-and-language-translators" class="level2">
+<h2 class="anchored" data-anchor-id="topic-2-familiarization-with-computer-systems-and-language-translators">Topic 2: Familiarization with Computer Systems and Language Translators</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Understand basic computer architecture and components.</p></li>
+<li><p>Identify different types of software and language translators.</p></li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Introduction to Computer Architecture:</p>
+<ul>
+<li><p>Block diagram of a computer</p></li>
+<li><p>Hardware components (Input, Output devices)</p></li>
+<li><p>Memory types</p></li>
+</ul></li>
+<li><p>Software Types:</p>
+<ul>
+<li><p>High-level vs.&nbsp;Low-level languages</p></li>
+<li><p>Assembly languages</p></li>
+</ul></li>
+<li><p>Language Translators:</p>
+<ul>
+<li>Compilers, Interpreters, Assemblers</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Explore how different programming languages and translators affect the execution of a simple program.</li>
+</ul>
+</section>
+<section id="topic-3-justification-for-using-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-3-justification-for-using-python">Topic 3: Justification for Using Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Understand the advantages of Python for algorithmic thinking and programming.</p></li>
+<li><p>Compare Python with other programming languages in terms of simplicity and effectiveness.</p></li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Why Python?</p>
+<ul>
+<li><p>Python’s simplicity and readability</p></li>
+<li><p>Comparison with other languages (e.g., C++, Java)</p></li>
+<li><p>Python’s role in modern software development and data science</p></li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Demonstrate a basic Python script and compare it with an equivalent script in another language.</li>
+</ul>
+</section>
+<section id="topic-4-developing-algorithms-and-flow-charts" class="level2">
+<h2 class="anchored" data-anchor-id="topic-4-developing-algorithms-and-flow-charts">Topic 4: Developing Algorithms and Flow Charts</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Develop and represent algorithms using flowcharts.</p></li>
+<li><p>Understand properties of good algorithms.</p></li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Introduction to Algorithms:</p>
+<ul>
+<li>Properties of good algorithms</li>
+</ul></li>
+<li><p>Flowchart Creation:</p>
+<ul>
+<li>Basic flowchart symbols and conventions</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Design flowcharts for simple algorithms (e.g., sorting a list of numbers).</li>
+</ul>
+</section>
+<section id="topic-5-data-types-and-arithmetic-operations-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-5-data-types-and-arithmetic-operations-in-python">Topic 5: Data Types and Arithmetic Operations in Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Understand and use basic data types and operators in Python.</p></li>
+<li><p>Perform arithmetic operations and handle expressions.</p></li>
+</ul>
+<p><strong>Content:</strong> - Introduction to Python Programming:</p>
+<ul>
+<li><p>Data types (int, float, str, etc.)</p></li>
+<li><p>Keywords and Variables</p></li>
+<li><p>Input and Output statements</p></li>
+<li><p>Operators and Arithmetic expressions</p></li>
+<li><p>Operator precedence and Evaluation of expressions</p></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Write a Python program that performs various arithmetic operations and displays results.</li>
+</ul>
+</section>
+<section id="topic-6-conditional-statements-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-6-conditional-statements-in-python">Topic 6: Conditional Statements in Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li>Implement and use conditional statements to control the flow of programs.</li>
+</ul>
+<p><strong>Content:</strong> - Types of Conditional Statements:</p>
+<ul>
+<li><p><code>if</code>, <code>if-else</code>, <code>elif</code>, nested <code>if-else</code>, <code>if-elif-else</code></p></li>
+<li><p>Practical Examples:</p>
+<ul>
+<li>Programs using conditional statements</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Create a Python program that determines if a number is positive, negative, or zero.</li>
+</ul>
+</section>
+<section id="topic-7-loop-structures-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-7-loop-structures-in-python">Topic 7: Loop Structures in Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li>Use loop structures to repeat actions and iterate over data.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Introduction to Looping:</p>
+<ul>
+<li><p><code>for</code>, <code>while</code>, nested loops</p></li>
+<li><p><code>break</code>, <code>continue</code>, <code>pass</code> statements</p></li>
+<li><p><code>range</code> function</p></li>
+</ul></li>
+<li><p>Sample Programs:</p>
+<ul>
+<li>Implementing various loop constructs</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Write a Python program that calculates the factorial of a number using loops.</li>
+</ul>
+</section>
+<section id="topic-8-functions-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-8-functions-in-python">Topic 8: Functions in Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li><p>Define and use functions for modular programming.</p></li>
+<li><p>Understand function concepts including parameter passing and return values.</p></li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Concept of Functions:</p>
+<ul>
+<li><p>Definition, Calling Functions</p></li>
+<li><p>Passing Parameters and Return Values</p></li>
+<li><p>Type Conversion and Coercion</p></li>
+</ul></li>
+<li><p>Advanced Function Concepts:</p>
+<ul>
+<li><p>Lambda functions</p></li>
+<li><p>Built-in Mathematical functions</p></li>
+</ul></li>
+<li><p>Sample Programs Using Functions</p></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Develop a Python program that uses functions to perform mathematical operations.</li>
+</ul>
+</section>
+<section id="topic-9-string-operations-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="topic-9-string-operations-in-python">Topic 9: String Operations in Python</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li>Manipulate and process strings using Python’s string handling functions.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Introduction to Strings:</p>
+<ul>
+<li>String creation and manipulation</li>
+</ul></li>
+<li><p>String Handling Functions:</p>
+<ul>
+<li>Commonly used functions (e.g., <code>split()</code>, <code>join()</code>, <code>replace()</code>)</li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Write a Python program that processes and formats user input strings.</li>
+</ul>
+</section>
+<section id="topic-10-real-timetechnical-applications-using-data-structures" class="level2">
+<h2 class="anchored" data-anchor-id="topic-10-real-timetechnical-applications-using-data-structures">Topic 10: Real-time/Technical Applications Using Data Structures</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li>Apply data structures (lists, tuples, dictionaries) to solve real-world problems.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Lists, Tuples, Dictionaries:</p>
+<ul>
+<li><p>Concepts, operations, and functions</p></li>
+<li><p>Mutable vs Immutable data structures</p></li>
+</ul></li>
+<li><p>Applications:</p>
+<ul>
+<li><p>Identifying use cases</p></li>
+<li><p>Solving problems using lists, tuples, and dictionaries</p></li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Create a Python program that manages a list of student records using lists and dictionaries.</li>
+</ul>
+</section>
+<section id="topic-11-micro-project" class="level2">
+<h2 class="anchored" data-anchor-id="topic-11-micro-project">Topic 11: Micro Project</h2>
+<p><strong>Lesson Outcomes:</strong></p>
+<ul>
+<li>Apply Python concepts to develop a project relevant to the student’s field of study.</li>
+</ul>
+<p><strong>Content:</strong></p>
+<ul>
+<li><p>Project Development:</p>
+<ul>
+<li><p>Design and implementation of a simple project</p></li>
+<li><p>Application of learned concepts to a practical problem</p></li>
+</ul></li>
+</ul>
+<p><strong>Practical Situation:</strong></p>
+<ul>
+<li>Develop and present a micro project related to the student’s branch of study.</li>
+</ul>
+</section>
+</section>
+<section id="teaching-methodology" class="level1">
+<h1>Teaching Methodology</h1>
+<ul>
+<li><p>Hands-on lab exercises</p></li>
+<li><p>Step-by-step problem-solving approach</p></li>
+<li><p>Regular assessments and feedback</p></li>
+</ul>
+</section>
+<section id="evaluation" class="level1">
+<h1>Evaluation</h1>
+<ul>
+<li><p>Lab exercises and practical implementation</p></li>
+<li><p>Micro Project</p></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/sijuswamy\.github\.io\/CME-workshop-1\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sijuswamy/CME-workshop-1/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Siju Swamy">
+
+<title>Instructional Design for Python Programming</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="mermaid-theme" content="dark">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Instructional Design for Python Programming</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About the FDP</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../feedback.html"> 
+<span class="menu-text">Feed Back</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Instructional_design/Instru_design.html">Instructional Design</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src=".././images/workshop_cover.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Course_outline.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Outline</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Instructional_design/Instru_design.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Instructional Design</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../introduction/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../setup/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Setting-up</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../hands_on.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hands-on Session on Quarto</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..\images//saintgits_logo.JPG" class="img-fluid figure-img"></p>
+<figcaption>Sharing Innovations</figcaption>
+</figure>
+</div>
+</div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#course-title-python-programming-for-algorithmic-thinking" id="toc-course-title-python-programming-for-algorithmic-thinking" class="nav-link" data-scroll-target="#course-title-python-programming-for-algorithmic-thinking"><em>Course Title:</em> Python Programming (for Algorithmic Thinking)</a></li>
+  <li><a href="#course-objectives" id="toc-course-objectives" class="nav-link" data-scroll-target="#course-objectives">Course Objectives</a></li>
+  <li><a href="#course-outcomes" id="toc-course-outcomes" class="nav-link" data-scroll-target="#course-outcomes">Course Outcomes</a></li>
+  <li><a href="#course-introduction" id="toc-course-introduction" class="nav-link" data-scroll-target="#course-introduction">Course Introduction</a></li>
+  <li><a href="#a-seven-in-one-problem" id="toc-a-seven-in-one-problem" class="nav-link" data-scroll-target="#a-seven-in-one-problem">A Seven-in-One Problem!</a></li>
+  <li><a href="#civil-engineering" id="toc-civil-engineering" class="nav-link" data-scroll-target="#civil-engineering">1. Civil Engineering</a></li>
+  <li><a href="#mechanical-engineering" id="toc-mechanical-engineering" class="nav-link" data-scroll-target="#mechanical-engineering">2. Mechanical Engineering:</a></li>
+  <li><a href="#chemical-engineering" id="toc-chemical-engineering" class="nav-link" data-scroll-target="#chemical-engineering">3. Chemical Engineering:</a></li>
+  <li><a href="#food-technology" id="toc-food-technology" class="nav-link" data-scroll-target="#food-technology">4. Food Technology:</a></li>
+  <li><a href="#electronics-and-communication" id="toc-electronics-and-communication" class="nav-link" data-scroll-target="#electronics-and-communication">5. Electronics and Communication:</a></li>
+  <li><a href="#robotics-and-automation" id="toc-robotics-and-automation" class="nav-link" data-scroll-target="#robotics-and-automation">6. Robotics and Automation:</a></li>
+  <li><a href="#computer-science" id="toc-computer-science" class="nav-link" data-scroll-target="#computer-science">7. Computer Science:</a></li>
+  <li><a href="#expected-partial-outcome" id="toc-expected-partial-outcome" class="nav-link" data-scroll-target="#expected-partial-outcome">Expected Partial Outcome</a></li>
+  <li><a href="#conceptual-to-computational" id="toc-conceptual-to-computational" class="nav-link" data-scroll-target="#conceptual-to-computational">Conceptual to Computational</a></li>
+  <li><a href="#developing-algorithms-and-flow-charts" id="toc-developing-algorithms-and-flow-charts" class="nav-link" data-scroll-target="#developing-algorithms-and-flow-charts">Developing Algorithms and Flow Charts</a></li>
+  <li><a href="#transition-from-algorithmic-thinking-to-programming" id="toc-transition-from-algorithmic-thinking-to-programming" class="nav-link" data-scroll-target="#transition-from-algorithmic-thinking-to-programming">Transition from Algorithmic Thinking to Programming</a></li>
+  <li><a href="#transition-from-algorithmic-thinking-to-programming-1" id="toc-transition-from-algorithmic-thinking-to-programming-1" class="nav-link" data-scroll-target="#transition-from-algorithmic-thinking-to-programming-1">Transition from Algorithmic Thinking to Programming</a></li>
+  <li><a href="#historical-context-and-comparison" id="toc-historical-context-and-comparison" class="nav-link" data-scroll-target="#historical-context-and-comparison">Historical Context and Comparison</a>
+  <ul class="collapse">
+  <li><a href="#c-language" id="toc-c-language" class="nav-link" data-scroll-target="#c-language">C Language</a></li>
+  <li><a href="#c-language-1" id="toc-c-language-1" class="nav-link" data-scroll-target="#c-language-1">C++ Language</a></li>
+  <li><a href="#java-language" id="toc-java-language" class="nav-link" data-scroll-target="#java-language">Java Language</a></li>
+  </ul></li>
+  <li><a href="#why-python-is-preferred-for-computational-thinking" id="toc-why-python-is-preferred-for-computational-thinking" class="nav-link" data-scroll-target="#why-python-is-preferred-for-computational-thinking">Why <code>Python</code> is Preferred for Computational Thinking?</a>
+  <ul class="collapse">
+  <li><a href="#readability-and-simplicity" id="toc-readability-and-simplicity" class="nav-link" data-scroll-target="#readability-and-simplicity">1. Readability and Simplicity</a></li>
+  <li><a href="#versatility-and-ease-of-use" id="toc-versatility-and-ease-of-use" class="nav-link" data-scroll-target="#versatility-and-ease-of-use">2. Versatility and Ease of Use</a></li>
+  <li><a href="#rich-libraries-and-frameworks" id="toc-rich-libraries-and-frameworks" class="nav-link" data-scroll-target="#rich-libraries-and-frameworks">3. Rich Libraries and Frameworks</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sijuswamy/CME-workshop-1/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides-quarto.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Instructional Design for Python Programming</h1>
+<p class="subtitle lead"><a href="slides-instructional-design.html" target="_blank"></a></p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Siju Swamy <a href="mailto:siju.swamy@saintgits.org" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Saintgits
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Instructional design is a systematic process used to create educational experiences and materials that effectively facilitate learning and improve student outcomes. It involves analyzing learners’ needs, defining clear objectives, structuring content, and selecting appropriate teaching methods and resources to achieve those objectives. Unlike a syllabus, which outlines the topics and schedule of a course, instructional design focuses on the pedagogical approach, instructional strategies, and assessment methods to ensure that the content is delivered in a way that maximizes learning.</p>
+<p>While the syllabus provides a roadmap of what will be taught, instructional design details the “how” and “why” of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them.</p>
+</section>
+<section id="course-title-python-programming-for-algorithmic-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="course-title-python-programming-for-algorithmic-thinking"><em>Course Title:</em> Python Programming (for Algorithmic Thinking)</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Course Description:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This lab-based one credit course introduces algorithmic thinking through Python programming. Designed for engineers, it covers fundamental programming concepts and their application to real-world problems. The course emphasizes the development of algorithms and their implementation in Python, preparing students to approach problem-solving methodically.</p>
+</div>
+</div>
+</section>
+<section id="course-objectives" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="course-objectives">Course Objectives</h2>
+<p>The course objectives for “Python Programming for Algorithmic Thinking” are designed to provide immediate, actionable goals that students are expected to achieve through successful execution of the course sessions. Each objective is directly aligned with hands-on lab exercises and practical coding tasks, ensuring that students gain relevant skills that are immediately applicable. The focus on these specific objectives not only prepares students to tackle fundamental programming challenges but also builds a strong foundation for advanced coursework and professional engineering tasks.</p>
+<p>The course objecives are:</p>
+<ol type="1">
+<li><strong>Characterize and Identify Computer Components:</strong>
+<ul>
+<li>Understand and describe the functional units and components of a computer system, including hardware, software, and language translators.</li>
+</ul></li>
+<li><strong>Develop Proficiency in Python Programming:</strong>
+<ul>
+<li>Gain the ability to code, test, and debug simple Python programs, demonstrating proficiency in basic programming concepts and practices.</li>
+</ul></li>
+<li><strong>Implement Control Structures:</strong>
+<ul>
+<li>Apply branching and looping statements in Python to develop programs that solve problems through conditional logic and repetitive tasks.</li>
+</ul></li>
+<li><strong>Utilize Python Data Structures:</strong>
+<ul>
+<li>Effectively use supported data structures such as lists, dictionaries, and tuples to organize and manage data in Python programs.</li>
+</ul></li>
+</ol>
+</section>
+<section id="course-outcomes" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="course-outcomes">Course Outcomes</h2>
+<p>The course outcomes represent measurable deliverables that students will gain upon completing the course. They are designed to be immediately applicable in subsequent courses and professional settings, ensuring that graduates are well-prepared for both advanced studies and real-world engineering challenges.</p>
+<p>Course outcomes of ‘Python Programming’ are:</p>
+<p>After the successful completion of the course, the graduate will be able to:</p>
+<ol type="1">
+<li><strong>Design and Implement Algorithms:</strong>
+<ul>
+<li>Develop, analyze, and apply algorithms to solve a variety of computational problems using Python.</li>
+</ul></li>
+<li><strong>Program Efficiently in Python:</strong>
+<ul>
+<li>Write, debug, and optimize Python code, utilizing core programming constructs and data structures effectively.</li>
+</ul></li>
+<li><strong>Apply Data Structures and Functions:</strong>
+<ul>
+<li>Use Python’s data structures, such as lists, tuples, and dictionaries, and modularize code with functions for efficient problem-solving.</li>
+</ul></li>
+<li><strong>Utilize Development Tools:</strong>
+<ul>
+<li>Leverage development tools like GitHub and Raptor for effective coding, documentation, and algorithm visualization.</li>
+</ul></li>
+</ol>
+</section>
+<section id="course-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="course-introduction">Course Introduction</h2>
+<p>To introduce the “Python Programming for Algorithmic Thinking” course to students from various branches, begin by explaining the universal relevance of algorithmic thinking in everyday problem-solving. Use a simple context, such as organizing a group project: just as you would plan tasks and delegate responsibilities to ensure the project is completed efficiently and effectively, algorithmic thinking involves creating systematic methods to solve problems. A block diagram representing this example is given below.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-1">graph TD
+    A[Start Project] --&gt; B[Identify Objectives]
+    B --&gt; C[Break Down Tasks]
+    C --&gt; D[Assign Responsibilities]
+    D --&gt; E[Set Deadlines]
+    E --&gt; F[Execute Tasks]
+    F --&gt; G[Monitor Progress]
+    G --&gt; H[Review and Adjust]
+    H --&gt; I[Complete Project]
+    I --&gt; J[Project Successful]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style G fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style H fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style I fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style J fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: State diagram to successfully finish a project.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Emphasize that the (the algorithmic thinking) skills learned will be valuable across all engineering disciplines, enhancing their problem-solving capabilities and preparing them for complex challenges in their academic and professional careers. This approach will help students appreciate the broad applicability of the course content and encourage active participation.</p>
+</section>
+<section id="a-seven-in-one-problem" class="level2">
+<h2 class="anchored" data-anchor-id="a-seven-in-one-problem">A Seven-in-One Problem!</h2>
+<p>In this context, we will explore how algorithmic thinking can be applied across different engineering branches using a common example. Each branch of engineering plays a critical role in developing and implementing this system, demonstrating the relevance and application of algorithms in diverse fields. Let us formulate the context and problem statement as follows.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Context:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A city wants to implement a smart traffic management system to improve traffic flow and reduce congestion at intersections. The system will use sensors and data analysis to control traffic lights dynamically.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Problem:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Design an algorithm to manage traffic lights at a busy intersection based on real-time traffic data from sensors. The goal is to optimize traffic flow and minimize waiting times for vehicles.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><em>Steps for Algorithmic Thinking:</em></p>
+</blockquote>
+</section>
+<section id="civil-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="civil-engineering">1. Civil Engineering</h2>
+<ul>
+<li><em>Problem:</em> Design the layout of the intersection to ensure efficient traffic flow.</li>
+<li><em>Algorithm:</em> Develop an algorithm to determine optimal road layouts and signal timings based on traffic volume and road capacity.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-civil" class="quarto-xref">Fig-&nbsp;2</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-civil" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-civil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-civil">graph TD
+    A[Design Intersection Layout] --&gt; B[Analyze Traffic Volume]
+    B --&gt; C[Determine Optimal Signal Timings]
+    C --&gt; D[Implement Traffic Light Control]
+    D --&gt; E[Monitor Traffic Flow]
+    E --&gt; F[Adjust Layout Based on Data]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-civil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: State diagram for Civil Engineering Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="mechanical-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="mechanical-engineering">2. Mechanical Engineering:</h2>
+<ul>
+<li><em>Problem:</em> Create a mechanism for automated traffic lights that can withstand varying weather conditions.</li>
+<li><em>Algorithm:</em> Develop an algorithm to control the mechanical parts of traffic lights and adjust for environmental factors.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-mech" class="quarto-xref">Fig-&nbsp;3</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-mech" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-mech">graph TD
+    A[Design Traffic Light Mechanism] --&gt; B[Select Durable Materials]
+    B --&gt; C[Create Weather-Resistant Design]
+    C --&gt; D[Develop Control Mechanism]
+    D --&gt; E[Automate Traffic Light Adjustments]
+    E --&gt; F[Test Mechanism for Reliability]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mech-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: State diagram for Mechanical Engineering Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chemical-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="chemical-engineering">3. Chemical Engineering:</h2>
+<ul>
+<li><em>Problem:</em> Design materials for road signs and sensors that are durable and effective.</li>
+<li><em>Algorithm:</em> Develop an algorithm to evaluate and select materials based on their chemical properties and environmental impact.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-chem" class="quarto-xref">Fig-&nbsp;4</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-chem" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-chem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-chem">graph TD
+    A[Design Road Signs and Sensors] --&gt; B[Evaluate Material Properties]
+    B --&gt; C[Select Chemical-Resistant Materials]
+    C --&gt; D[Ensure Environmental Impact]
+    D --&gt; E[Test Durability]
+    E --&gt; F[Implement in Traffic System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: State diagram for Chemical Engineering Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="food-technology" class="level2">
+<h2 class="anchored" data-anchor-id="food-technology">4. Food Technology:</h2>
+<ul>
+<li><em>Problem:</em> Ensure that traffic management systems in areas with food distribution centers do not disrupt deliveries.</li>
+<li><em>Algorithm:</em> Create an algorithm to prioritize traffic flow for delivery vehicles during peak hours to avoid delays.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-food" class="quarto-xref">Fig-&nbsp;5</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-food" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-food-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-food">graph TD
+    A[Assess Impact on Delivery Routes] --&gt; B[Prioritize Delivery Vehicles]
+    B --&gt; C[Design Traffic Light Scheduling]
+    C --&gt; D[Implement Scheduling in System]
+    D --&gt; E[Monitor Delivery Efficiency]
+    E --&gt; F[Adjust Based on Feedback]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-food-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: State diagram for Food Engineering Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="electronics-and-communication" class="level2">
+<h2 class="anchored" data-anchor-id="electronics-and-communication">5. Electronics and Communication:</h2>
+<ul>
+<li><em>Problem:</em> Implement sensor networks and communication systems for data collection and signal control.</li>
+<li><em>Algorithm:</em> Develop algorithms for data transmission, sensor data integration, and communication between traffic lights and control systems.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-EC" class="quarto-xref">Fig-&nbsp;6</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-EC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-EC">graph TD
+    A[Implement Sensor Network] --&gt; B[Design Data Transmission System]
+    B --&gt; C[Integrate Sensors with Traffic Lights]
+    C --&gt; D[Develop Communication Protocols]
+    D --&gt; E[Ensure Reliable Data Transfer]
+    E --&gt; F[Optimize Communication System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: State diagram for Electronics and Communication Engineering Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="robotics-and-automation" class="level2">
+<h2 class="anchored" data-anchor-id="robotics-and-automation">6. Robotics and Automation:</h2>
+<ul>
+<li><em>Problem:</em> Automate the adjustment of traffic lights based on real-time data.</li>
+<li><em>Algorithm:</em> Design an algorithm to control automated systems that adjust traffic lights dynamically based on sensor data and predefined rules.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-RB" class="quarto-xref">Fig-&nbsp;7</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-RB" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-RB-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-RB">graph TD
+    A[Develop Automation System] --&gt; B[Create Real-Time Adjustment Algorithms]
+    B --&gt; C[Integrate with Traffic Lights]
+    C --&gt; D[Test for Dynamic Control]
+    D --&gt; E[Optimize Automation for Traffic Flow]
+    E --&gt; F[Monitor and Refine System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-RB-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: State diagram for Robotics Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="computer-science" class="level2">
+<h2 class="anchored" data-anchor-id="computer-science">7. Computer Science:</h2>
+<ul>
+<li><em>Problem:</em> Create a software system to process traffic data and control traffic lights.</li>
+<li><em>Algorithm:</em> Develop a software algorithm that processes data from traffic sensors, makes real-time decisions on traffic light timings, and adjusts signals to optimize traffic flow.</li>
+</ul>
+<p>The block diagram is shown in <a href="#fig-CS" class="quarto-xref">Fig-&nbsp;8</a></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-CS" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-CS">graph TD
+    A[Develop Software System] --&gt; B[Process Traffic Data]
+    B --&gt; C[Implement Decision-Making Algorithms]
+    C --&gt; D[Control Traffic Lights Based on Data]
+    D --&gt; E[Test and Debug System]
+    E --&gt; F[Deploy and Monitor System]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px,color:#000;
+    style B fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style C fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style D fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style E fill:#ccf,stroke:#333,stroke-width:2px,color:#000;
+    style F fill:#cfc,stroke:#333,stroke-width:2px,color:#000;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: State diagram for Computer Science Tribe.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="expected-partial-outcome" class="level2">
+<h2 class="anchored" data-anchor-id="expected-partial-outcome">Expected Partial Outcome</h2>
+<p>By designing and implementing algorithms for this traffic management system, engineers from various branches contribute to creating a more efficient and responsive traffic control system. Each branch applies algorithmic thinking to address specific aspects of the problem, demonstrating the relevance and application of algorithms in real-world scenarios.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key Takeaway
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By engaging with the various engineering contexts illustrated through algorithmic thinking, students will gain a deeper appreciation for how structured problem-solving can lead to better planning, efficient design, and successful execution in real-world scenarios. Algorithmic thinking is not just about writing code but about systematically breaking down complex challenges into manageable steps, which is crucial for effective engineering solutions. Understanding and applying this approach will empower students to tackle problems more efficiently, optimize processes, and enhance their ability to innovate across different engineering disciplines.</p>
+</div>
+</div>
+<p>The next session will focus on translating the conceptual framework of algorithmic thinking into a computational framework. This transition will involve exploring the fundamental components and functions of computer systems, which are essential for implementing algorithms in a practical programming environment.</p>
+</section>
+<section id="conceptual-to-computational" class="level2">
+<h2 class="anchored" data-anchor-id="conceptual-to-computational">Conceptual to Computational</h2>
+<p>Algorithmic thinking offers a robust conceptual framework for addressing complex problems through systematic decomposition into manageable steps. This method allows for effective planning, design, and implementation of solutions. However, transitioning from conceptual frameworks to practical applications necessitates a foundational understanding of computer systems.</p>
+<p>To effectively translate algorithmic concepts into computational implementations, it is essential to grasp how computer systems operate. Knowledge of computer architecture, software types, and various programming tools is crucial for converting algorithms into executable programs and optimizing these solutions.</p>
+<p>This course will introduce the basic components and functions of computer systems, including hardware, software, and programming environments. This foundational understanding will bridge the gap between theoretical algorithmic thinking and practical computational implementation, facilitating the effective application of algorithms in programming tasks. ### Familiarization of Computer System, Editors, Various Language Translators</p>
+<section id="introduction-to-computer-architecture" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-to-computer-architecture">Introduction to Computer Architecture</h4>
+<p><strong>1. Block Diagram of Computer:</strong> The block diagram of a computer provides a visual representation of its major components and their interconnections. It typically includes the Central Processing Unit (CPU), Memory, Input Devices, Output Devices, and Storage Units. This diagram helps in understanding the flow of data and control signals within the computer system. A sample block diagram is shown in <a href="#fig-CBD" class="quarto-xref">Fig-&nbsp;9</a>.</p>
+<div id="fig-CBD" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://www.essc-india.org/semicon/images/coureses_computer/computer-architecture.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CBD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Block Diagram of a Computer
+</figcaption>
+</figure>
+</div>
+<p><strong>2. Hardware:</strong> Hardware refers to the physical components of a computer system. It includes the CPU, motherboard, RAM, hard drives, input devices (such as keyboards and mice), output devices (such as monitors and printers), and peripheral devices. Understanding hardware is crucial for comprehending how software interacts with physical components to perform tasks.</p>
+<p><strong>3. Input and Output Devices:</strong> - <strong>Input Devices:</strong> These are devices used to enter data into a computer. Common examples include keyboards, mice, scanners, and microphones. - <strong>Output Devices:</strong> These devices display or output data from the computer. Examples include monitors, printers, and speakers.</p>
+<p><strong>4. Memory:</strong> Memory in a computer system is used to store data and instructions. It includes: - <strong>Primary Memory (RAM):</strong> Volatile memory that temporarily holds data and instructions currently in use. - <strong>Secondary Memory (Storage):</strong> Non-volatile memory used for long-term data storage, such as hard drives and SSDs.</p>
+</section>
+<section id="software" class="level4">
+<h4 class="anchored" data-anchor-id="software">Software</h4>
+<p><strong>1. Types of Software:</strong> - <strong>System Software:</strong> Includes operating systems (e.g., Windows, macOS, Linux) that manage hardware resources and provide a platform for running applications. - <strong>Application Software:</strong> Programs designed for end-users to perform specific tasks, such as word processors, web browsers, and games.</p>
+<p><strong>2. High-Level Languages:</strong> High-level programming languages are designed to be easy for humans to read and write. Examples include Python, Java, and C++. They are used to write programs that are compiled or interpreted into machine code.</p>
+<p><strong>3. Low-Level Languages:</strong> Low-level languages are closer to machine code and provide less abstraction from the hardware. Examples include assembly language, which is specific to a particular computer architecture and provides a symbolic representation of machine instructions.</p>
+<p><strong>4. Assembly Languages:</strong> Assembly language is a low-level programming language that uses symbolic names for instructions and data. It is specific to a computer architecture and is used to write programs that interact directly with hardware.</p>
+</section>
+<section id="language-translators" class="level4">
+<h4 class="anchored" data-anchor-id="language-translators">Language Translators</h4>
+<p><strong>1. Compiler:</strong> A compiler is a program that translates high-level source code into machine code or intermediate code that can be executed by the computer. It performs syntax checking, optimization, and generates executable files.</p>
+<p><strong>2. Interpreter:</strong> An interpreter translates high-level source code into machine code line-by-line or statement-by-statement at runtime. It does not produce an executable file but directly executes the instructions. Examples include Python interpreters.</p>
+<p><strong>3. Assembler:</strong> An assembler translates assembly language code into machine code. It converts symbolic instructions into binary instructions that the computer’s CPU can execute.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Need and Significance of Technical Know-how on Computer System
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Understanding the fundamentals of computer systems, including hardware components, software types, and language translators, is crucial for engineers as they move from conceptual ideas to practical, computer-based solutions. Familiarity with computer architecture helps engineers grasp how different hardware elements interact and how data flows through the system. Knowledge of software types and language translators enables engineers to select appropriate programming tools and languages for implementing their algorithms efficiently.</p>
+</div>
+</div>
+<p>Before delving into the development of algorithms and flow charts, it is essential to understand the fundamental concepts of the computer system, as they provide the groundwork for translating conceptual ideas into computational solutions. The knowledge of computer architecture, memory, and software helps in effectively implementing and visualizing algorithms within a computer system.</p>
+<p>With this foundational understanding in place, the focus shifts to developing algorithms and flow charts, which are designed with specific structures to facilitate standardization.</p>
+</section>
+</section>
+<section id="developing-algorithms-and-flow-charts" class="level2">
+<h2 class="anchored" data-anchor-id="developing-algorithms-and-flow-charts">Developing Algorithms and Flow Charts</h2>
+<p>In the computational framework, standardizing the step-by-step process of algorithmic thinking is crucial for ensuring consistency and clarity in program development.</p>
+<section id="introduction-to-algorithms" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-to-algorithms">Introduction to Algorithms</h4>
+<p><strong>1. What is an Algorithm?</strong></p>
+<p>An algorithm is a well-defined <em>sequence of steps</em> or instructions designed to perform a specific task or solve a particular problem. It serves as a blueprint for writing computer programs. Algorithms are essential for problem-solving as they provide a clear and systematic approach to achieving desired outcomes.</p>
+<p><strong>2. Properties of a Good Algorithm</strong></p>
+<p>A well-constructed algorithm possesses several key properties: - <strong>Finiteness:</strong> The algorithm must have a finite number of steps and should terminate after a certain number of operations. - <strong>Definiteness:</strong> Each step of the algorithm should be precisely defined and unambiguous. - <strong>Input:</strong> The algorithm should accept zero or more inputs, which are the data necessary for its execution. - <strong>Output:</strong> The algorithm should produce at least one output, which is the result or solution of the problem. - <strong>Effectiveness:</strong> Each step of the algorithm should be basic enough to be executed within a finite amount of time.</p>
+</section>
+<section id="introduction-to-flow-charts" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-to-flow-charts">Introduction to Flow Charts</h4>
+<p><strong>1. What is a Flow Chart?</strong></p>
+<p>A flow chart is a <em>visual representation</em> of an algorithm, using various symbols to denote different types of operations or steps. Flow charts help in understanding and communicating the logic of an algorithm more clearly by illustrating the flow of control and decision-making process.</p>
+<p><strong>2. Key Symbols in Flow Charts</strong></p>
+<ul>
+<li><strong>Oval:</strong> Represents the start and end points of the flow chart.</li>
+<li><strong>Rectangle:</strong> Indicates a process or action step.</li>
+<li><strong>Diamond:</strong> Denotes a decision point, where branching occurs based on conditions.</li>
+<li><strong>Parallelogram:</strong> Used for input and output operations.</li>
+<li><strong>Arrow:</strong> Shows the direction of flow between steps.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Standardizing Algorithmic Thinking
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the computational framework, algorithms and flow charts are designed with a specific structure to ensure that the problem-solving approach is standardized. This standardization helps in maintaining consistency in how algorithms are developed, communicated, and executed. By adhering to these standardized structures, engineers and programmers can more effectively design, analyze, and implement solutions, ensuring that the computational processes are efficient and reliable.</p>
+</div>
+</div>
+<p>In the upcoming sessions, students will have the opportunity to explore more examples and apply the principles of algorithmic thinking and flowchart design to a variety of problems.</p>
+</section>
+<section id="crossing-a-traffic-signal" class="level4">
+<h4 class="anchored" data-anchor-id="crossing-a-traffic-signal">1. Crossing a Traffic Signal</h4>
+<p><strong>Problem:</strong> Write the algorithm and flowchart for the program to determine whether a pedestrian can cross the road based on the traffic signal color.</p>
+<p><strong>Algorithm:</strong></p>
+<ol type="1">
+<li>Start</li>
+<li>Observe the traffic signal color</li>
+<li>If the signal is green, “Cross the road”</li>
+<li>Else if the signal is yellow, “Wait”</li>
+<li>Else if the signal is red, “wait”</li>
+<li>End</li>
+</ol>
+<p><strong>Flowchart:</strong> Flowchart for this program is shown in <a href="#fig-FCC" class="quarto-xref">Fig-&nbsp;10</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-FCC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FCC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-FCC">flowchart TD
+    A((Start)) --&gt; B{Check traffic light color}
+    B -- Red --&gt; C[Wait]
+    B -- Yellow --&gt; D[Wait]
+    B -- Green --&gt; E[Cross the road]
+    C --&gt; B
+    D --&gt; B
+    E --&gt; F((Stop))
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,H startEnd;
+    class B,D,F,G inputOutput;
+    class C,E decision;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FCC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Flowchart of the program to cross the trafic signal.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-the-maximum-of-two-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="finding-the-maximum-of-two-numbers">2. Finding the Maximum of Two Numbers</h4>
+<p><strong>Problem:</strong> Write the algorithm and draw the flowchart for the program that takes two numbers as input and prints the larger of the two.</p>
+</section>
+<section id="algorithm" class="level4">
+<h4 class="anchored" data-anchor-id="algorithm">Algorithm:</h4>
+<ol type="1">
+<li>Start</li>
+<li>Input two numbers, A and B</li>
+<li>If A is greater than B, print A</li>
+<li>Otherwise, print B</li>
+<li>End</li>
+</ol>
+</section>
+<section id="flowchart" class="level4">
+<h4 class="anchored" data-anchor-id="flowchart">Flowchart</h4>
+<p>Flowchart for this program is shown in <a href="#fig-FC1" class="quarto-xref">Fig-&nbsp;11</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-FC1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FC1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-FC1">flowchart TD
+    A([Start]) --&gt; B[Input A and B]
+    B --&gt; C{Is A &gt; B?}
+    C -- Yes --&gt; D[Print A]
+    C -- No --&gt; E[Print B]
+    D --&gt; F([End])
+    E --&gt; F
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,F startEnd;
+    class B,D,E inputOutput;
+    class C decision;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FC1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Flowchart of the program to find larger of two numbers.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="finding-the-largest-of-three-numbers" class="level4">
+<h4 class="anchored" data-anchor-id="finding-the-largest-of-three-numbers">3. Finding the Largest of Three Numbers</h4>
+<p><strong>Problem:</strong> Write a program that takes three numbers as input and prints the largest of the three.</p>
+<p><strong>Algorithm:</strong></p>
+<ol type="1">
+<li>Start</li>
+<li>Input three numbers, A, B, and C</li>
+<li>If A is greater than B and A is greater than C, print A</li>
+<li>Else if B is greater than A and B is greater than C, print B</li>
+<li>Otherwise, print C</li>
+<li>End</li>
+</ol>
+<p><strong>Flowchart:</strong> Flowchart for this program is shown in <a href="#fig-FC3" class="quarto-xref">Fig-&nbsp;12</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-FC3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FC3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-FC3">flowchart TD
+    A([Start]) --&gt; B[Input A, B, and C]
+    B --&gt; C{Is A &gt; B?}
+    C --&gt;|Yes| D{Is A &gt; C?}
+    C --&gt;|No| E{Is B &gt; C?}
+    D -- Yes --&gt; F[Print A]
+    D -- No --&gt; G[Print C]
+    E -- Yes --&gt; H[Print B]
+    E -- No --&gt; G
+    F --&gt; I([End])
+    H --&gt; I
+    G --&gt; I
+    
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,I startEnd;
+    class B,F,H inputOutput;
+    class C,D,E decision;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FC3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Flowchart of the program to find largest of three numbers.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="class-joining-dilema" class="level4">
+<h4 class="anchored" data-anchor-id="class-joining-dilema">4. Class Joining Dilema</h4>
+<p><strong>Problem:</strong> Write the algorithm and draw the flowchart for the program to determine whether a student will join a class based on whether their favorite teacher and best friend are in the class.</p>
+<p><strong>Algorithm:</strong></p>
+<ol type="1">
+<li>Start</li>
+<li>Observe the presence of the favorite teacher</li>
+<li>Observe the presence of the best friend</li>
+<li>If both the favorite teacher and the best friend are present, “Join the class”</li>
+<li>Else, “Do not join the class”</li>
+<li>End</li>
+</ol>
+<p><strong>Flowchart:</strong> Flowchart for this program is shown in <a href="#fig-FC4" class="quarto-xref">Fig-&nbsp;13</a>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-FC4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FC4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-FC4">flowchart TD
+    A([Start]) --&gt; B{Is favourite teacher in class?}
+    B -- Yes --&gt; C{Is best friend in class?}
+    C -- Yes --&gt; D[Joins class]
+    B -- No --&gt; E[Does not join class]
+    C -- No --&gt; E[Does not join class]
+    E --&gt; F([Stop])
+    %% Define styles
+    classDef startEnd fill:#ffffff,stroke:#000000,color:#000000;
+    classDef inputOutput fill:#f0f0f0,stroke:#000000,color:#000000;
+    classDef decision fill:#e0e0e0,stroke:#000000,color:#000000;
+    
+    %% Apply styles to nodes
+    class A,I startEnd;
+    class B,F,H inputOutput;
+    class C,D,E decision;
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FC4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Flowchart of the program to join the class
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="transition-from-algorithmic-thinking-to-programming" class="level2">
+<h2 class="anchored" data-anchor-id="transition-from-algorithmic-thinking-to-programming">Transition from Algorithmic Thinking to Programming</h2>
+<p>The algorithmic thinking process involves breaking down a problem into a series of logical steps, as illustrated by our flowcharts. This conceptual framework is very important for defining clear, sequential instructions to solve a problem. However, to bring these concepts into a practical domain, we need to translate them into a programming language that can execute these instructions.</p>
+</section>
+<section id="transition-from-algorithmic-thinking-to-programming-1" class="level2">
+<h2 class="anchored" data-anchor-id="transition-from-algorithmic-thinking-to-programming-1">Transition from Algorithmic Thinking to Programming</h2>
+<p>Algorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like <code>C</code>, <code>C++</code>, and <code>Java</code> have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with <code>Python</code>, highlighting why <code>Python</code> is particularly suitable for computational thinking in engineering.</p>
+</section>
+<section id="historical-context-and-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="historical-context-and-comparison">Historical Context and Comparison</h2>
+<section id="c-language" class="level3">
+<h3 class="anchored" data-anchor-id="c-language">C Language</h3>
+<p>Developed in the early 1970s, <code>C</code> is one of the earliest high-level programming languages. It provides a foundation for many modern languages and is known for its performance and low-level memory manipulation capabilities. <code>C</code> requires explicit management of memory and pointers, which adds complexity to code. While powerful, it lacks some of the high-level abstractions and simplicity found in <code>Python</code>.</p>
+</section>
+<section id="c-language-1" class="level3">
+<h3 class="anchored" data-anchor-id="c-language-1">C++ Language</h3>
+<p>An extension of <code>C</code>, <code>C++</code> was developed in the early 1980s and introduced object-oriented programming features. It allows for complex data modeling and high-performance applications. <code>C++</code> offers more control over system resources but at the cost of increased complexity. It involves managing object-oriented concepts and memory explicitly, which can be challenging for beginners.</p>
+</section>
+<section id="java-language" class="level3">
+<h3 class="anchored" data-anchor-id="java-language">Java Language</h3>
+<p>Developed in the mid-1990s, <code>Java</code> is known for its portability across platforms, thanks to the <code>Java Virtual Machine</code> (JVM). It emphasizes object-oriented programming and has extensive libraries. <code>Java</code>’s syntax is more verbose compared to <code>Python</code>. It requires managing class structures and access modifiers, which can make code less straightforward to write and read.</p>
+</section>
+</section>
+<section id="why-python-is-preferred-for-computational-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="why-python-is-preferred-for-computational-thinking">Why <code>Python</code> is Preferred for Computational Thinking?</h2>
+<p><code>Python</code>, created by Guido van Rossum and first released in 1991, emerged from a desire to develop a language that was both easy to read and write, while also being powerful enough to handle complex tasks. It was inspired by the ABC language, which van Rossum had worked on during his time at Centrum Wiskunde &amp; Informatica (CWI) in the Netherlands. <code>Python</code>’s base code was written in C, which provides a solid foundation for its extensive standard library and cross-platform capabilities. The language emphasizes readability and simplicity, featuring an elegant syntax that allows programmers to express concepts in fewer lines of code compared to many other languages. This design philosophy has contributed to <code>Python</code>’s widespread adoption across various fields, from web development to scientific computing and engineering. Popular features of <code>Python</code> programming language are:</p>
+<section id="readability-and-simplicity" class="level3">
+<h3 class="anchored" data-anchor-id="readability-and-simplicity">1. Readability and Simplicity</h3>
+<p><code>Python</code>’s syntax is designed to be clear and intuitive, resembling natural language. This simplicity allows engineers to focus on the logic of their algorithms without being bogged down by complex syntax. For computational thinking, where clarity and understanding are crucial, <code>Python</code>’s readability reduces cognitive load, making it easier to implement and debug algorithms.</p>
+</section>
+<section id="versatility-and-ease-of-use" class="level3">
+<h3 class="anchored" data-anchor-id="versatility-and-ease-of-use">2. Versatility and Ease of Use</h3>
+<p><code>Python</code> supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Its versatility makes it suitable for a wide range of applications, from simple scripts to complex systems. This adaptability is particularly useful in engineering, where problems often span different domains and require diverse approaches.</p>
+</section>
+<section id="rich-libraries-and-frameworks" class="level3">
+<h3 class="anchored" data-anchor-id="rich-libraries-and-frameworks">3. Rich Libraries and Frameworks</h3>
+<p><code>Python</code>’s extensive standard library and third-party modules simplify many tasks. Libraries such as <code>NumPy</code> for numerical computations, <code>pandas</code> for data manipulation, and <code>Matplotlib</code> for visualization provide powerful tools for engineers. These libraries streamline the implementation of complex algorithms and data handling, making <code>Python</code> an efficient choice for solving engineering problems.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Verdict
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The historical languages like <code>C</code>, <code>C++</code>, and <code>Java</code> have their strengths, <code>Python</code>’s readability, versatility, and extensive libraries make it particularly well-suited for computational thinking in engineering. By transitioning from conceptual algorithmic thinking to practical <code>Python</code> programming, engineers can effectively apply and implement their problem-solving strategies in a straightforward and efficient manner.</p>
+</div>
+</div>
+<p>Future sessions will delve into various <code>Python</code> examples, reinforcing the practical application of these concepts and preparing students for advanced problem-solving in their respective engineering fields.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/sijuswamy\.github\.io\/CME-workshop-1\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sijuswamy/CME-workshop-1/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

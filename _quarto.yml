@@ -1,6 +1,6 @@
 project:
   type: website
-  
+  output-dir: docs
 website:
   title: "Instructional Design for Python Programming"
   site-url: https://sijuswamy.github.io/CME-workshop-1/
@@ -23,8 +23,12 @@ website:
     contents:
       - href: index.qmd
         text: Home
+      - href: Course_outline.qmd
+        text: Instructional_design/Course Outline
+      - href: Instructional_design/Instru_design.qmd
+        text: Instructional Design
       - href: introduction/index.qmd
-        text: Introduction
+        text: Introduction to Quarto
       - href: setup/index.qmd
         text: Setting-up
       - hands_on.qmd

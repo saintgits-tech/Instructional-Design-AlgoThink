@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.5.56">
 
   <meta name="author" content="Siju Swamy">
-  <title>Workshop on Advanced Literate Programming and Machine Learning – Setting Up of Quarto</title>
+  <title>Instructional Design for Python Programming – Introduction to Literate Programming with Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -396,7 +396,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Setting Up of Quarto</h1>
+  <h1 class="title">Introduction to Literate Programming with Quarto</h1>
   <p class="subtitle"><a href="slides-quarto.html" target="_blank"></a></p>
 
 <div class="quarto-title-authors">
@@ -414,109 +414,59 @@ Siju Swamy
 </div>
 
 </section>
-<section>
-<section id="step-by-step-procedure" class="title-slide slide level1 center">
-<h1>Step-by-step procedure</h1>
-
-</section>
-<section id="step-1-install-python" class="slide level2">
-<h2>Step 1: Install Python</h2>
-<ol type="1">
-<li><strong>Download and Install Python</strong>
-<ul>
-<li>Go to the <a href="https://www.python.org/downloads/">official Python website</a>.</li>
-<li>Download the latest stable version of Python suitable for your operating system (Windows, macOS, or Linux).</li>
-<li>Run the installer and ensure you check the box to “Add Python to PATH” during installation.</li>
-<li>Follow the on-screen instructions to complete the installation.</li>
-</ul></li>
-</ol>
-</section>
-<section id="step-2-install-visual-studio-code-vs-code" class="slide level2">
-<h2>Step 2: Install Visual Studio Code (VS Code)</h2>
-<ol start="2" type="1">
-<li><strong>Download and Install Visual Studio Code (VS Code)</strong>
-<ul>
-<li>Visit the <a href="https://code.visualstudio.com/">official VS Code website</a>.</li>
-<li>Download the installer for your operating system.</li>
-<li>Run the installer and follow the prompts to install VS Code.</li>
-<li>After installation, open VS Code and install the recommended extensions:
-<ul>
-<li><strong>Python Extension</strong>: Search for “Python” in the Extensions view (Ctrl+Shift+X) and install it.</li>
-<li><strong>Quarto Extension</strong>: Search for “Quarto” in the Extensions view and install it.</li>
-</ul></li>
-</ul></li>
-</ol>
-</section>
-<section id="step-3-install-quarto-cli" class="slide level2">
-<h2>Step 3: Install Quarto CLI</h2>
-<ol start="3" type="1">
-<li><strong>Download and Install Quarto CLI</strong>
-<ul>
-<li><p>Visit the <a href="https://quarto.org/docs/download/">Quarto CLI download page</a>.</p></li>
-<li><p>Download the latest stable release of Quarto CLI for your operating system.</p></li>
-<li><p>Run the installer and follow the on-screen instructions to complete the installation.</p></li>
-<li><p>After installation, verify that Quarto CLI is correctly installed by opening a command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows) and typing:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a></a><span class="ex">quarto</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ol>
-</section>
-<section id="step-4-install-git-for-cicd" class="slide level2 smaller">
-<h2>Step 4: Install Git for CI/CD</h2>
-<ol type="1">
-<li><strong>Download and Install Git</strong>
-<ul>
-<li>Visit the <a href="https://git-scm.com/downloads">official Git website</a>.</li>
-<li>Download the installer for your operating system.</li>
-<li>Run the installer and follow the prompts. You can use the default settings for most options.</li>
-<li>Ensure Git is added to your system PATH by checking the appropriate option during installation.</li>
-</ul></li>
-<li><strong>Configure Git</strong>
-<ul>
-<li><p>Open your command line interface (Terminal on macOS/Linux, Command Prompt or PowerShell on Windows).</p></li>
-<li><p>Configure your Git username and email:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span>
-<span id="cb2-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"your.email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Verify the installation by checking the Git version:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ol>
-</section>
-<section id="literate-programming-workflow" class="slide level2">
-<h2>Literate Programming Workflow</h2>
+<section id="publishing-workflow" class="title-slide slide level1 center">
+<h1>Publishing workflow</h1>
 <div class="cell" data-reveal="true" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class=""><p></p>
 <div>
 <pre class="mermaid mermaid-js">---
- Literate Programming Workflow
+Publishing workflow
 ---
-graph TD
-    A[Python] --&gt;|Code Execution| B[Quarto CLI]
-    B --&gt;|Document Rendering| C[Technical Documents]
-    B --&gt;|Document Rendering| D[Blogs]
-    B --&gt;|Document Rendering| E[Websites]
-    E --&gt;|Host| F[GitHub Pages]
-    G[Git] --&gt;|Version Control| C
-    G --&gt;|Version Control| D
-    G --&gt;|Version Control| E
-    G --&gt;|CI/CD| F
+%%{ init : { "theme" : "neutral", "flowchart" : { "curve" : "stepBefore" }}}%%
+flowchart LR
+  
+    E1("(1)\nExternal resources"):::external -.-&gt; A1
+    A1{{"(2)\nAuthoring tool"}} --&gt; I1("(3)\nText + Figures +\nCode + Tables + ..."):::input
+    I1 --&gt; P1{{"(4)\nFormatting tool"}}
+    P1 --&gt; O1["(5)\nFormatted\nOutput"]:::output
+    O1 -.-&gt; D1{{"(6)\nDelivery system"}}:::delivery
+    classDef external fill:#eee,stroke:#666,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+    classDef delivery stroke:#666,stroke-width:2px,stroke-dasharray: 5 5;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>An example of the creation of a personal website. You collect <strong>(1)</strong> material to publish in your website data, figures, analyses, and results, those resources are put together with <strong>(2)</strong> an Integrated Development Environment like Visual Studio creating <strong>(3)</strong> an organised hierarchy of files and text that includes formatting information, then using <strong>(4)</strong> a formatting tool like Jekyll all the artefacts are combined into <strong>(5)</strong> a website of html and other files that can be <strong>(6)</strong> hosted in a web server.</p>
+</section>
 
-    subgraph Development
-        A
-        B
-        G
+<section id="quarto-is-a-formatting-tool" class="title-slide slide level1 center">
+<h1>Quarto is a formatting tool</h1>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{ init : { "theme" : "neutral", "flowchart" : { "curve" : "stepBefore" }}}%%
+
+flowchart LR
+  
+    E1("External resources"):::external -.-&gt; A1
+    A1{{"Authoring tool"}} --&gt; I1("Text + Figures +\nCode + Tables + ..."):::input
+    subgraph "Quarto, pdflatex, xelatex, pandoc, ..." 
+      direction LR
+      I1 --&gt; P1{{"Quarto\nFormatting tool"}}:::quarto
+      P1 --&gt; O1["Formatted\nOutput"]:::output
     end
-
-    subgraph Output
-        C
-        D
-        E
-        F
-    end
-
-    style Development fill:#f9f,stroke:#333,stroke-width:2px
-    style Output fill:#ccf,stroke:#333,stroke-width:2px
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+    classDef quarto fill:#75aadb,color:#000;
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -524,42 +474,157 @@ graph TD
 </div>
 </div>
 </section>
-<section id="creating-your-personal-website" class="slide level2">
-<h2>Creating Your Personal Website</h2>
+
+<section id="quarto-supports-single-in-multi-out" class="title-slide slide level1 center">
+<h1>Quarto supports Single-In-Multi-Out</h1>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{ init : { "theme" : "neutral", "flowchart" : { "curve" : "stepBefore" }}}%%
+
+flowchart LR
+    I1("(3)\nText + Figures + \n Code + ..."):::input --- dummy2{{"(4) Quarto\nFormatting tool"}}:::quarto
+    dummy2 --&gt; O1["(5a) Published \n Paper \n (PDF)"]
+    dummy2 --&gt; O2["(5b) Presentation \n Slides \n (PPTX/PDF)"]
+    dummy2 --&gt; O3["(5c) Poster \n (PPTX/PDF)"]
+    dummy2 --&gt; O4["(5d) Computational \n Notebook \n (Colab)"]
+    classDef input fill:#ffa;
+    style O1 fill:#fca
+    style O2 fill:#bff
+    style O3 fill:#f99
+    style O4 fill:#bfb
+    classDef quarto fill:#75aadb,color:#000;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
-<section id="step-1-clone-the-website-template-respository-from-github" class="slide level2">
-<h2>Step 1: Clone the Website template respository from Github</h2>
-<p>Copy the following Github repo url and clone using Vscode <code>source control</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="ex">https://github.com/sijuswamy/Website-Template</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+<section id="available-for-multiple-os" class="title-slide slide level1 center">
+<h1>Available for multiple OS</h1>
+
+<img data-src="assets/images/get_started_step1.jpg" class="r-stretch"></section>
+
+<section>
+<section id="using-quarto" class="title-slide slide level1 smaller center">
+<h1>Using quarto</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource shell number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>$ quarto --help</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>  render     [input] [args...]     - Render files or projects to various document types.</span>
+<span id="cb1-4"><a></a>  preview    [file] [args...]      - Render and preview a document or website project.  </span>
+<span id="cb1-5"><a></a>  serve      [input]               - Serve a Shiny interactive document.                </span>
+<span id="cb1-6"><a></a>  create     [type] [commands...]  - Create a Quarto project or extension               </span>
+<span id="cb1-7"><a></a>  use        &lt;type&gt; [target]       - Automate document or project setup tasks.          </span>
+<span id="cb1-8"><a></a>  add        &lt;extension&gt;           - Add an extension to this folder or project         </span>
+<span id="cb1-9"><a></a>  update     [target...]           - Updates an extension or global dependency.         </span>
+<span id="cb1-10"><a></a>  remove     [target...]           - Removes an extension.                              </span>
+<span id="cb1-11"><a></a>  convert    &lt;input&gt;               - Convert documents to alternate representations.    </span>
+<span id="cb1-12"><a></a>  pandoc     [args...]             - Run the version of Pandoc embedded within Quarto.  </span>
+<span id="cb1-13"><a></a>  typst      [args...]             - Run the version of Typst embedded within Quarto.   </span>
+<span id="cb1-14"><a></a>  run        [script] [args...]    - Run a TypeScript, R, Python, or Lua script.        </span>
+<span id="cb1-15"><a></a>  install    [target...]           - Installs a global dependency (TinyTex or Chromium).</span>
+<span id="cb1-16"><a></a>  uninstall  [tool]                - Removes an extension.                              </span>
+<span id="cb1-17"><a></a>  tools                            - Display the status of Quarto installed dependencies</span>
+<span id="cb1-18"><a></a>  publish    [provider] [path]     - Publish a document or project to a provider.       </span>
+<span id="cb1-19"><a></a>  check      [target]              - Verify correct functioning of Quarto installation. </span>
+<span id="cb1-20"><a></a>  help       [command]             - Show this help or the help of a sub-command.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="step-2-open-the-folder-in-the-vscode-and-change-and-update-the-necessary-details-and-content." class="slide level2 smaller">
-<h2>Step 2: Open the folder in the VScode and change and update the necessary details and content.</h2>
-<p>Use any of the following options to create your personal website designed in <code>Quarto</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="co"># preview as html</span></span>
-<span id="cb5-2"><a></a><span class="ex">quarto</span> preview index.qmd</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a><span class="co"># preview as pdf</span></span>
-<span id="cb5-5"><a></a><span class="ex">quarto</span> preview index.qmd <span class="at">--to</span> pdf</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a><span class="co"># preview a jupyter notebook</span></span>
-<span id="cb5-8"><a></a><span class="ex">quarto</span> preview index.ipynb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<h3 class="smaller" id="rendering">Rendering</h3>
-<p>You can use quarto render command line options to control caching behavior without changing the document’s code. Use options to force the use of caching on all chunks, disable the use of caching on all chunks (even if it’s specified in options), or to force a refresh of the cache even if it has not been invalidated:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource sh number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="co"># use a cache (even if not enabled in options)</span></span>
-<span id="cb6-2"><a></a><span class="ex">quarto</span> render example.qmd <span class="at">--cache</span> </span>
-<span id="cb6-3"><a></a></span>
-<span id="cb6-4"><a></a><span class="co"># don't use a cache (even if enabled in options)</span></span>
-<span id="cb6-5"><a></a><span class="ex">quarto</span> render example.qmd <span class="at">--no-cache</span> </span>
-<span id="cb6-6"><a></a></span>
-<span id="cb6-7"><a></a><span class="co"># use a cache and force a refresh </span></span>
-<span id="cb6-8"><a></a><span class="ex">quarto</span> render example.qmd <span class="at">--cache-refresh</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<ul>
+<li>Get started documentation: <a href="https://quarto.org/docs/get-started/">quarto.org/docs/get-started/</a></li>
+<li>Open-source repository in GitHub: <a href="https://github.com/quarto-dev/quarto-cli">Quarto-cli</a></li>
+<li>Create a project with <code>quarto create project</code>
+<ul>
+<li>Type: default, website, blog, manuscript, book, confluence</li>
+</ul></li>
+<li>Build project with <code>quarto render</code></li>
+<li>Preview with <code>quarto preview</code> (it autobuilds and updates when changes in the source files are detected).</li>
+</ul>
+</section></section>
+<section id="authoring-tools" class="title-slide slide level1 center">
+<h1>Authoring tools</h1>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{ init : { "theme" : "neutral", "flowchart" : { "curve" : "stepBefore" }}}%%
+flowchart LR
+  
+    E1("External resources"):::external -.-&gt; A1
+    subgraph "Vim, NeoVim, Notepad" 
+      direction LR
+      A1{{"Authoring tool"}} --&gt; I1("Text + Code +\nTables + ..."):::input
+    end
+    I1 --&gt; P1{{"Quarto\nFormatting tool"}}:::quarto
+    P1 --&gt; O1["Formatted\nOutput"]:::output
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+    classDef quarto fill:#75aadb,color:#000;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="authoring-with-formatting-ide-quarto" class="title-slide slide level1 center">
+<h1>Authoring with formatting (IDE + Quarto)</h1>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{ init : { "theme" : "neutral", "flowchart" : { "curve" : "stepBefore" }}}%%
+flowchart LR
+  
+    E1("External resources"):::external -.-&gt; A1
+    subgraph "IDE + Quarto" 
+      direction LR
+      A1{{"IDE\nAuthoring tool"}} --&gt; I1("Text + Figures +\nCode + Tables + ..."):::input
+      I1 --&gt; P1{{"Quarto\nFormatting tool"}}:::quarto
+      P1 --&gt; O1["Formatted\nOutput"]:::output
+    end
+    classDef external fill:#eee;
+    classDef input fill:#ffa;
+    classDef output fill:#faa;
+    classDef quarto fill:#75aadb,color:#000;
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="integrated-development-environments" class="slide level2">
+<h2>Integrated Development Environments</h2>
+<p><code>Quarto</code> is integrated in multiple IDEs</p>
+
+<img data-src="assets/images/get_started_step2.jpg" class="r-stretch"></section></section>
+<section id="then-what-is-quarto" class="title-slide slide level1 center">
+<h1>Then, what is Quarto?</h1>
+<ul>
+<li><code>Quarto</code> is a formatting tool</li>
+<li>uses pandoc to convert the input artefacts to various outputs.</li>
+<li>supports plain text markdown, Jupyter notebooks and an augmented markdown,</li>
+<li>supports dynamic content with Python, R, Julia and Observable programming languages.</li>
+<li>is integrated in multiple IDEs: Visual Studio, Posit Connect (former RMarkdown), Atlassian Confluence, …</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -859,7 +924,7 @@ graph TD
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/intelligentsystemslaboratory\.github\.io\/quarto_workshop\/");
+          var filterRegex = new RegExp("https:\/\/sijuswamy\.github\.io\/CME-workshop-1\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
