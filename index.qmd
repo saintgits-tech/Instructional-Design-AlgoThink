@@ -1,0 +1,134 @@
+---
+title: "One Day Faculty Development Programme"
+
+author: 
+  - name: Dr. Naveen Punnoose
+    email: naveen.punnoose@saintgits.org
+    affiliations:
+      - name: Saintgits College of Engineering (Autonomous)
+        city: Kottayam
+        country: India
+        postal-code: 686532
+  - name:
+      given: Siju
+      family: Swamy
+    #orcid: 0000-0001-8925-424X
+    email: siju.swamy@saintgits.org
+    affiliations:
+      - name: Saintgits College of Engineering (Autonomous)
+        city: Kottayam
+        country: India
+        postal-code: 686532
+  - name: Justin Joseph
+    email: justine.joseph@saintgits.org
+    affiliations:
+      - name: Saintgits College of Engineering (Autonomous)
+        city: Kottayam
+        country: India
+        postal-code: 686532
+---
+
+# Welcome Note
+
+Welcome to this one-day Faculty Development Program! Today, we will explore the essential role of algorithmic thinking in engineering education and how it can be effectively taught using Python programming. The focus will be on how to shift from using tools and methods to designing innovative teaching solutions. We will also delve into practical hands-on training with tools like Quarto, Raptor, and Python code visualizers, which are designed to enhance teaching methods and facilitate a deeper understanding of computational thinking.
+
+By the end of the session, you will have a comprehensive understanding of how to integrate algorithmic thinking into your teaching and how to utilize Python for implementing these concepts. Additionally, you will gain practical experience with various tools that can aid in presenting and visualizing these ideas effectively.
+
+# Objectives
+
+1. To Equip faculty with the skills to teach algorithmic thinking through Python programming and effective instructional design. 
+
+2. To Provide hands-on training on tools like Quarto, Raptor, and Python code visualizers to enhance teaching methods and course delivery.
+
+
+
+
+# Agenda
+
+
+**9:00 AM – 9:30 AM: Introduction and Overview**
+
+  - **Welcome and Overview:**
+    - Introduction to the day’s goals.
+    - Importance of algorithmic thinking in engineering education.
+
+**9:30 AM – 11:00 AM: Introduction to GitHub, Account Creation, and Software Installation**
+
+  - **GitHub Introduction:**
+    - Overview of GitHub and its role in version control and collaboration.
+    - Create a GitHub account and explore basic functionalities.
+- **Software Installation:**
+
+    - **Python Installation:** Guide through installing Python.
+    - **Visual Studio Code (VSCode):** Installation and setup for Python development.
+    - **Quarto CLI:** Installation and initial setup for dynamic document creation.
+    - **Hands-On Activity:**
+      - Create and push a simple repository to GitHub.
+      - Verify installations and configurations.
+      - Synchronize with GitHub using VScode.
+
+**11:00 AM – 11:15 AM: Tea Break**
+
+**11:15 AM – 12:00 PM: The Role of High-Level Languages**
+
+- **Concept Introduction:**
+
+  - Importance and advantages of high-level programming languages.
+
+- **Hands-On Activity:**
+
+  - Compare a simple algorithm implemented in Python with versions in other languages (e.g., C, Java).
+
+**12:00 PM – 12:30 PM: Python Programming for Algorithmic Implementation**
+
+- **Content Overview:**
+
+  - Basic Python programming concepts: syntax, data types, operators.
+
+- **Hands-On Activity:**
+
+  - Develop Python programs to implement various algorithms.
+
+**12:30 PM – 1:30 PM: Lunch Break**
+
+**1:30 PM – 2:15 PM: Tool Training: Quarto**
+
+- **Introduction to Quarto:**
+
+  - Creating dynamic documents and using Quarto for literate programming.
+
+- **Hands-On Activity:**
+
+  - Create a Quarto document to demonstrate publishing academic documents containing Python code.
+
+**2:15 PM – 3:00 PM: Tool Training: Raptor**
+
+- **Introduction to Raptor:**
+
+  - Designing flowcharts and simulating algorithms using Raptor.
+
+- **Hands-On Activity:**
+
+  - Design and test algorithms with Raptor.
+
+**3:00 PM – 3:20 PM: Tea Break**
+
+**3:20 PM – 4:05 PM: Tool Training: Python Code Visualizers**
+
+- **Overview of Code Visualizers:**
+
+  - Visualizing and debugging Python code.
+
+- **Hands-On Activity:**
+
+  - Use code visualizers to understand and debug Python programs.
+
+**4:05 PM – 4:20 PM: Conclusion and Q&A**
+
+- **Recap:**
+
+  - Summary of the day’s key takeaways.
+
+- **Q&A Session:**
+
+  - Address any questions and provide additional resources and support.
