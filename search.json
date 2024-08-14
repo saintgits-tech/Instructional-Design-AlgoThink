@@ -710,84 +710,132 @@
     "href": "Instructional_design/Course_outline.html",
     "title": "Python Programming",
     "section": "",
-    "text": "Credits: 2\nHours per Week: 2\nCourse Objectives:\n\nTo develop algorithmic thinking and problem-solving skills.\nTo familiarize students with computer systems, software, and language translators.\nTo justify the use of Python for programming and algorithmic design.\nTo introduce Python programming concepts, including data types, conditional statements, and loops.\nTo implement functions, string operations, and real-time applications using Python’s data structures.\nTo enable students to apply their knowledge to solve practical problems through a micro project."
+    "text": "Credits: 2\nHours per Week: 2\nCourse Objectives:\n\nTo develop algorithmic thinking and problem-solving skills.\nTo familiarize students with computer systems, software, and language translators.\nTo justify the use of Python for programming and algorithmic design.\nTo introduce Python programming concepts, including data types, conditional statements, and loops.\nTo implement functions, string operations, and real-time applications using Python’s data structures.\nTo enable students to apply their knowledge to solve practical problems through a micro project.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-1-introduction-to-algorithmic-thinking",
     "href": "Instructional_design/Course_outline.html#topic-1-introduction-to-algorithmic-thinking",
     "title": "Python Programming",
     "section": "Topic 1: Introduction to Algorithmic Thinking",
-    "text": "Topic 1: Introduction to Algorithmic Thinking\nLesson Outcomes:\n\nUnderstand the concept of algorithmic thinking.\nDevelop basic algorithms for simple problems.\nRecognize the importance of algorithms in problem-solving.\n\nContent:\n\nWhat is Algorithmic Thinking?\n\nImportance in problem-solving\nSteps in designing an algorithm\n\nExample Algorithms:\n\nSimple tasks (e.g., making a cup of tea)\n\n\nPractical Situation:\n\nCreate algorithms for everyday activities to illustrate the concept."
+    "text": "Topic 1: Introduction to Algorithmic Thinking\nLesson Outcomes:\n\nUnderstand the concept of algorithmic thinking.\nDevelop basic algorithms for simple problems.\nRecognize the importance of algorithms in problem-solving.\n\nContent:\n\nWhat is Algorithmic Thinking?\n\nImportance in problem-solving\nSteps in designing an algorithm\n\nExample Algorithms:\n\nSimple tasks (e.g., making a cup of tea)\n\n\nPractical Situation:\n\nCreate algorithms for everyday activities to illustrate the concept.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-2-familiarization-with-computer-systems-and-language-translators",
     "href": "Instructional_design/Course_outline.html#topic-2-familiarization-with-computer-systems-and-language-translators",
     "title": "Python Programming",
     "section": "Topic 2: Familiarization with Computer Systems and Language Translators",
-    "text": "Topic 2: Familiarization with Computer Systems and Language Translators\nLesson Outcomes:\n\nUnderstand basic computer architecture and components.\nIdentify different types of software and language translators.\n\nContent:\n\nIntroduction to Computer Architecture:\n\nBlock diagram of a computer\nHardware components (Input, Output devices)\nMemory types\n\nSoftware Types:\n\nHigh-level vs. Low-level languages\nAssembly languages\n\nLanguage Translators:\n\nCompilers, Interpreters, Assemblers\n\n\nPractical Situation:\n\nExplore how different programming languages and translators affect the execution of a simple program."
+    "text": "Topic 2: Familiarization with Computer Systems and Language Translators\nLesson Outcomes:\n\nUnderstand basic computer architecture and components.\nIdentify different types of software and language translators.\n\nContent:\n\nIntroduction to Computer Architecture:\n\nBlock diagram of a computer\nHardware components (Input, Output devices)\nMemory types\n\nSoftware Types:\n\nHigh-level vs. Low-level languages\nAssembly languages\n\nLanguage Translators:\n\nCompilers, Interpreters, Assemblers\n\n\nPractical Situation:\n\nExplore how different programming languages and translators affect the execution of a simple program.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-3-justification-for-using-python",
     "href": "Instructional_design/Course_outline.html#topic-3-justification-for-using-python",
     "title": "Python Programming",
     "section": "Topic 3: Justification for Using Python",
-    "text": "Topic 3: Justification for Using Python\nLesson Outcomes:\n\nUnderstand the advantages of Python for algorithmic thinking and programming.\nCompare Python with other programming languages in terms of simplicity and effectiveness.\n\nContent:\n\nWhy Python?\n\nPython’s simplicity and readability\nComparison with other languages (e.g., C++, Java)\nPython’s role in modern software development and data science\n\n\nPractical Situation:\n\nDemonstrate a basic Python script and compare it with an equivalent script in another language."
+    "text": "Topic 3: Justification for Using Python\nLesson Outcomes:\n\nUnderstand the advantages of Python for algorithmic thinking and programming.\nCompare Python with other programming languages in terms of simplicity and effectiveness.\n\nContent:\n\nWhy Python?\n\nPython’s simplicity and readability\nComparison with other languages (e.g., C++, Java)\nPython’s role in modern software development and data science\n\n\nPractical Situation:\n\nDemonstrate a basic Python script and compare it with an equivalent script in another language.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-4-developing-algorithms-and-flow-charts",
     "href": "Instructional_design/Course_outline.html#topic-4-developing-algorithms-and-flow-charts",
     "title": "Python Programming",
     "section": "Topic 4: Developing Algorithms and Flow Charts",
-    "text": "Topic 4: Developing Algorithms and Flow Charts\nLesson Outcomes:\n\nDevelop and represent algorithms using flowcharts.\nUnderstand properties of good algorithms.\n\nContent:\n\nIntroduction to Algorithms:\n\nProperties of good algorithms\n\nFlowchart Creation:\n\nBasic flowchart symbols and conventions\n\n\nPractical Situation:\n\nDesign flowcharts for simple algorithms (e.g., sorting a list of numbers)."
+    "text": "Topic 4: Developing Algorithms and Flow Charts\nLesson Outcomes:\n\nDevelop and represent algorithms using flowcharts.\nUnderstand properties of good algorithms.\n\nContent:\n\nIntroduction to Algorithms:\n\nProperties of good algorithms\n\nFlowchart Creation:\n\nBasic flowchart symbols and conventions\n\n\nPractical Situation:\n\nDesign flowcharts for simple algorithms (e.g., sorting a list of numbers).",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-5-data-types-and-arithmetic-operations-in-python",
     "href": "Instructional_design/Course_outline.html#topic-5-data-types-and-arithmetic-operations-in-python",
     "title": "Python Programming",
     "section": "Topic 5: Data Types and Arithmetic Operations in Python",
-    "text": "Topic 5: Data Types and Arithmetic Operations in Python\nLesson Outcomes:\n\nUnderstand and use basic data types and operators in Python.\nPerform arithmetic operations and handle expressions.\n\nContent: - Introduction to Python Programming:\n\nData types (int, float, str, etc.)\nKeywords and Variables\nInput and Output statements\nOperators and Arithmetic expressions\nOperator precedence and Evaluation of expressions\n\nPractical Situation:\n\nWrite a Python program that performs various arithmetic operations and displays results."
+    "text": "Topic 5: Data Types and Arithmetic Operations in Python\nLesson Outcomes:\n\nUnderstand and use basic data types and operators in Python.\nPerform arithmetic operations and handle expressions.\n\nContent: - Introduction to Python Programming:\n\nData types (int, float, str, etc.)\nKeywords and Variables\nInput and Output statements\nOperators and Arithmetic expressions\nOperator precedence and Evaluation of expressions\n\nPractical Situation:\n\nWrite a Python program that performs various arithmetic operations and displays results.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-6-conditional-statements-in-python",
     "href": "Instructional_design/Course_outline.html#topic-6-conditional-statements-in-python",
     "title": "Python Programming",
     "section": "Topic 6: Conditional Statements in Python",
-    "text": "Topic 6: Conditional Statements in Python\nLesson Outcomes:\n\nImplement and use conditional statements to control the flow of programs.\n\nContent: - Types of Conditional Statements:\n\nif, if-else, elif, nested if-else, if-elif-else\nPractical Examples:\n\nPrograms using conditional statements\n\n\nPractical Situation:\n\nCreate a Python program that determines if a number is positive, negative, or zero."
+    "text": "Topic 6: Conditional Statements in Python\nLesson Outcomes:\n\nImplement and use conditional statements to control the flow of programs.\n\nContent: - Types of Conditional Statements:\n\nif, if-else, elif, nested if-else, if-elif-else\nPractical Examples:\n\nPrograms using conditional statements\n\n\nPractical Situation:\n\nCreate a Python program that determines if a number is positive, negative, or zero.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-7-loop-structures-in-python",
     "href": "Instructional_design/Course_outline.html#topic-7-loop-structures-in-python",
     "title": "Python Programming",
     "section": "Topic 7: Loop Structures in Python",
-    "text": "Topic 7: Loop Structures in Python\nLesson Outcomes:\n\nUse loop structures to repeat actions and iterate over data.\n\nContent:\n\nIntroduction to Looping:\n\nfor, while, nested loops\nbreak, continue, pass statements\nrange function\n\nSample Programs:\n\nImplementing various loop constructs\n\n\nPractical Situation:\n\nWrite a Python program that calculates the factorial of a number using loops."
+    "text": "Topic 7: Loop Structures in Python\nLesson Outcomes:\n\nUse loop structures to repeat actions and iterate over data.\n\nContent:\n\nIntroduction to Looping:\n\nfor, while, nested loops\nbreak, continue, pass statements\nrange function\n\nSample Programs:\n\nImplementing various loop constructs\n\n\nPractical Situation:\n\nWrite a Python program that calculates the factorial of a number using loops.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-8-functions-in-python",
     "href": "Instructional_design/Course_outline.html#topic-8-functions-in-python",
     "title": "Python Programming",
     "section": "Topic 8: Functions in Python",
-    "text": "Topic 8: Functions in Python\nLesson Outcomes:\n\nDefine and use functions for modular programming.\nUnderstand function concepts including parameter passing and return values.\n\nContent:\n\nConcept of Functions:\n\nDefinition, Calling Functions\nPassing Parameters and Return Values\nType Conversion and Coercion\n\nAdvanced Function Concepts:\n\nLambda functions\nBuilt-in Mathematical functions\n\nSample Programs Using Functions\n\nPractical Situation:\n\nDevelop a Python program that uses functions to perform mathematical operations."
+    "text": "Topic 8: Functions in Python\nLesson Outcomes:\n\nDefine and use functions for modular programming.\nUnderstand function concepts including parameter passing and return values.\n\nContent:\n\nConcept of Functions:\n\nDefinition, Calling Functions\nPassing Parameters and Return Values\nType Conversion and Coercion\n\nAdvanced Function Concepts:\n\nLambda functions\nBuilt-in Mathematical functions\n\nSample Programs Using Functions\n\nPractical Situation:\n\nDevelop a Python program that uses functions to perform mathematical operations.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-9-string-operations-in-python",
     "href": "Instructional_design/Course_outline.html#topic-9-string-operations-in-python",
     "title": "Python Programming",
     "section": "Topic 9: String Operations in Python",
-    "text": "Topic 9: String Operations in Python\nLesson Outcomes:\n\nManipulate and process strings using Python’s string handling functions.\n\nContent:\n\nIntroduction to Strings:\n\nString creation and manipulation\n\nString Handling Functions:\n\nCommonly used functions (e.g., split(), join(), replace())\n\n\nPractical Situation:\n\nWrite a Python program that processes and formats user input strings."
+    "text": "Topic 9: String Operations in Python\nLesson Outcomes:\n\nManipulate and process strings using Python’s string handling functions.\n\nContent:\n\nIntroduction to Strings:\n\nString creation and manipulation\n\nString Handling Functions:\n\nCommonly used functions (e.g., split(), join(), replace())\n\n\nPractical Situation:\n\nWrite a Python program that processes and formats user input strings.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-10-real-timetechnical-applications-using-data-structures",
     "href": "Instructional_design/Course_outline.html#topic-10-real-timetechnical-applications-using-data-structures",
     "title": "Python Programming",
     "section": "Topic 10: Real-time/Technical Applications Using Data Structures",
-    "text": "Topic 10: Real-time/Technical Applications Using Data Structures\nLesson Outcomes:\n\nApply data structures (lists, tuples, dictionaries) to solve real-world problems.\n\nContent:\n\nLists, Tuples, Dictionaries:\n\nConcepts, operations, and functions\nMutable vs Immutable data structures\n\nApplications:\n\nIdentifying use cases\nSolving problems using lists, tuples, and dictionaries\n\n\nPractical Situation:\n\nCreate a Python program that manages a list of student records using lists and dictionaries."
+    "text": "Topic 10: Real-time/Technical Applications Using Data Structures\nLesson Outcomes:\n\nApply data structures (lists, tuples, dictionaries) to solve real-world problems.\n\nContent:\n\nLists, Tuples, Dictionaries:\n\nConcepts, operations, and functions\nMutable vs Immutable data structures\n\nApplications:\n\nIdentifying use cases\nSolving problems using lists, tuples, and dictionaries\n\n\nPractical Situation:\n\nCreate a Python program that manages a list of student records using lists and dictionaries.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "Instructional_design/Course_outline.html#topic-11-micro-project",
     "href": "Instructional_design/Course_outline.html#topic-11-micro-project",
     "title": "Python Programming",
     "section": "Topic 11: Micro Project",
-    "text": "Topic 11: Micro Project\nLesson Outcomes:\n\nApply Python concepts to develop a project relevant to the student’s field of study.\n\nContent:\n\nProject Development:\n\nDesign and implementation of a simple project\nApplication of learned concepts to a practical problem\n\n\nPractical Situation:\n\nDevelop and present a micro project related to the student’s branch of study."
+    "text": "Topic 11: Micro Project\nLesson Outcomes:\n\nApply Python concepts to develop a project relevant to the student’s field of study.\n\nContent:\n\nProject Development:\n\nDesign and implementation of a simple project\nApplication of learned concepts to a practical problem\n\n\nPractical Situation:\n\nDevelop and present a micro project related to the student’s branch of study.",
+    "crumbs": [
+      "Home",
+      "Course Outline"
+    ]
   },
   {
     "objectID": "introduction/slides-quarto.html#getting-started",
