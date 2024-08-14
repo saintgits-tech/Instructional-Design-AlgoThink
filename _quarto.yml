@@ -23,8 +23,8 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: Course_outline.qmd
-        text: Instructional_design/Course Outline.qmd
+      - href: Instructional_design/Course_outline.qmd
+        text: Course Outline
       - href: Instructional_design/Instru_design.qmd
         text: Instructional Design
       - href: introduction/index.qmd
