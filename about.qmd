@@ -10,7 +10,7 @@ This site contains information about a FDP organised in Saintgits College of Eng
 ![Dr.Nisha Joseph](images/Nisha.jpg){fig-align="left" width=150px
 height=200px}
 
-![Dr. Naveen Punnose](images/Naveen.jpg){fig-align="left"  width=150px
+![Dr. Naveen Punnose John](images/Naveen.jpg){fig-align="left"  width=150px
 height=200px}
 
 ![Er. Justin Mathew](images/Justine.jpg){fig-align="left"  width=150px
