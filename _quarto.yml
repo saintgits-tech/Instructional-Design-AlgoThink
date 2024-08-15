@@ -21,6 +21,8 @@ website:
           text: Course Outline
         - href: Instructional_design/Instru_design.qmd
           text: Instructional Design
+        - href: Instructional_design/python_programs.qmd
+          text: Tutorial
 
   sidebar:
     style: "docked"

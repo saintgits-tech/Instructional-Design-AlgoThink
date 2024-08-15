@@ -2,7 +2,7 @@
 title: "One Day Faculty Development Programme"
 
 author: 
-  - name: Dr. Naveen Punnoose John
+  - name: Dr. Naveen John Punnoose 
     email: naveen.punnoose@saintgits.org
     affiliations:
       - name: Saintgits College of Engineering (Autonomous)
