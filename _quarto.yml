@@ -15,6 +15,13 @@ website:
         text: About the FDP
       - href: feedback.qmd
         text: Feed Back  
+      - text: "Resourses"
+        menu:
+        - href: Instructional_design/Course_outline.qmd
+          text: Course Outline
+        - href: Instructional_design/Instru_design.qmd
+          text: Instructional Design
+
   sidebar:
     style: "docked"
     logo: "./images/workshop_cover.png"
@@ -23,10 +30,6 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: Instructional_design/Course_outline.qmd
-        text: Course Outline
-      - href: Instructional_design/Instru_design.qmd
-        text: Instructional Design
       - href: introduction/index.qmd
         text: Introduction to Quarto
       - href: setup/index.qmd
@@ -52,4 +55,4 @@ sphinx:
 body-header: | 
   This Cource is designed and implemented by Department of Mathematics
 margin-header: |
-  ![Sharing Innovations](/images//saintgits_logo.JPG)
+  ![`Saintgits-Tech`- Sharing Innovations to Community](/images//saintgits_logo.JPG)

@@ -19,6 +19,8 @@ format: html
 5. To implement functions, string operations, and real-time applications using Python's data structures.
 6. To enable students to apply their knowledge to solve practical problems through a micro project.
 
+
+
 # Key Ideas
 
 ## Topic 1: Introduction to Algorithmic Thinking

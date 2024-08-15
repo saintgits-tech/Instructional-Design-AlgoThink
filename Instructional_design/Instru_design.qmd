@@ -33,7 +33,13 @@ format:
 Instructional design is a systematic process used to create educational experiences and materials that effectively facilitate learning and improve student outcomes. It involves analyzing learners' needs, defining clear objectives, structuring content, and selecting appropriate teaching methods and resources to achieve those objectives. Unlike a syllabus, which outlines the topics and schedule of a course, instructional design focuses on the pedagogical approach, instructional strategies, and assessment methods to ensure that the content is delivered in a way that maximizes learning. 
 ::::
 
-While the syllabus provides a roadmap of what will be taught, instructional design details the "how" and "why" of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them.
+While the syllabus provides a roadmap of what will be taught, instructional design details the "how" and "why" of teaching each component, aiming to create a coherent and engaging learning experience. This process ensures that the course not only covers the necessary material but also aligns with educational goals and effectively supports students in achieving them. Then `What is Instructional Design?`. Watch the following video to get a clear understanding.
+
+{{< video https://youtu.be/dWqc3s64LIU?si=j7MT52csir-DYiXe 
+    title='What is Instructional Design?' 
+>}}
+
+
 
 ## *Course Title:* Python Programming (for Algorithmic Thinking)
 
@@ -86,6 +92,10 @@ After the successful completion of the course, the graduate will be able to:
    - Leverage development tools like GitHub and Raptor for effective coding, documentation, and algorithm visualization.
 
 ## Course Introduction
+
+{{< video https://youtu.be/fkIvmfqX-t0?si=HvsxGDf9Mm_XarPK 
+    title='Theme of the Course' 
+>}}
 
 To introduce the "Python Programming for Algorithmic Thinking" course to students from various branches, begin by explaining the universal relevance of algorithmic thinking in everyday problem-solving. Use a simple context, such as organizing a group project: just as you would plan tasks and delegate responsibilities to ensure the project is completed efficiently and effectively, algorithmic thinking involves creating systematic methods to solve problems. A block diagram representing this example is given below.
 
@@ -327,6 +337,18 @@ By designing and implementing algorithms for this traffic management system, eng
 By engaging with the various engineering contexts illustrated through algorithmic thinking, students will gain a deeper appreciation for how structured problem-solving can lead to better planning, efficient design, and successful execution in real-world scenarios. Algorithmic thinking is not just about writing code but about systematically breaking down complex challenges into manageable steps, which is crucial for effective engineering solutions. Understanding and applying this approach will empower students to tackle problems more efficiently, optimize processes, and enhance their ability to innovate across different engineering disciplines.
 :::
 
+### Wait a second...
+
+Friends, do you ever think this instructional design might seem impractical? Let me challenge that idea. Time can feel like a stubborn illusion, but have you ever wondered how your students really perceive it? Imagine seeing their experience from their perspective. Do they feel confined by the rigid structures we often impose, or do they crave a more dynamic approach? By understanding how they truly think and engage with our sessions, we might find that what seems impractical to us could actually be exactly what they need to thrive. Let’s open our minds to how changing our approach can make a real difference in their learning experience. Just watch the following video.
+
+
+{{< video https://youtu.be/ZyYqyYAKGC0?si=teJ8OxzLN_2zE1Xr 
+    title='What is the CERN?' 
+>}}
+
+
+
+
 The next session will focus on translating the conceptual framework of algorithmic thinking into a computational framework. This transition will involve exploring the fundamental components and functions of computer systems, which are essential for implementing algorithms in a practical programming environment.
 
 ## Conceptual to Computational 
@@ -336,7 +358,23 @@ Algorithmic thinking offers a robust conceptual framework for addressing complex
 To effectively translate algorithmic concepts into computational implementations, it is essential to grasp how computer systems operate. Knowledge of computer architecture, software types, and various programming tools is crucial for converting algorithms into executable programs and optimizing these solutions.
 
 This course will introduce the basic components and functions of computer systems, including hardware, software, and programming environments. This foundational understanding will bridge the gap between theoretical algorithmic thinking and practical computational implementation, facilitating the effective application of algorithms in programming tasks.
+
 ### Familiarization of Computer System, Editors, Various Language Translators
+
+Knowledge of computer architecture, including the roles of input/output devices, memory, and various types of software, enables programmers to write more efficient and effective code. This understanding helps in debugging, optimizing performance, and leveraging system resources effectively. By grasping how language translators like compilers, interpreters, and assemblers work, programmers can better appreciate how their code is transformed into executable instructions and troubleshoot issues with greater precision. 
+
+:::{.callout-note}
+### The poetry of programming
+
+To showcase how the new generation views and engages with technology, we can draw inspiration from Linda Liukas' TEDx talk. In her presentation, Liukas passionately argues that a significant movement in technology is underway, emphasizing the need for inclusive and diverse participation, especially from younger generations. Her vision of technology, framed as the "poetry of code," highlights how creativity and diversity can shape a more vibrant and innovative tech landscape. By including her TEDx video, we can provide a compelling testimonial that illustrates how the next generation perceives and interacts with technology, reinforcing the importance of adapting our instructional designs to better connect with their perspectives and aspirations.
+
+{{< video https://youtu.be/-jRREn6ifEQ?si=vXheHgZA58rNf5x- 
+    title='The poetry of programming' 
+>}}
+
+:::
+
+
 
 #### Introduction to Computer Architecture
 
@@ -596,7 +634,12 @@ The algorithmic thinking process involves breaking down a problem into a series 
 
 ## Transition from Algorithmic Thinking to Programming
 
-Algorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like `C`, `C++`, and `Java` have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with `Python`, highlighting why `Python` is particularly suitable for computational thinking in engineering.
+Algorithmic thinking involves deconstructing problems into logical, sequential steps, as demonstrated by our flowcharts. Converting these concepts into a practical programming language allows us to execute these steps effectively. Historically, high-level programming languages like `C`, `C++`, and `Java` have been instrumental in translating algorithms into executable code. Here’s a comparison of these languages with `Python`, highlighting why `Python` is particularly suitable for computational thinking in engineering. Advantages of `Python` over other popular programming languages is explained in the following video.
+
+{{< video https://youtu.be/W2_qqLiIulY?si=899-A9rq5AAMEguU 
+    title='What is the CERN?' 
+>}}
+
 
 ## Historical Context and Comparison
 
@@ -631,3 +674,14 @@ The historical languages like `C`, `C++`, and `Java` have their strengths, `Pyth
 :::
 
 Future sessions will delve into various `Python` examples, reinforcing the practical application of these concepts and preparing students for advanced problem-solving in their respective engineering fields.
+
+### Just a second...
+
+Programming extends beyond mere coding, which involves translating instructions into a form that computers can execute. While coding focuses on syntax and grammar, programming encompasses the entire process of solving problems, from understanding the problem and designing algorithms to implementing and testing solutions. This broader view highlights the importance of logical thinking, a skill central to effective programming. According to Lesli Lambort, "Programming is not just about writing code; it’s about creating solutions through a logical process." This involves breaking down complex problems, understanding their components, and systematically building solutions. Just watch what Labort saying on this topic.
+
+{{< video https://youtu.be/rkZzg7Vowao?si=cM77GaAYyNvqxfTu 
+    title='Coding Vs Programming' 
+>}}
+
+
+https://youtu.be/rkZzg7Vowao?si=kGgUubYz9KL8-AxL
