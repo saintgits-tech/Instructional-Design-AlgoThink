@@ -15,7 +15,7 @@ website:
         text: About the FDP
       - href: feedback.qmd
         text: Feed Back  
-      - text: "Resourses"
+      - text: "Resources"
         menu:
         - href: Instructional_design/Course_outline.qmd
           text: Course Outline
@@ -44,7 +44,8 @@ format:
     theme: yeti
     css: styles.css
     toc: true
-
+filters: 
+  - pyodide
 # Additional extensions for Sphinx
 sphinx:
   config:
